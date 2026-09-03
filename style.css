@@ -1,10 +1,12 @@
 /* =========================================
    THE REALM
-   WEBSITE DESIGN
+   VISUAL DEVELOPMENT WEBSITE
    ========================================= */
 
 
-/* RESET */
+/* =========================================
+   RESET
+   ========================================= */
 
 * {
     margin: 0;
@@ -18,26 +20,42 @@ html {
 
 body {
     margin: 0;
-    background: #080c0e;
-    color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        #080c0e;
+
+    color:
+        #f2f2f2;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     line-height: 1.6;
 }
 
 
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 72px;
+
     z-index: 1000;
 
-    background: rgba(8, 10, 13, 0.93);
+    background:
+        rgba(8, 10, 13, 0.93);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     border-bottom:
         1px solid
@@ -47,12 +65,16 @@ header {
 nav {
     width: 100%;
     max-width: 1500px;
+
     height: 100%;
 
     margin: 0 auto;
-    padding: 0 40px;
+
+    padding:
+        0 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 }
@@ -61,46 +83,64 @@ nav {
     height: 100%;
 
     display: flex;
+
     align-items: center;
 
-    color: #f0dfb7;
+    color:
+        #f0dfb7;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.45rem;
-    font-weight: 700;
+    font-size:
+        1.45rem;
 
-    letter-spacing: 0.18em;
+    font-weight:
+        700;
 
-    white-space: nowrap;
+    letter-spacing:
+        0.18em;
+
+    white-space:
+        nowrap;
 }
 
 .navigation {
     height: 100%;
 
     display: flex;
+
     align-items: center;
 
-    gap: 32px;
+    gap:
+        32px;
 }
 
 .navigation a {
+    position: relative;
+
     height: 100%;
 
     display: flex;
+
     align-items: center;
 
-    color: #dddddd;
+    color:
+        #dddddd;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size:
+        0.9rem;
 
-    letter-spacing: 0.03em;
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.03em;
 
     border-bottom:
         2px solid transparent;
@@ -110,23 +150,77 @@ nav {
         border-color 0.2s ease;
 }
 
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 12px;
+
+    width: 0;
+    height: 1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #d6b56a;
+
+    transition:
+        width 0.2s ease;
+}
+
 .navigation a:hover {
-    color: #d6b56a;
-    border-bottom-color: #d6b56a;
+    color:
+        #d6b56a;
+
+    border-bottom-color:
+        #d6b56a;
+}
+
+.navigation a:hover::after {
+    width:
+        65%;
 }
 
 
-/* HERO */
+/* =========================================
+   SECTION ANCHORS
+   ========================================= */
+
+#home,
+#world,
+#competitive-season,
+#updates,
+#store,
+#support,
+#native-species,
+#forest-minibosses,
+#forest-island-boss,
+#latest-updates {
+    scroll-margin-top:
+        90px;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
 
 #home {
     position: relative;
 
     width: 100%;
-    min-height: 100vh;
 
-    overflow: hidden;
+    min-height:
+        100vh;
+
+    overflow:
+        hidden;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -135,7 +229,8 @@ nav {
         40px
         5vh;
 
-    text-align: center;
+    text-align:
+        center;
 
     background:
         linear-gradient(
@@ -146,15 +241,21 @@ nav {
         ),
         url("realm-hero.png");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
 }
 
 #home::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -164,28 +265,36 @@ nav {
             rgba(0, 0, 0, 0.3) 100%
         );
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
-    z-index: 1;
+    z-index:
+        1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+
+    z-index:
+        2;
 
     width: 100%;
     max-width: 1100px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 }
 
 #home h1 {
-    color: #f6efe2;
+    color:
+        #f6efe2;
 
     font-size:
         clamp(
@@ -194,11 +303,14 @@ nav {
             7.5rem
         );
 
-    font-weight: 900;
+    font-weight:
+        900;
 
-    line-height: 1;
+    line-height:
+        1;
 
-    letter-spacing: 0.08em;
+    letter-spacing:
+        0.08em;
 
     text-shadow:
         0 3px 0 #57452f,
@@ -206,9 +318,11 @@ nav {
 }
 
 .hero-tagline {
-    margin-top: 28px;
+    margin-top:
+        28px;
 
-    color: #f0dfb7;
+    color:
+        #f0dfb7;
 
     font-size:
         clamp(
@@ -217,19 +331,25 @@ nav {
             1.35rem
         );
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 }
 
 .hero-description {
-    max-width: 720px;
+    max-width:
+        720px;
 
-    margin-top: 22px;
+    margin-top:
+        22px;
 
-    color: #f0f0f0;
+    color:
+        #f0f0f0;
 
     font-size:
         clamp(
@@ -241,26 +361,101 @@ nav {
 
 
 /* =========================================
+   MAIN SECTION TRANSITIONS
+   ========================================= */
+
+#world,
+#competitive-season,
+#updates,
+#store,
+#support {
+    position:
+        relative;
+}
+
+#world::before,
+#competitive-season::before,
+#updates::before,
+#store::before,
+#support::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width:
+        min(70%, 900px);
+
+    height:
+        1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.65),
+            rgba(214, 181, 106, 0)
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================
+   SHARED PANEL DEPTH
+   ========================================= */
+
+.world-panel,
+.competitive-panel,
+.updates-panel,
+.store-panel,
+.support-panel {
+    box-shadow:
+        inset 0 0 55px
+        rgba(0, 0, 0, 0.4),
+        0 10px 35px
+        rgba(0, 0, 0, 0.24);
+}
+
+
+/* =========================================
    WORLD
    ========================================= */
 
 #world {
-    padding: 14px;
-    background: #070b0d;
+    padding:
+        14px;
+
+    background:
+        #070b0d;
 }
 
 .world-panel {
-    width: 100%;
-    max-width: 1500px;
+    position:
+        relative;
 
-    margin: 0 auto;
+    width:
+        100%;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
 
     padding:
         58px
         55px
         44px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(300px, 0.75fr)
@@ -282,33 +477,88 @@ nav {
         );
 }
 
+.world-panel::before,
+.world-panel::after {
+    content: "";
+
+    position:
+        absolute;
+
+    width:
+        15px;
+
+    height:
+        15px;
+}
+
+.world-panel::before {
+    top:
+        8px;
+
+    left:
+        8px;
+
+    border-top:
+        2px solid #d6b56a;
+
+    border-left:
+        2px solid #d6b56a;
+}
+
+.world-panel::after {
+    right:
+        8px;
+
+    bottom:
+        8px;
+
+    border-right:
+        2px solid #d6b56a;
+
+    border-bottom:
+        2px solid #d6b56a;
+}
+
 .world-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
 }
 
 .section-kicker,
 .season-label,
 .section-small-label {
-    color: #d6b56a;
+    color:
+        #d6b56a;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
 .section-kicker {
-    margin-bottom: 16px;
+    margin-bottom:
+        16px;
 }
 
 .season-label {
-    margin-bottom: 5px;
+    margin-bottom:
+        5px;
 }
 
 #world h2 {
-    color: #f5ecda;
+    color:
+        #f5ecda;
 
     font-family:
         Georgia,
@@ -322,14 +572,16 @@ nav {
             4rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .title-divider,
 .center-divider,
 .boss-divider,
 .competitive-divider {
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -341,18 +593,22 @@ nav {
 }
 
 .title-divider {
-    width: 155px;
+    width:
+        155px;
 
     margin:
         20px 0;
 }
 
 .world-description {
-    max-width: 430px;
+    max-width:
+        430px;
 
-    margin-bottom: 25px;
+    margin-bottom:
+        25px;
 
-    color: #d0d0d0;
+    color:
+        #d0d0d0;
 
     font-family:
         Georgia,
@@ -360,31 +616,87 @@ nav {
         serif;
 }
 
+
+/* BUTTONS */
+
 .world-button,
 .updates-button {
-    min-height: 46px;
+    position:
+        relative;
 
-    padding: 0 20px;
+    min-height:
+        46px;
 
-    display: inline-flex;
-    align-items: center;
+    padding:
+        0 20px;
 
-    gap: 14px;
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    overflow:
+        hidden;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.75);
 
-    color: #f0d795;
+    color:
+        #f0d795;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size:
+        0.8rem;
 
-    letter-spacing: 0.08em;
+    font-weight:
+        700;
 
-    transition: 0.2s ease;
+    letter-spacing:
+        0.08em;
+
+    transition:
+        0.2s ease;
+}
+
+.world-button::before,
+.updates-button::before {
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -100%;
+
+    width:
+        60%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0),
+            rgba(240, 215, 149, 0.1),
+            rgba(255, 255, 255, 0)
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.5s ease;
 }
 
 .world-button:hover,
@@ -392,15 +704,28 @@ nav {
     background:
         rgba(214, 181, 106, 0.09);
 
-    border-color: #d6b56a;
+    border-color:
+        #d6b56a;
 
-    color: #fff2c8;
+    color:
+        #fff2c8;
 }
 
-.world-image {
-    min-height: 360px;
+.world-button:hover::before,
+.updates-button:hover::before {
+    left:
+        140%;
+}
 
-    overflow: hidden;
+
+/* FOREST IMAGE */
+
+.world-image {
+    min-height:
+        360px;
+
+    overflow:
+        hidden;
 
     border:
         1px solid
@@ -408,23 +733,39 @@ nav {
 }
 
 .world-image img {
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    min-height: 360px;
+    height:
+        100%;
 
-    object-fit: cover;
+    min-height:
+        360px;
 
-    display: block;
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.world-image:hover img {
+    transform:
+        scale(1.025);
 }
 
 
 /* WORLD FEATURES */
 
 .forest-features {
-    grid-column: 1 / -1;
+    grid-column:
+        1 / -1;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(5, 1fr);
@@ -439,7 +780,8 @@ nav {
         30px
         22px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .feature-item:not(:last-child) {
@@ -449,46 +791,63 @@ nav {
 }
 
 .feature-icon {
-    width: 52px;
-    height: 52px;
+    width:
+        52px;
+
+    height:
+        52px;
 
     margin:
         0 auto
         20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
 
-    transform: rotate(45deg);
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    transform:
+        rotate(45deg);
 
     border:
-        1px solid #d6b56a;
+        1px solid
+        #d6b56a;
 
-    color: #f0cf7c;
+    color:
+        #f0cf7c;
 }
 
 .feature-icon span {
-    transform: rotate(-45deg);
+    transform:
+        rotate(-45deg);
 }
 
 .feature-item h3 {
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
-    color: #eee6d4;
+    color:
+        #eee6d4;
 
-    font-size: 0.82rem;
+    font-size:
+        0.82rem;
 }
 
 .feature-item p {
-    color: #bbb5aa;
+    color:
+        #bbb5aa;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.88rem;
+    font-size:
+        0.88rem;
 }
 
 
@@ -497,9 +856,11 @@ nav {
 .native-species-section,
 .miniboss-section,
 .island-boss-section {
-    grid-column: 1 / -1;
+    grid-column:
+        1 / -1;
 
-    padding-top: 52px;
+    padding-top:
+        52px;
 
     border-top:
         1px solid
@@ -507,18 +868,21 @@ nav {
 }
 
 .section-heading {
-    max-width: 780px;
+    max-width:
+        780px;
 
     margin:
         0 auto
         40px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .section-heading h3,
 .boss-copy h3 {
-    color: #f2e6cc;
+    color:
+        #f2e6cc;
 
     font-family:
         Georgia,
@@ -532,11 +896,13 @@ nav {
             3.4rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .center-divider {
-    width: 190px;
+    width:
+        190px;
 
     margin:
         18px auto
@@ -544,7 +910,8 @@ nav {
 }
 
 .section-heading p:last-child {
-    color: #c9c2b5;
+    color:
+        #c9c2b5;
 
     font-family:
         Georgia,
@@ -553,18 +920,22 @@ nav {
 }
 
 .section-closing {
-    margin-top: 34px;
+    margin-top:
+        34px;
 
-    color: #b9aa81;
+    color:
+        #b9aa81;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 
@@ -572,17 +943,20 @@ nav {
 
 .native-grid,
 .miniboss-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 22px;
+    gap:
+        22px;
 }
 
 .species-card,
 .miniboss-card {
-    overflow: hidden;
+    overflow:
+        hidden;
 
     border:
         1px solid
@@ -593,21 +967,37 @@ nav {
 }
 
 .species-image {
-    height: 360px;
+    height:
+        360px;
 }
 
 .miniboss-image {
-    height: 390px;
+    height:
+        390px;
 }
 
 .species-image img,
 .miniboss-image img {
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    object-fit: cover;
+    height:
+        100%;
 
-    display: block;
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.species-card:hover .species-image img,
+.miniboss-card:hover .miniboss-image img {
+    transform:
+        scale(1.025);
 }
 
 .species-card-content,
@@ -617,29 +1007,37 @@ nav {
         24px
         26px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .species-symbol {
-    display: inline-block;
+    display:
+        inline-block;
 
-    margin-bottom: 9px;
+    margin-bottom:
+        9px;
 
-    color: #9fbe73;
+    color:
+        #9fbe73;
 
-    font-size: 1.5rem;
+    font-size:
+        1.5rem;
 }
 
 .aggressive-symbol,
 .aggressive-card h4 {
-    color: #d57a61;
+    color:
+        #d57a61;
 }
 
 .species-card h4,
 .miniboss-content h4 {
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
-    color: #cbdc9a;
+    color:
+        #cbdc9a;
 
     font-family:
         Georgia,
@@ -649,31 +1047,37 @@ nav {
 
 .species-card p,
 .miniboss-content p {
-    color: #bbb5aa;
+    color:
+        #bbb5aa;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.92rem;
+    font-size:
+        0.92rem;
 }
 
 
 /* ISLAND BOSS */
 
 .island-boss-section {
-    margin-top: 32px;
+    margin-top:
+        32px;
 
-    padding: 34px;
+    padding:
+        34px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(300px, 0.8fr)
         minmax(500px, 1.6fr);
 
-    gap: 30px;
+    gap:
+        30px;
 
     border:
         1px solid
@@ -681,14 +1085,22 @@ nav {
 }
 
 .boss-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
 }
 
 .boss-divider {
-    width: 180px;
+    width:
+        180px;
 
     margin:
         18px 0
@@ -696,7 +1108,8 @@ nav {
 }
 
 .boss-description {
-    color: #c9c2b5;
+    color:
+        #c9c2b5;
 
     font-family:
         Georgia,
@@ -705,39 +1118,60 @@ nav {
 }
 
 .boss-teaser {
-    margin-top: 22px;
+    margin-top:
+        22px;
 
-    color: #9eb46d;
+    color:
+        #9eb46d;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 .boss-image {
-    min-height: 520px;
+    min-height:
+        520px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 }
 
 .boss-image img {
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    object-fit: cover;
+    height:
+        100%;
 
-    display: block;
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.island-boss-section:hover .boss-image img {
+    transform:
+        scale(1.025);
 }
 
 .boss-footer {
-    grid-column: 1 / -1;
+    grid-column:
+        1 / -1;
 
-    padding-top: 28px;
+    padding-top:
+        28px;
 
-    text-align: center;
+    text-align:
+        center;
 
     border-top:
         1px solid
@@ -745,20 +1179,24 @@ nav {
 }
 
 .boss-footer p {
-    color: #a9bf6f;
+    color:
+        #a9bf6f;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.4rem;
+    font-size:
+        1.4rem;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
 .boss-footer span {
-    color: #b8ac91;
+    color:
+        #b8ac91;
 }
 
 
@@ -767,33 +1205,48 @@ nav {
    ========================================= */
 
 #competitive-season {
-    padding: 14px;
-    background: #07090d;
+    padding:
+        14px;
+
+    background:
+        #07090d;
 }
 
 .competitive-panel {
-    max-width: 1500px;
+    width:
+        100%;
 
-    margin: 0 auto;
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
 
     padding:
         48px
         40px
         28px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        1.05fr
-        0.95fr;
+        minmax(500px, 1.05fr)
+        minmax(460px, 0.95fr);
 
-    gap: 34px;
+    gap:
+        34px;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.56);
 
     background:
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(100, 65, 160, 0.08),
+            rgba(0, 0, 0, 0) 42%
+        ),
         linear-gradient(
             135deg,
             #0b1015,
@@ -801,24 +1254,42 @@ nav {
         );
 }
 
+.competitive-left {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        36px;
+}
+
 .competitive-heading {
-    text-align: center;
+    text-align:
+        center;
 }
 
 .competitive-kicker {
-    color: #c69bf4;
+    color:
+        #c69bf4;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .competitive-heading h2 {
-    margin-top: 8px;
+    margin-top:
+        8px;
 
-    color: #f3e5c6;
+    color:
+        #f3e5c6;
 
     font-family:
         Georgia,
@@ -832,18 +1303,21 @@ nav {
             4.8rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .competitive-divider {
-    width: 220px;
+    width:
+        220px;
 
     margin:
         20px auto;
 }
 
 .competitive-heading > p:last-child {
-    color: #d0c5b1;
+    color:
+        #d0c5b1;
 
     font-family:
         Georgia,
@@ -851,10 +1325,12 @@ nav {
         serif;
 }
 
-.season-stats {
-    margin-top: 36px;
 
-    display: grid;
+/* SEASON STATS */
+
+.season-stats {
+    display:
+        grid;
 
     grid-template-columns:
         repeat(5, 1fr);
@@ -862,14 +1338,33 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.5);
+
+    background:
+        rgba(9, 13, 19, 0.76);
 }
 
 .season-stat {
+    min-height:
+        150px;
+
     padding:
         22px
         14px;
 
-    text-align: center;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
 }
 
 .season-stat:not(:last-child) {
@@ -879,34 +1374,49 @@ nav {
 }
 
 .season-stat-icon {
-    display: block;
+    margin-bottom:
+        8px;
 
-    color: #b78bf2;
+    color:
+        #b78bf2;
 
-    font-size: 1.45rem;
+    font-size:
+        1.45rem;
 }
 
 .season-stat strong {
-    display: block;
-
-    color: #efd083;
+    color:
+        #efd083;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
+
+    font-size:
+        1.08rem;
 }
 
 .season-stat small {
-    color: #bcb2a3;
+    margin-top:
+        4px;
+
+    color:
+        #bcb2a3;
+
+    font-size:
+        0.67rem;
+
+    letter-spacing:
+        0.08em;
 }
 
-.placement-section {
-    margin-top: 36px;
-}
+
+/* PLACEMENT */
 
 .placement-heading {
-    text-align: center;
+    text-align:
+        center;
 }
 
 .placement-heading p:last-child {
@@ -914,7 +1424,8 @@ nav {
         8px auto
         24px;
 
-    color: #c7bdac;
+    color:
+        #c7bdac;
 
     font-family:
         Georgia,
@@ -923,61 +1434,100 @@ nav {
 }
 
 .placement-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 16px;
+    gap:
+        16px;
 }
 
 .placement-card {
+    min-height:
+        180px;
+
     padding:
         26px
         18px;
 
-    text-align: center;
+    text-align:
+        center;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.44);
+
+    background:
+        rgba(11, 15, 20, 0.84);
 }
 
 .placement-symbol {
-    display: block;
+    display:
+        block;
 
-    font-size: 2rem;
+    margin-bottom:
+        10px;
+
+    font-size:
+        2rem;
 }
 
 .placement-card h3 {
+    margin-bottom:
+        8px;
+
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 }
 
+.placement-card p {
+    color:
+        #bfb5a5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        0.86rem;
+}
+
 .diamond-placement h3,
 .diamond-placement .placement-symbol {
-    color: #7ec8ff;
+    color:
+        #7ec8ff;
 }
 
 .gold-placement h3,
 .gold-placement .placement-symbol {
-    color: #e8bd4e;
+    color:
+        #e8bd4e;
 }
 
 .silver-placement h3,
 .silver-placement .placement-symbol {
-    color: #d6d6d6;
+    color:
+        #d6d6d6;
 }
 
 .placement-note {
-    margin-top: 18px;
+    margin-top:
+        18px;
 
-    color: #ae9a68;
+    color:
+        #ae9a68;
 
-    text-align: center;
+    text-align:
+        center;
 }
+
+
+/* WINGS */
 
 .wings-panel {
     padding:
@@ -989,11 +1539,20 @@ nav {
         1px solid
         rgba(214, 181, 106, 0.58);
 
-    text-align: center;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(10, 13, 20, 0.92),
+            rgba(5, 7, 11, 0.98)
+        );
+
+    text-align:
+        center;
 }
 
 .wings-panel h3 {
-    color: #e7b245;
+    color:
+        #e7b245;
 
     font-family:
         Georgia,
@@ -1007,11 +1566,13 @@ nav {
             4rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .wings-description {
-    color: #d1c4ae;
+    color:
+        #d1c4ae;
 
     font-family:
         Georgia,
@@ -1020,102 +1581,149 @@ nav {
 }
 
 .wings-image {
-    height: 520px;
+    height:
+        520px;
 
-    margin-top: 24px;
+    margin-top:
+        24px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 }
 
 .wings-image img {
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    object-fit: cover;
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.45s ease;
 }
 
 .wing-labels {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    margin-top: 16px;
+    margin-top:
+        16px;
 }
 
 .diamond-label {
-    color: #7ec8ff;
+    color:
+        #7ec8ff;
 }
 
 .gold-label {
-    color: #e8bd4e;
+    color:
+        #e8bd4e;
 }
 
 .silver-label {
-    color: #dddddd;
+    color:
+        #dddddd;
 }
 
-.competitive-bottom {
-    grid-column: 1 / -1;
 
-    display: grid;
+/* COMPETITIVE BOTTOM */
+
+.competitive-bottom {
+    grid-column:
+        1 / -1;
+
+    display:
+        grid;
 
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 18px;
+    gap:
+        18px;
 }
 
 .competitive-info-block {
+    min-height:
+        120px;
+
     padding:
         24px
         28px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 22px;
+    align-items:
+        center;
+
+    gap:
+        22px;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.34);
+
+    background:
+        rgba(8, 12, 17, 0.88);
 }
 
 .competitive-info-icon {
-    color: #b68cf0;
-    font-size: 2rem;
+    color:
+        #b68cf0;
+
+    font-size:
+        2rem;
 }
 
 .competitive-info-block h4 {
-    color: #c69bf4;
+    color:
+        #c69bf4;
 }
 
 .competitive-info-block p {
-    color: #bbb2a5;
+    color:
+        #bbb2a5;
 }
 
 
 /* =========================================
-   UPDATES
+   UPDATES — REALM CHRONICLE
    ========================================= */
 
 #updates {
-    padding: 14px;
-    background: #060b0f;
+    padding:
+        14px;
+
+    background:
+        #060b0f;
 }
 
 .updates-panel {
-    width: 100%;
-    max-width: 1500px;
+    width:
+        100%;
 
-    margin: 0 auto;
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
 
     padding:
         56px
         46px
         34px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(300px, 0.7fr)
@@ -1144,30 +1752,44 @@ nav {
 }
 
 .updates-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
 }
 
 .updates-kicker {
-    color: #7fc8e7;
+    color:
+        #7fc8e7;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size:
+        0.85rem;
 
-    letter-spacing: 0.22em;
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.22em;
 }
 
 .updates-intro h2 {
-    margin-top: 8px;
+    margin-top:
+        8px;
 
-    color: #f2d89a;
+    color:
+        #f2d89a;
 
     font-family:
         Georgia,
@@ -1181,76 +1803,97 @@ nav {
             4.8rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 
-    line-height: 0.98;
-
-    letter-spacing: 0.035em;
+    line-height:
+        0.98;
 }
 
 .updates-subtitle {
-    margin-top: 12px;
+    margin-top:
+        12px;
 
-    color: #a6bfd0;
+    color:
+        #a6bfd0;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.1rem;
+    font-size:
+        1.1rem;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 .updates-ornament {
-    width: 260px;
+    width:
+        260px;
 
     margin:
         22px 0
         24px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 12px;
+    align-items:
+        center;
 
-    color: #d6b56a;
+    gap:
+        12px;
+
+    color:
+        #d6b56a;
 }
 
 .updates-ornament span {
-    flex: 1;
+    flex:
+        1;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         rgba(214, 181, 106, 0.65);
 }
 
 .updates-intro-copy {
-    max-width: 440px;
+    max-width:
+        440px;
 
-    margin-bottom: 28px;
+    margin-bottom:
+        28px;
 
-    color: #d3c7b4;
+    color:
+        #d3c7b4;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
 
 .updates-content {
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
 
-    gap: 22px;
+    flex-direction:
+        column;
+
+    gap:
+        22px;
 }
 
 .featured-update {
-    position: relative;
+    position:
+        relative;
 
     padding:
         38px
@@ -1262,6 +1905,11 @@ nav {
         rgba(214, 181, 106, 0.62);
 
     background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(122, 81, 157, 0.16),
+            rgba(0, 0, 0, 0) 32%
+        ),
         linear-gradient(
             135deg,
             rgba(14, 23, 30, 0.98),
@@ -1270,86 +1918,121 @@ nav {
 }
 
 .featured-corner {
-    position: absolute;
+    position:
+        absolute;
 
-    width: 18px;
-    height: 18px;
+    width:
+        18px;
+
+    height:
+        18px;
 }
 
 .corner-top-left {
-    top: 9px;
-    left: 9px;
+    top:
+        9px;
+
+    left:
+        9px;
 
     border-top:
-        2px solid #d6b56a;
+        2px solid
+        #d6b56a;
 
     border-left:
-        2px solid #d6b56a;
+        2px solid
+        #d6b56a;
 }
 
 .corner-bottom-right {
-    right: 9px;
-    bottom: 9px;
+    right:
+        9px;
+
+    bottom:
+        9px;
 
     border-right:
-        2px solid #d6b56a;
+        2px solid
+        #d6b56a;
 
     border-bottom:
-        2px solid #d6b56a;
+        2px solid
+        #d6b56a;
 }
 
 .featured-update-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display:
+        flex;
 
-    gap: 16px;
+    align-items:
+        center;
 
-    margin-bottom: 18px;
+    justify-content:
+        space-between;
+
+    gap:
+        16px;
+
+    margin-bottom:
+        18px;
 }
 
 .update-type {
-    display: inline-block;
+    display:
+        inline-block;
 
     padding:
         5px
         10px;
 
-    font-size: 0.66rem;
-    font-weight: 700;
+    font-size:
+        0.66rem;
 
-    letter-spacing: 0.12em;
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
 
     border:
-        1px solid currentColor;
+        1px solid
+        currentColor;
 }
 
 .announcement-type {
-    color: #c69bf4;
+    color:
+        #c69bf4;
 }
 
 .content-type {
-    color: #94bc78;
+    color:
+        #94bc78;
 }
 
 .competition-type {
-    color: #a98ce5;
+    color:
+        #a98ce5;
 }
 
 .event-type {
-    color: #d7aa5d;
+    color:
+        #d7aa5d;
 }
 
 .chronicle-marker {
-    color: #7faec4;
+    color:
+        #7faec4;
 
-    font-size: 0.7rem;
+    font-size:
+        0.7rem;
 
-    letter-spacing: 0.14em;
+    letter-spacing:
+        0.14em;
 }
 
 .featured-update h3 {
-    color: #f3dfb2;
+    color:
+        #f3dfb2;
 
     font-family:
         Georgia,
@@ -1363,14 +2046,16 @@ nav {
             2.8rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .featured-divider,
 .card-divider,
 .store-rank-divider,
 .rank-divider {
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -1381,7 +2066,8 @@ nav {
 }
 
 .featured-divider {
-    width: 150px;
+    width:
+        150px;
 
     margin:
         18px 0
@@ -1389,24 +2075,33 @@ nav {
 }
 
 .featured-update > p {
-    color: #cec3b3;
+    color:
+        #cec3b3;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
 
 .featured-footer {
-    margin-top: 24px;
+    margin-top:
+        24px;
 
-    padding-top: 18px;
+    padding-top:
+        18px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
 
     border-top:
         1px solid
@@ -1414,36 +2109,46 @@ nav {
 }
 
 .update-status {
-    color: #84c8e3;
+    color:
+        #84c8e3;
 
-    font-size: 0.7rem;
+    font-size:
+        0.7rem;
 
-    letter-spacing: 0.14em;
+    letter-spacing:
+        0.14em;
 }
 
 .featured-symbol {
-    color: #d6b56a;
+    color:
+        #d6b56a;
 }
 
 .updates-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 18px;
+    gap:
+        18px;
 }
 
 .update-card {
-    min-height: 290px;
+    min-height:
+        290px;
 
     padding:
         28px
         24px
         24px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
+
+    flex-direction:
+        column;
 
     border:
         1px solid
@@ -1458,40 +2163,50 @@ nav {
 }
 
 .update-card-ornament {
-    margin-bottom: 14px;
+    margin-bottom:
+        14px;
 
-    font-size: 1.55rem;
+    font-size:
+        1.55rem;
 }
 
 .content-update .update-card-ornament {
-    color: #92b777;
+    color:
+        #92b777;
 }
 
 .competition-update .update-card-ornament {
-    color: #ac8ce3;
+    color:
+        #ac8ce3;
 }
 
 .community-update .update-card-ornament {
-    color: #d2aa64;
+    color:
+        #d2aa64;
 }
 
 .update-card h3 {
-    margin-top: 14px;
+    margin-top:
+        14px;
 
-    color: #ead8ad;
+    color:
+        #ead8ad;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.35rem;
+    font-size:
+        1.35rem;
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .card-divider {
-    width: 70px;
+    width:
+        70px;
 
     margin:
         12px 0
@@ -1499,28 +2214,36 @@ nav {
 }
 
 .update-card p {
-    flex: 1;
+    flex:
+        1;
 
-    color: #c4b9a8;
+    color:
+        #c4b9a8;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.92rem;
+    font-size:
+        0.92rem;
 }
 
 .update-meta {
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    padding-top: 12px;
+    padding-top:
+        12px;
 
-    color: #839eab;
+    color:
+        #839eab;
 
-    font-size: 0.68rem;
+    font-size:
+        0.68rem;
 
-    letter-spacing: 0.13em;
+    letter-spacing:
+        0.13em;
 
     border-top:
         1px solid
@@ -1528,62 +2251,81 @@ nav {
 }
 
 .updates-footer {
-    grid-column: 1 / -1;
+    grid-column:
+        1 / -1;
 
-    padding-top: 30px;
+    padding-top:
+        30px;
 
     border-top:
         1px solid
         rgba(214, 181, 106, 0.22);
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .updates-footer-ornament {
-    max-width: 860px;
+    max-width:
+        860px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 16px;
+    align-items:
+        center;
+
+    gap:
+        16px;
 }
 
 .updates-footer-ornament span {
-    flex: 1;
+    flex:
+        1;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         rgba(214, 181, 106, 0.55);
 }
 
 .updates-footer-ornament b {
-    color: #d3b66f;
+    color:
+        #d3b66f;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.84rem;
-    font-weight: 500;
+    font-size:
+        0.84rem;
 
-    letter-spacing: 0.12em;
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.12em;
 }
 
 .updates-footer p {
-    margin-top: 10px;
+    margin-top:
+        10px;
 
-    color: #999085;
+    color:
+        #999085;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 
@@ -1592,17 +2334,25 @@ nav {
    ========================================= */
 
 #store {
-    padding: 14px;
-    background: #070b09;
+    padding:
+        14px;
+
+    background:
+        #070b09;
 }
 
 .store-panel {
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
-    max-width: 1500px;
+    width:
+        100%;
 
-    margin: 0 auto;
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
 
     padding:
         58px
@@ -1630,37 +2380,41 @@ nav {
             #050807 65%,
             #0c0c08
         );
-
-    box-shadow:
-        inset 0 0 60px
-        rgba(0, 0, 0, 0.55);
 }
 
 .store-heading {
-    max-width: 900px;
+    max-width:
+        900px;
 
     margin:
         0 auto
         42px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .store-kicker,
 .store-small-label {
-    color: #d6b56a;
+    color:
+        #d6b56a;
 
-    font-size: 0.8rem;
+    font-size:
+        0.8rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 }
 
 .store-heading h2 {
-    margin-top: 8px;
+    margin-top:
+        8px;
 
-    color: #f0cf7e;
+    color:
+        #f0cf7e;
 
     font-family:
         Georgia,
@@ -1674,47 +2428,59 @@ nav {
             5.3rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 
-    line-height: 1;
-
-    letter-spacing: 0.035em;
+    line-height:
+        1;
 }
 
 .store-subtitle {
-    margin-top: 14px;
+    margin-top:
+        14px;
 
-    color: #b9c99f;
+    color:
+        #b9c99f;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.08rem;
+    font-size:
+        1.08rem;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 .store-ornament {
-    width: 320px;
+    width:
+        320px;
 
     margin:
         22px auto
         24px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 13px;
+    align-items:
+        center;
 
-    color: #d6b56a;
+    gap:
+        13px;
+
+    color:
+        #d6b56a;
 }
 
 .store-ornament span {
-    flex: 1;
+    flex:
+        1;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -1734,29 +2500,36 @@ nav {
 }
 
 .store-description {
-    max-width: 760px;
+    max-width:
+        760px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    color: #d2c5ae;
+    color:
+        #d2c5ae;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1rem;
-
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
 
+
+/* STORE PRINCIPLES */
+
 .store-principles {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    margin-bottom: 48px;
+    margin-bottom:
+        48px;
 
     border:
         1px solid
@@ -1767,16 +2540,21 @@ nav {
 }
 
 .store-principle {
-    min-height: 150px;
+    min-height:
+        150px;
 
     padding:
         26px
         24px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 18px;
+    align-items:
+        center;
+
+    gap:
+        18px;
 }
 
 .store-principle:not(:last-child) {
@@ -1786,60 +2564,81 @@ nav {
 }
 
 .principle-icon {
-    flex-shrink: 0;
+    flex-shrink:
+        0;
 
-    width: 48px;
-    height: 48px;
+    width:
+        48px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.65);
 
-    color: #e2bd61;
+    color:
+        #e2bd61;
 
-    font-size: 1.1rem;
+    font-size:
+        1.1rem;
 }
 
 .store-principle h3 {
-    margin-bottom: 4px;
+    margin-bottom:
+        4px;
 
-    color: #dfbd6b;
+    color:
+        #dfbd6b;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.9rem;
-
-    letter-spacing: 0.06em;
+    font-size:
+        0.9rem;
 }
 
 .store-principle p {
-    color: #bdb2a0;
+    color:
+        #bdb2a0;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.86rem;
+    font-size:
+        0.86rem;
 }
 
-.store-rank-showcase {
-    margin-bottom: 34px;
 
-    text-align: center;
+/* RANK SHOWCASE */
+
+.store-rank-showcase {
+    margin-bottom:
+        34px;
+
+    text-align:
+        center;
 }
 
 .store-rank-showcase h3 {
-    margin-top: 6px;
+    margin-top:
+        6px;
 
-    color: #eed49a;
+    color:
+        #eed49a;
 
     font-family:
         Georgia,
@@ -1853,11 +2652,13 @@ nav {
             3.5rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .store-rank-divider {
-    width: 190px;
+    width:
+        190px;
 
     margin:
         18px auto
@@ -1865,13 +2666,15 @@ nav {
 }
 
 .rank-showcase-description {
-    max-width: 700px;
+    max-width:
+        700px;
 
     margin:
         0 auto
         30px;
 
-    color: #c7b9a3;
+    color:
+        #c7b9a3;
 
     font-family:
         Georgia,
@@ -1880,54 +2683,72 @@ nav {
 }
 
 .store-ranks-image {
-    width: 100%;
+    width:
+        100%;
 
     padding:
         22px
         20px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.42);
 
     background:
-        rgba(3, 6, 5, 0.86);
+        #030605;
 }
 
 .store-ranks-image img {
-    width: 100%;
-    height: auto;
+    width:
+        100%;
 
-    display: block;
+    height:
+        auto;
 
-    object-fit: contain;
+    display:
+        block;
+
+    object-fit:
+        contain;
 }
 
+
+/* RANK CARDS */
+
 .rank-card-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(5, 1fr);
 
-    gap: 16px;
+    gap:
+        16px;
 
-    margin-bottom: 42px;
+    margin-bottom:
+        42px;
 }
 
 .rank-card {
-    min-height: 330px;
+    min-height:
+        330px;
 
     padding:
         28px
         20px
         24px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
 
-    text-align: center;
+    flex-direction:
+        column;
+
+    text-align:
+        center;
 
     border:
         1px solid
@@ -1942,16 +2763,19 @@ nav {
 }
 
 .rank-number {
-    margin-bottom: 8px;
+    margin-bottom:
+        8px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.78rem;
+    font-size:
+        0.78rem;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 }
 
 .rank-card h3 {
@@ -1960,54 +2784,68 @@ nav {
         "Times New Roman",
         serif;
 
-    font-size: 1.45rem;
+    font-size:
+        1.45rem;
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .rank-tagline {
-    margin-top: 6px;
+    margin-top:
+        6px;
 
-    color: #c7b9a2;
+    color:
+        #c7b9a2;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 
-    font-size: 0.9rem;
+    font-size:
+        0.9rem;
 }
 
 .rank-divider {
-    width: 70px;
+    width:
+        70px;
 
     margin:
         18px auto;
 }
 
 .rank-card > p:not(.rank-tagline) {
-    flex: 1;
+    flex:
+        1;
 
-    color: #bcb3a4;
+    color:
+        #bcb3a4;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.88rem;
+    font-size:
+        0.88rem;
 }
 
 .rank-classification {
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    padding-top: 13px;
+    padding-top:
+        13px;
 
-    font-size: 0.66rem;
+    font-size:
+        0.66rem;
 
-    letter-spacing: 0.13em;
+    letter-spacing:
+        0.13em;
 
     border-top:
         1px solid
@@ -2017,49 +2855,61 @@ nav {
 .adventurer-rank h3,
 .adventurer-rank .rank-number,
 .adventurer-rank .rank-classification {
-    color: #99bc58;
+    color:
+        #99bc58;
 }
 
 .hero-rank h3,
 .hero-rank .rank-number,
 .hero-rank .rank-classification {
-    color: #66b9e8;
+    color:
+        #66b9e8;
 }
 
 .champion-rank h3,
 .champion-rank .rank-number,
 .champion-rank .rank-classification {
-    color: #ba79d8;
+    color:
+        #ba79d8;
 }
 
 .legend-rank h3,
 .legend-rank .rank-number,
 .legend-rank .rank-classification {
-    color: #e5b33f;
+    color:
+        #e5b33f;
 }
 
 .mythic-rank h3,
 .mythic-rank .rank-number,
 .mythic-rank .rank-classification {
-    color: #e36343;
+    color:
+        #e36343;
 }
 
+
+/* STORE FAIRNESS */
+
 .store-fairness-banner {
-    margin-bottom: 28px;
+    margin-bottom:
+        28px;
 
     padding:
         30px
         34px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         auto
         1fr;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 28px;
+    gap:
+        28px;
 
     border:
         1px solid
@@ -2074,22 +2924,33 @@ nav {
 }
 
 .fairness-symbol {
-    width: 76px;
-    height: 76px;
+    width:
+        76px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.7);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    color: #e1b957;
+    color:
+        #e1b957;
 
-    font-size: 2rem;
+    font-size:
+        2rem;
 }
 
 .store-fairness-banner h3 {
@@ -2097,20 +2958,24 @@ nav {
         4px 0
         7px;
 
-    color: #e6c77f;
+    color:
+        #e6c77f;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.45rem;
+    font-size:
+        1.45rem;
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .store-fairness-banner p:last-child {
-    color: #c6b9a4;
+    color:
+        #c6b9a4;
 
     font-family:
         Georgia,
@@ -2118,14 +2983,19 @@ nav {
         serif;
 }
 
+
+/* STORE WINGS */
+
 .store-wings-notice {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         minmax(320px, 0.85fr)
         minmax(400px, 1.15fr);
 
-    gap: 26px;
+    gap:
+        26px;
 
     padding:
         28px;
@@ -2143,19 +3013,27 @@ nav {
 }
 
 .store-wings-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
 }
 
 .store-wings-copy .store-small-label {
-    color: #82c9eb;
+    color:
+        #82c9eb;
 }
 
 .store-wings-copy h3 {
-    margin-top: 6px;
+    margin-top:
+        6px;
 
-    color: #d7ebf5;
+    color:
+        #d7ebf5;
 
     font-family:
         Georgia,
@@ -2169,11 +3047,13 @@ nav {
             2.7rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 }
 
 .store-wings-copy p:last-child {
-    color: #bdcbd0;
+    color:
+        #bdcbd0;
 
     font-family:
         Georgia,
@@ -2182,9 +3062,11 @@ nav {
 }
 
 .store-wings-image {
-    min-height: 310px;
+    min-height:
+        310px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
     border:
         1px solid
@@ -2192,35 +3074,51 @@ nav {
 }
 
 .store-wings-image img {
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    display: block;
+    height:
+        100%;
 
-    object-fit: cover;
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.45s ease;
 }
 
-.store-footer-message {
-    margin-top: 34px;
 
-    display: grid;
+/* STORE FOOTER */
+
+.store-footer-message {
+    margin-top:
+        34px;
+
+    display:
+        grid;
 
     grid-template-columns:
         1fr
         auto
         1fr;
 
-    align-items: center;
+    align-items:
+        center;
 
     gap:
         12px
         20px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .store-footer-line {
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -2240,29 +3138,35 @@ nav {
 }
 
 .store-footer-message p {
-    color: #d8b968;
+    color:
+        #d8b968;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.95rem;
+    font-size:
+        0.95rem;
 
-    letter-spacing: 0.12em;
+    letter-spacing:
+        0.12em;
 }
 
 .store-footer-message span {
-    grid-column: 1 / -1;
+    grid-column:
+        1 / -1;
 
-    color: #9f9789;
+    color:
+        #9f9789;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 
@@ -2271,15 +3175,22 @@ nav {
    ========================================= */
 
 #support {
-    padding: 14px;
-    background: #070a0d;
+    padding:
+        14px;
+
+    background:
+        #070a0d;
 }
 
 .support-panel {
-    width: 100%;
-    max-width: 1500px;
+    width:
+        100%;
 
-    margin: 0 auto;
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
 
     padding:
         58px
@@ -2302,44 +3213,45 @@ nav {
             #05090c 58%,
             #0b0d0c
         );
-
-    box-shadow:
-        inset 0 0 60px
-        rgba(0, 0, 0, 0.5);
 }
 
-
-/* SUPPORT HEADER */
-
 .support-heading {
-    max-width: 1000px;
+    max-width:
+        1000px;
 
     margin:
         0 auto
         46px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .support-kicker {
-    color: #7fc9e5;
+    color:
+        #7fc9e5;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.85rem;
+    font-size:
+        0.85rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 }
 
 .support-heading h2 {
-    margin-top: 8px;
+    margin-top:
+        8px;
 
-    color: #e8c274;
+    color:
+        #e8c274;
 
     font-family:
         Georgia,
@@ -2353,32 +3265,40 @@ nav {
             5rem
         );
 
-    font-weight: 500;
+    font-weight:
+        500;
 
-    line-height: 1;
-
-    letter-spacing: 0.035em;
+    line-height:
+        1;
 }
 
 .support-ornament {
-    width: 360px;
+    width:
+        360px;
 
     margin:
         24px auto
         24px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 14px;
+    align-items:
+        center;
 
-    color: #d6b56a;
+    gap:
+        14px;
+
+    color:
+        #d6b56a;
 }
 
 .support-ornament span {
-    flex: 1;
+    flex:
+        1;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -2398,18 +3318,19 @@ nav {
 }
 
 .support-heading > p:last-child {
-    max-width: 760px;
+    max-width:
+        760px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    color: #d1c4b2;
+    color:
+        #d1c4b2;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1rem;
 }
 
 
@@ -2428,28 +3349,36 @@ nav {
     background:
         rgba(6, 10, 12, 0.78);
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .support-action-section {
-    margin-top: 28px;
+    margin-top:
+        28px;
 }
 
 .support-small-label {
-    color: #d6b56a;
+    color:
+        #d6b56a;
 
-    font-size: 0.76rem;
+    font-size:
+        0.76rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 }
 
 .meet-staff-section > h3,
 .support-action-section > h3 {
-    margin-top: 7px;
+    margin-top:
+        7px;
 
-    color: #eccb84;
+    color:
+        #eccb84;
 
     font-family:
         Georgia,
@@ -2463,15 +3392,16 @@ nav {
             3.5rem
         );
 
-    font-weight: 500;
-
-    letter-spacing: 0.04em;
+    font-weight:
+        500;
 }
 
 .support-divider {
-    width: 190px;
+    width:
+        190px;
 
-    height: 1px;
+    height:
+        1px;
 
     margin:
         18px auto
@@ -2487,13 +3417,15 @@ nav {
 }
 
 .staff-intro {
-    max-width: 760px;
+    max-width:
+        760px;
 
     margin:
         0 auto
         28px;
 
-    color: #c8bcab;
+    color:
+        #c8bcab;
 
     font-family:
         Georgia,
@@ -2503,7 +3435,8 @@ nav {
 
 .staff-emblems-image,
 .support-actions-image {
-    width: 100%;
+    width:
+        100%;
 
     padding:
         18px;
@@ -2518,37 +3451,49 @@ nav {
 
 .staff-emblems-image img,
 .support-actions-image img {
-    width: 100%;
-    height: auto;
+    width:
+        100%;
 
-    display: block;
+    height:
+        auto;
 
-    object-fit: contain;
+    display:
+        block;
+
+    object-fit:
+        contain;
 }
 
 
-/* STAFF ROLES */
+/* STAFF ROLE CARDS */
 
 .staff-role-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(5, 1fr);
 
-    gap: 14px;
+    gap:
+        14px;
 
-    margin-top: 20px;
+    margin-top:
+        20px;
 }
 
 .staff-role {
-    min-height: 240px;
+    min-height:
+        240px;
 
     padding:
         24px
         18px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
+
+    flex-direction:
+        column;
 
     border:
         1px solid
@@ -2563,97 +3508,116 @@ nav {
 }
 
 .staff-rank-marker {
-    margin-bottom: 8px;
+    margin-bottom:
+        8px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.75rem;
+    font-size:
+        0.75rem;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
 .staff-role h4 {
-    margin-bottom: 12px;
+    margin-bottom:
+        12px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.1rem;
+    font-size:
+        1.1rem;
 
-    font-weight: 500;
-
-    letter-spacing: 0.06em;
+    font-weight:
+        500;
 }
 
 .staff-role p {
-    color: #bcb3a5;
+    color:
+        #bcb3a5;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.88rem;
+    font-size:
+        0.88rem;
 }
 
 .owner-staff h4,
 .owner-staff .staff-rank-marker {
-    color: #e2b859;
+    color:
+        #e2b859;
 }
 
 .admin-staff h4,
 .admin-staff .staff-rank-marker {
-    color: #74bee9;
+    color:
+        #74bee9;
 }
 
 .moderator-staff h4,
 .moderator-staff .staff-rank-marker {
-    color: #98bd5f;
+    color:
+        #98bd5f;
 }
 
 .support-staff h4,
 .support-staff .staff-rank-marker {
-    color: #ba82de;
+    color:
+        #ba82de;
 }
 
 .builder-staff h4,
 .builder-staff .staff-rank-marker {
-    color: #dfb34e;
+    color:
+        #dfb34e;
 }
 
 
 /* SUPPORT ACTIONS */
 
 .support-actions-image {
-    margin-bottom: 20px;
+    margin-bottom:
+        20px;
 }
 
 .support-action-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 18px;
+    gap:
+        18px;
 }
 
 .support-action-card {
-    min-height: 290px;
+    min-height:
+        290px;
 
     padding:
         28px
         24px
         24px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
 
-    text-align: left;
+    flex-direction:
+        column;
+
+    text-align:
+        left;
 
     border:
         1px solid
@@ -2668,16 +3632,19 @@ nav {
 }
 
 .support-card-number {
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.72rem;
+    font-size:
+        0.72rem;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
 .support-action-card h4 {
@@ -2686,17 +3653,19 @@ nav {
         "Times New Roman",
         serif;
 
-    font-size: 1.45rem;
+    font-size:
+        1.45rem;
 
-    font-weight: 500;
-
-    letter-spacing: 0.05em;
+    font-weight:
+        500;
 }
 
 .support-card-divider {
-    width: 80px;
+    width:
+        80px;
 
-    height: 1px;
+    height:
+        1px;
 
     margin:
         15px 0
@@ -2711,26 +3680,33 @@ nav {
 }
 
 .support-action-card p {
-    flex: 1;
+    flex:
+        1;
 
-    color: #bfb6a9;
+    color:
+        #bfb6a9;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.92rem;
+    font-size:
+        0.92rem;
 }
 
 .support-action-status {
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    padding-top: 12px;
+    padding-top:
+        12px;
 
-    font-size: 0.68rem;
+    font-size:
+        0.68rem;
 
-    letter-spacing: 0.13em;
+    letter-spacing:
+        0.13em;
 
     border-top:
         1px solid
@@ -2745,7 +3721,8 @@ nav {
 .application-card h4,
 .application-card .support-card-number,
 .application-card .support-action-status {
-    color: #9ec867;
+    color:
+        #9ec867;
 }
 
 .appeal-card {
@@ -2756,7 +3733,8 @@ nav {
 .appeal-card h4,
 .appeal-card .support-card-number,
 .appeal-card .support-action-status {
-    color: #df705d;
+    color:
+        #df705d;
 }
 
 .discord-card {
@@ -2767,33 +3745,42 @@ nav {
 .discord-card h4,
 .discord-card .support-card-number,
 .discord-card .support-action-status {
-    color: #79bde8;
+    color:
+        #79bde8;
 }
 
 
 /* SUPPORT PRINCIPLES */
 
 .support-principles {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 18px;
+    gap:
+        18px;
 
-    margin-top: 28px;
+    margin-top:
+        28px;
 }
 
 .support-principle {
-    min-height: 130px;
+    min-height:
+        130px;
 
     padding:
         24px;
 
-    display: flex;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 18px;
+    align-items:
+        center;
+
+    gap:
+        18px;
 
     border:
         1px solid
@@ -2804,68 +3791,86 @@ nav {
 }
 
 .support-principle > span {
-    flex-shrink: 0;
+    flex-shrink:
+        0;
 
-    width: 48px;
-    height: 48px;
+    width:
+        48px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.6);
 
-    color: #d8b45c;
+    color:
+        #d8b45c;
 }
 
 .support-principle h4 {
-    color: #dfc07b;
+    color:
+        #dfc07b;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.95rem;
-
-    letter-spacing: 0.07em;
+    font-size:
+        0.95rem;
 }
 
 .support-principle p {
-    color: #b7aea1;
+    color:
+        #b7aea1;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.84rem;
+    font-size:
+        0.84rem;
 }
 
 
 /* SUPPORT FOOTER */
 
 .support-footer {
-    margin-top: 34px;
+    margin-top:
+        34px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         1fr
         auto
         1fr;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 20px;
+    gap:
+        20px;
 
-    text-align: center;
+    text-align:
+        center;
 }
 
 .support-footer > span {
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -2885,50 +3890,496 @@ nav {
 }
 
 .support-footer p {
-    color: #d6b56a;
+    color:
+        #d6b56a;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1rem;
+    font-size:
+        1rem;
 
-    letter-spacing: 0.11em;
+    letter-spacing:
+        0.11em;
 }
 
 .support-footer small {
-    display: block;
+    display:
+        block;
 
-    margin-top: 5px;
+    margin-top:
+        5px;
 
-    color: #8f9da3;
+    color:
+        #8f9da3;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-style: italic;
+    font-style:
+        italic;
 }
 
 
-/* FOOTER */
+/* =========================================
+   SHARED CARD POLISH
+   ========================================= */
 
-footer {
+.species-card,
+.miniboss-card,
+.placement-card,
+.update-card,
+.rank-card,
+.staff-role,
+.support-action-card,
+.support-principle,
+.store-principle,
+.competitive-info-block {
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.species-card:hover,
+.miniboss-card:hover,
+.placement-card:hover,
+.update-card:hover,
+.rank-card:hover,
+.staff-role:hover,
+.support-action-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(214, 181, 106, 0.72);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   FINAL REALM FOOTER
+   ========================================= */
+
+.realm-footer {
+    position:
+        relative;
+
     padding:
-        40px
-        20px;
+        0 14px
+        14px;
 
-    text-align: center;
-
-    background: #06090b;
+    background:
+        #05080a;
 
     border-top:
-        1px solid
-        rgba(214, 181, 106, 0.2);
+        none;
 
-    color: #777777;
+    color:
+        inherit;
+}
+
+.footer-inner {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        65px
+        46px
+        30px;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.55);
+
+    border-top-color:
+        rgba(214, 181, 106, 0.72);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(214, 181, 106, 0.08),
+            rgba(0, 0, 0, 0) 38%
+        ),
+        linear-gradient(
+            to bottom,
+            #080d10,
+            #040709
+        );
+
+    box-shadow:
+        inset 0 20px 50px
+        rgba(0, 0, 0, 0.35);
+}
+
+.footer-inner::before,
+.footer-inner::after {
+    content: "";
+
+    position:
+        absolute;
+
+    width:
+        18px;
+
+    height:
+        18px;
+}
+
+.footer-inner::before {
+    top:
+        9px;
+
+    left:
+        9px;
+
+    border-top:
+        2px solid
+        #d6b56a;
+
+    border-left:
+        2px solid
+        #d6b56a;
+}
+
+.footer-inner::after {
+    right:
+        9px;
+
+    bottom:
+        9px;
+
+    border-right:
+        2px solid
+        #d6b56a;
+
+    border-bottom:
+        2px solid
+        #d6b56a;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    max-width:
+        760px;
+
+    margin:
+        0 auto;
+}
+
+.footer-emblem {
+    width:
+        42px;
+
+    height:
+        42px;
+
+    margin:
+        0 auto
+        16px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    transform:
+        rotate(45deg);
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.72);
+
+    color:
+        #d6b56a;
+
+    font-size:
+        0;
+}
+
+.footer-emblem::before {
+    content:
+        "◆";
+
+    transform:
+        rotate(-45deg);
+
+    font-size:
+        0.65rem;
+}
+
+.footer-brand h2 {
+    color:
+        #e9c573;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            4rem
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        0.12em;
+}
+
+.footer-tagline {
+    margin-top:
+        14px;
+
+    color:
+        #f0dfb7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.15em;
+
+    text-transform:
+        uppercase;
+}
+
+.footer-description {
+    max-width:
+        620px;
+
+    margin:
+        17px auto
+        0;
+
+    color:
+        #9da4a4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        0.92rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* FOOTER DIVIDER */
+
+.footer-divider {
+    width:
+        min(700px, 80%);
+
+    height:
+        1px;
+
+    margin:
+        36px auto
+        28px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.65),
+            rgba(214, 181, 106, 0)
+        );
+}
+
+
+/* FOOTER LINKS */
+
+.footer-small-label {
+    margin-bottom:
+        16px;
+
+    color:
+        #788a92;
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.22em;
+}
+
+.footer-links {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px
+        18px;
+}
+
+.footer-links a {
+    color:
+        #c9b98f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        0.78rem;
+
+    letter-spacing:
+        0.1em;
+
+    text-decoration:
+        none;
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color:
+        #f0cf7c;
+}
+
+.footer-links span {
+    color:
+        rgba(214, 181, 106, 0.48);
+
+    font-size:
+        0.45rem;
+}
+
+
+/* FOOTER COPYRIGHT */
+
+.footer-final-line {
+    margin-top:
+        36px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items:
+        center;
+
+    gap:
+        24px;
+}
+
+.footer-final-line > span {
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.38)
+        );
+}
+
+.footer-final-line > span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.38)
+        );
+}
+
+.footer-copyright p {
+    color:
+        #827c70;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        0.75rem;
+
+    letter-spacing:
+        0.08em;
+}
+
+.footer-copyright small {
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        #525d62;
+
+    font-size:
+        0.58rem;
+
+    letter-spacing:
+        0.18em;
 }
 
 
@@ -2993,34 +4444,61 @@ footer {
 @media (max-width: 1000px) {
 
     header {
-        height: auto;
+        height:
+            auto;
     }
 
     nav {
-        height: auto;
+        height:
+            auto;
 
         padding:
             14px
             20px;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        gap: 10px;
+        gap:
+            10px;
     }
 
     .navigation {
-        height: auto;
+        height:
+            auto;
 
-        flex-wrap: wrap;
+        flex-wrap:
+            wrap;
 
-        justify-content: center;
+        justify-content:
+            center;
     }
 
     .navigation a {
-        height: auto;
+        height:
+            auto;
 
         padding:
             4px 0;
+    }
+
+    .navigation a::after {
+        bottom:
+            -2px;
+    }
+
+    #home,
+    #world,
+    #competitive-season,
+    #updates,
+    #store,
+    #support,
+    #native-species,
+    #forest-minibosses,
+    #forest-island-boss,
+    #latest-updates {
+        scroll-margin-top:
+            145px;
     }
 
     #home {
@@ -3067,7 +4545,8 @@ footer {
     }
 
     .logo {
-        font-size: 1.05rem;
+        font-size:
+            1.05rem;
     }
 
     .navigation {
@@ -3077,11 +4556,13 @@ footer {
     }
 
     .navigation a {
-        font-size: 0.7rem;
+        font-size:
+            0.7rem;
     }
 
     #home {
-        min-height: 100svh;
+        min-height:
+            100svh;
 
         padding:
             155px
@@ -3103,7 +4584,8 @@ footer {
     #updates,
     #store,
     #support {
-        padding: 8px;
+        padding:
+            8px;
     }
 
     .world-panel,
@@ -3120,20 +4602,28 @@ footer {
     .world-copy,
     .boss-copy,
     .updates-intro {
-        align-items: center;
+        align-items:
+            center;
 
-        text-align: center;
+        text-align:
+            center;
     }
 
     .title-divider,
     .boss-divider {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
     }
 
     .updates-ornament {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
     }
 
     .forest-features {
@@ -3144,11 +4634,16 @@ footer {
     .feature-item {
         border-right:
             none !important;
+
+        border-bottom:
+            1px solid
+            rgba(214, 181, 106, 0.16);
     }
 
     .species-image,
     .miniboss-image {
-        height: 300px;
+        height:
+            300px;
     }
 
     .island-boss-section {
@@ -3158,8 +4653,12 @@ footer {
     }
 
     .boss-image {
-        min-height: 300px;
+        min-height:
+            300px;
     }
+
+
+    /* COMPETITIVE */
 
     .season-stats,
     .placement-grid,
@@ -3174,8 +4673,12 @@ footer {
     }
 
     .wings-image {
-        height: 310px;
+        height:
+            310px;
     }
+
+
+    /* UPDATES */
 
     .featured-update {
         padding:
@@ -3185,8 +4688,11 @@ footer {
     }
 
     .featured-update-top {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
     }
 
     .updates-grid {
@@ -3194,15 +4700,22 @@ footer {
             1fr;
     }
 
+    .updates-footer-ornament span {
+        display:
+            none;
+    }
 
-    /* STORE MOBILE */
+
+    /* STORE */
 
     .store-heading h2 {
-        font-size: 2.8rem;
+        font-size:
+            2.8rem;
     }
 
     .store-ornament {
-        width: 220px;
+        width:
+            220px;
     }
 
     .store-principles {
@@ -3213,6 +4726,10 @@ footer {
     .store-principle {
         border-right:
             none !important;
+
+        border-bottom:
+            1px solid
+            rgba(214, 181, 106, 0.18);
     }
 
     .rank-card-grid {
@@ -3221,18 +4738,26 @@ footer {
     }
 
     .mythic-rank {
-        grid-column: auto;
+        grid-column:
+            auto;
+    }
+
+    .rank-card {
+        min-height:
+            auto;
     }
 
     .store-fairness-banner {
         grid-template-columns:
             1fr;
 
-        text-align: center;
+        text-align:
+            center;
     }
 
     .fairness-symbol {
-        margin: 0 auto;
+        margin:
+            0 auto;
     }
 
     .store-wings-notice {
@@ -3242,11 +4767,13 @@ footer {
     }
 
     .store-wings-copy {
-        text-align: center;
+        text-align:
+            center;
     }
 
     .store-wings-image {
-        min-height: 240px;
+        min-height:
+            240px;
     }
 
     .store-footer-message {
@@ -3255,18 +4782,21 @@ footer {
     }
 
     .store-footer-line {
-        display: none;
+        display:
+            none;
     }
 
 
-    /* SUPPORT MOBILE */
+    /* SUPPORT */
 
     .support-heading h2 {
-        font-size: 2.6rem;
+        font-size:
+            2.6rem;
     }
 
     .support-ornament {
-        width: 220px;
+        width:
+            220px;
     }
 
     .meet-staff-section,
@@ -3278,7 +4808,8 @@ footer {
 
     .staff-emblems-image,
     .support-actions-image {
-        padding: 6px;
+        padding:
+            6px;
     }
 
     .staff-role-grid {
@@ -3287,11 +4818,13 @@ footer {
     }
 
     .builder-staff {
-        grid-column: auto;
+        grid-column:
+            auto;
     }
 
     .staff-role {
-        min-height: auto;
+        min-height:
+            auto;
     }
 
     .support-action-grid {
@@ -3300,18 +4833,24 @@ footer {
     }
 
     .support-action-card {
-        min-height: auto;
+        min-height:
+            auto;
 
-        text-align: center;
+        text-align:
+            center;
     }
 
     .support-card-divider {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
     }
 
     .support-principle {
-        text-align: left;
+        text-align:
+            left;
     }
 
     .support-footer {
@@ -3320,7 +4859,85 @@ footer {
     }
 
     .support-footer > span {
-        display: none;
+        display:
+            none;
+    }
+
+
+    /* FINAL FOOTER */
+
+    .realm-footer {
+        padding:
+            0 8px
+            8px;
+    }
+
+    .footer-inner {
+        padding:
+            50px
+            18px
+            26px;
+    }
+
+    .footer-brand h2 {
+        font-size:
+            2.5rem;
+
+        letter-spacing:
+            0.08em;
+    }
+
+    .footer-tagline {
+        font-size:
+            0.82rem;
+
+        letter-spacing:
+            0.11em;
+    }
+
+    .footer-links {
+        flex-direction:
+            column;
+
+        gap:
+            11px;
+    }
+
+    .footer-links span {
+        display:
+            none;
+    }
+
+    .footer-links a {
+        font-size:
+            0.78rem;
+    }
+
+    .footer-final-line {
+        grid-template-columns:
+            1fr;
+
+        margin-top:
+            30px;
+    }
+
+    .footer-final-line > span {
+        display:
+            none;
+    }
+
+
+    /* REMOVE HOVER MOVEMENT ON MOBILE */
+
+    .species-card:hover,
+    .miniboss-card:hover,
+    .placement-card:hover,
+    .update-card:hover,
+    .rank-card:hover,
+    .staff-role:hover,
+    .support-action-card:hover {
+        transform:
+            none;
     }
 
 }
