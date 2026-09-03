@@ -357,7 +357,7 @@ nav {
     padding:
         58px
         55px
-        28px;
+        40px;
 
     border:
         1px solid
@@ -493,7 +493,9 @@ nav {
 }
 
 
-/* TITLE DIVIDER */
+/* =========================================
+   TITLE DIVIDER
+   ========================================= */
 
 .title-divider {
     width: 155px;
@@ -512,7 +514,9 @@ nav {
 }
 
 
-/* WORLD DESCRIPTION */
+/* =========================================
+   WORLD DESCRIPTION
+   ========================================= */
 
 .world-description {
     max-width: 430px;
@@ -615,9 +619,6 @@ nav {
     object-position: center;
 }
 
-
-/* FOREST IMAGE SHADING */
-
 .world-image::after {
     content: "";
 
@@ -654,8 +655,6 @@ nav {
     border-top:
         1px solid
         rgba(214, 181, 106, 0.25);
-
-    scroll-margin-top: 100px;
 }
 
 .feature-item {
@@ -717,11 +716,6 @@ nav {
     line-height: 1;
 }
 
-
-/* =========================================
-   FEATURE TEXT
-   ========================================= */
-
 .feature-item h3 {
     margin-bottom: 10px;
 
@@ -753,6 +747,339 @@ nav {
 
 
 /* =========================================
+   NATIVE SPECIES SECTION
+   ========================================= */
+
+.native-species-section {
+    grid-column:
+        1 / -1;
+
+    padding:
+        50px
+        0
+        10px;
+
+    border-top:
+        1px solid
+        rgba(214, 181, 106, 0.25);
+
+    scroll-margin-top:
+        95px;
+}
+
+
+/* =========================================
+   NATIVE HEADING
+   ========================================= */
+
+.native-heading {
+    max-width: 760px;
+
+    margin:
+        0 auto
+        38px;
+
+    text-align: center;
+}
+
+.native-kicker {
+    margin-bottom: 8px;
+
+    color: #d6b56a;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.24em;
+}
+
+.native-heading h3 {
+    margin: 0;
+
+    color: #f2e6cc;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.2rem,
+            4vw,
+            3.4rem
+        );
+
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+}
+
+.native-divider {
+    width: 180px;
+
+    height: 1px;
+
+    margin:
+        18px auto
+        20px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            #d6b56a,
+            rgba(214, 181, 106, 0)
+        );
+}
+
+.native-heading > p:last-child {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #c9c2b5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   SPECIES GRID
+   ========================================= */
+
+.native-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   SPECIES CARD
+   ========================================= */
+
+.species-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.55);
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(15, 25, 20, 0.98),
+            rgba(8, 14, 12, 0.98)
+        );
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0, 0, 0, 0.35);
+}
+
+.species-card::before,
+.species-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    z-index: 4;
+}
+
+.species-card::before {
+    top: 7px;
+    left: 7px;
+
+    border-top:
+        1px solid #d6b56a;
+
+    border-left:
+        1px solid #d6b56a;
+}
+
+.species-card::after {
+    right: 7px;
+    bottom: 7px;
+
+    border-right:
+        1px solid #d6b56a;
+
+    border-bottom:
+        1px solid #d6b56a;
+}
+
+
+/* =========================================
+   SPECIES IMAGE
+   ========================================= */
+
+.species-image {
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid
+        rgba(214, 181, 106, 0.25);
+}
+
+.species-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.species-card:hover
+.species-image img {
+    transform:
+        scale(1.035);
+}
+
+.species-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 55%,
+            rgba(5, 10, 8, 0.6) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SPECIES CARD CONTENT
+   ========================================= */
+
+.species-card-content {
+    min-height: 180px;
+
+    padding:
+        24px
+        24px
+        26px;
+
+    text-align: center;
+}
+
+.species-symbol {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: #9fbe73;
+
+    font-size: 1.5rem;
+}
+
+.aggressive-symbol {
+    color: #c96c54;
+
+    letter-spacing: 0.1em;
+}
+
+.species-card h4 {
+    margin-bottom: 10px;
+
+    color: #cbdc9a;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.aggressive-card h4 {
+    color: #d57a61;
+}
+
+.species-card p {
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    color: #bbb5aa;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.92rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   NATIVE CLOSING
+   ========================================= */
+
+.native-closing {
+    max-width: 760px;
+
+    margin:
+        34px auto
+        0;
+
+    color: #b9aa81;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.95rem;
+
+    font-style: italic;
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
    OTHER WEBSITE SECTIONS
    ========================================= */
 
@@ -764,15 +1091,13 @@ section:not(#home):not(#world) {
     background: #070b0d;
 }
 
-
-/* BORDER AROUND FUTURE SECTIONS */
-
 .standard-panel {
     width: 100%;
 
     max-width: 1500px;
 
-    min-height: calc(65vh - 28px);
+    min-height:
+        calc(65vh - 28px);
 
     margin: 0 auto;
 
@@ -904,8 +1229,6 @@ footer p {
     }
 
 
-    /* WORLD */
-
     .world-panel {
         grid-template-columns:
             1fr;
@@ -913,7 +1236,7 @@ footer p {
         padding:
             45px
             35px
-            25px;
+            30px;
 
         row-gap: 32px;
     }
@@ -939,6 +1262,16 @@ footer p {
 
     .feature-item:nth-child(even) {
         border-right: none;
+    }
+
+
+    .native-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .species-image {
+        height: 420px;
     }
 
 }
@@ -970,8 +1303,6 @@ footer p {
         font-size: 0.7rem;
     }
 
-
-    /* HERO */
 
     #home {
         min-height: 100svh;
@@ -1017,8 +1348,6 @@ footer p {
     }
 
 
-    /* WORLD */
-
     #world {
         padding: 8px;
     }
@@ -1027,7 +1356,7 @@ footer p {
         padding:
             35px
             20px
-            20px;
+            24px;
 
         row-gap: 28px;
     }
@@ -1070,7 +1399,31 @@ footer p {
     }
 
 
-    /* FUTURE SECTIONS */
+    .native-species-section {
+        padding-top: 40px;
+    }
+
+    .native-heading h3 {
+        font-size: 2.1rem;
+    }
+
+    .native-heading > p:last-child {
+        font-size: 0.95rem;
+    }
+
+    .species-image {
+        height: 300px;
+    }
+
+    .species-card-content {
+        min-height: auto;
+
+        padding:
+            22px
+            18px
+            24px;
+    }
+
 
     section:not(#home):not(#world) {
         padding: 8px;
