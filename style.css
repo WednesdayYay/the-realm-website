@@ -1,6 +1,6 @@
 /* =========================================
    THE REALM
-   VISUAL DEVELOPMENT WEBSITE
+   SINGLE-PAGE VISUAL WEBSITE
    ========================================= */
 
 
@@ -22,7 +22,7 @@ body {
     margin: 0;
 
     background:
-        #080c0e;
+        #060a0c;
 
     color:
         #f2f2f2;
@@ -32,7 +32,8 @@ body {
         Helvetica,
         sans-serif;
 
-    line-height: 1.6;
+    line-height:
+        1.6;
 }
 
 
@@ -52,14 +53,14 @@ header {
     z-index: 1000;
 
     background:
-        rgba(8, 10, 13, 0.93);
+        rgba(8, 10, 13, 0.94);
 
     backdrop-filter:
-        blur(10px);
+        blur(12px);
 
     border-bottom:
         1px solid
-        rgba(214, 181, 106, 0.28);
+        rgba(214, 181, 106, 0.25);
 }
 
 nav {
@@ -80,12 +81,6 @@ nav {
 }
 
 .logo {
-    height: 100%;
-
-    display: flex;
-
-    align-items: center;
-
     color:
         #f0dfb7;
 
@@ -139,15 +134,8 @@ nav {
     font-weight:
         600;
 
-    letter-spacing:
-        0.03em;
-
-    border-bottom:
-        2px solid transparent;
-
     transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
+        color 0.2s ease;
 }
 
 .navigation a::after {
@@ -156,7 +144,7 @@ nav {
     position: absolute;
 
     left: 50%;
-    bottom: 12px;
+    bottom: 13px;
 
     width: 0;
     height: 1px;
@@ -174,19 +162,16 @@ nav {
 .navigation a:hover {
     color:
         #d6b56a;
-
-    border-bottom-color:
-        #d6b56a;
 }
 
 .navigation a:hover::after {
     width:
-        65%;
+        62%;
 }
 
 
 /* =========================================
-   SECTION ANCHORS
+   ANCHORS
    ========================================= */
 
 #home,
@@ -200,7 +185,7 @@ nav {
 #forest-island-boss,
 #latest-updates {
     scroll-margin-top:
-        90px;
+        88px;
 }
 
 
@@ -211,13 +196,8 @@ nav {
 #home {
     position: relative;
 
-    width: 100%;
-
     min-height:
         100vh;
-
-    overflow:
-        hidden;
 
     display: flex;
 
@@ -225,9 +205,12 @@ nav {
     justify-content: center;
 
     padding:
-        calc(72px + 5vh)
+        100px
         40px
-        5vh;
+        50px;
+
+    overflow:
+        hidden;
 
     text-align:
         center;
@@ -235,9 +218,9 @@ nav {
     background:
         linear-gradient(
             to bottom,
-            rgba(5, 7, 10, 0.08) 0%,
-            rgba(5, 7, 10, 0.14) 52%,
-            rgba(5, 7, 10, 0.7) 100%
+            rgba(4, 7, 9, 0.08),
+            rgba(4, 7, 9, 0.15) 50%,
+            rgba(4, 7, 9, 0.72)
         ),
         url("realm-hero.png");
 
@@ -261,15 +244,12 @@ nav {
     background:
         radial-gradient(
             ellipse at center,
-            rgba(0, 0, 0, 0) 30%,
-            rgba(0, 0, 0, 0.3) 100%
+            rgba(0, 0, 0, 0) 35%,
+            rgba(0, 0, 0, 0.25)
         );
 
     pointer-events:
         none;
-
-    z-index:
-        1;
 }
 
 .hero-content {
@@ -279,17 +259,8 @@ nav {
         2;
 
     width: 100%;
-    max-width: 1100px;
-
-    margin:
-        0 auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
+    max-width:
+        1000px;
 }
 
 #home h1 {
@@ -299,8 +270,8 @@ nav {
     font-size:
         clamp(
             4rem,
-            8vw,
-            7.5rem
+            7.2vw,
+            7rem
         );
 
     font-weight:
@@ -319,7 +290,7 @@ nav {
 
 .hero-tagline {
     margin-top:
-        28px;
+        24px;
 
     color:
         #f0dfb7;
@@ -327,8 +298,8 @@ nav {
     font-size:
         clamp(
             1rem,
-            1.5vw,
-            1.35rem
+            1.4vw,
+            1.3rem
         );
 
     font-weight:
@@ -343,25 +314,22 @@ nav {
 
 .hero-description {
     max-width:
-        720px;
+        680px;
 
-    margin-top:
-        22px;
+    margin:
+        18px auto
+        0;
 
     color:
         #f0f0f0;
 
     font-size:
-        clamp(
-            0.95rem,
-            1.2vw,
-            1.1rem
-        );
+        1rem;
 }
 
 
 /* =========================================
-   MAIN SECTION TRANSITIONS
+   SECTION FOUNDATIONS
    ========================================= */
 
 #world,
@@ -371,6 +339,12 @@ nav {
 #support {
     position:
         relative;
+
+    padding:
+        12px;
+
+    background:
+        #060a0c;
 }
 
 #world::before,
@@ -397,49 +371,17 @@ nav {
     background:
         linear-gradient(
             to right,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.65),
-            rgba(214, 181, 106, 0)
+            transparent,
+            rgba(214, 181, 106, 0.6),
+            transparent
         );
-
-    pointer-events:
-        none;
 }
-
-
-/* =========================================
-   SHARED PANEL DEPTH
-   ========================================= */
 
 .world-panel,
 .competitive-panel,
 .updates-panel,
 .store-panel,
 .support-panel {
-    box-shadow:
-        inset 0 0 55px
-        rgba(0, 0, 0, 0.4),
-        0 10px 35px
-        rgba(0, 0, 0, 0.24);
-}
-
-
-/* =========================================
-   WORLD
-   ========================================= */
-
-#world {
-    padding:
-        14px;
-
-    background:
-        #070b0d;
-}
-
-.world-panel {
-    position:
-        relative;
-
     width:
         100%;
 
@@ -449,10 +391,24 @@ nav {
     margin:
         0 auto;
 
+    box-shadow:
+        inset 0 0 50px
+        rgba(0, 0, 0, 0.38);
+}
+
+
+/* =========================================
+   WORLD
+   ========================================= */
+
+.world-panel {
+    position:
+        relative;
+
     padding:
-        58px
-        55px
-        44px;
+        48px
+        52px
+        40px;
 
     display:
         grid;
@@ -462,75 +418,34 @@ nav {
         minmax(500px, 1.8fr);
 
     gap:
-        45px
-        55px;
+        38px
+        50px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.6);
+        rgba(154, 190, 89, 0.42);
 
     background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(66, 100, 38, 0.08),
+            transparent 35%
+        ),
         linear-gradient(
             135deg,
-            rgba(10, 17, 19, 0.98),
-            rgba(5, 10, 12, 0.99)
+            #09100d,
+            #050a0b
         );
 }
 
-.world-panel::before,
-.world-panel::after {
-    content: "";
-
-    position:
-        absolute;
-
-    width:
-        15px;
-
-    height:
-        15px;
-}
-
-.world-panel::before {
-    top:
-        8px;
-
-    left:
-        8px;
-
-    border-top:
-        2px solid #d6b56a;
-
-    border-left:
-        2px solid #d6b56a;
-}
-
-.world-panel::after {
-    right:
-        8px;
-
-    bottom:
-        8px;
-
-    border-right:
-        2px solid #d6b56a;
-
-    border-bottom:
-        2px solid #d6b56a;
-}
-
 .world-copy {
-    display:
-        flex;
+    display: flex;
 
-    flex-direction:
-        column;
+    flex-direction: column;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    align-items:
-        flex-start;
+    align-items: flex-start;
 }
 
 .section-kicker,
@@ -548,12 +463,12 @@ nav {
 
 .section-kicker {
     margin-bottom:
-        16px;
+        14px;
 }
 
 .season-label {
     margin-bottom:
-        5px;
+        4px;
 }
 
 #world h2 {
@@ -568,8 +483,8 @@ nav {
     font-size:
         clamp(
             2.5rem,
-            4vw,
-            4rem
+            3.8vw,
+            3.8rem
         );
 
     font-weight:
@@ -586,26 +501,26 @@ nav {
     background:
         linear-gradient(
             to right,
-            rgba(214, 181, 106, 0),
+            transparent,
             #d6b56a,
-            rgba(214, 181, 106, 0)
+            transparent
         );
 }
 
 .title-divider {
     width:
-        155px;
+        150px;
 
     margin:
-        20px 0;
+        18px 0;
 }
 
 .world-description {
     max-width:
-        430px;
+        420px;
 
     margin-bottom:
-        25px;
+        24px;
 
     color:
         #d0d0d0;
@@ -616,19 +531,16 @@ nav {
         serif;
 }
 
-
-/* BUTTONS */
-
 .world-button,
 .updates-button {
     position:
         relative;
 
     min-height:
-        46px;
+        44px;
 
     padding:
-        0 20px;
+        0 18px;
 
     display:
         inline-flex;
@@ -637,7 +549,7 @@ nav {
         center;
 
     gap:
-        14px;
+        12px;
 
     overflow:
         hidden;
@@ -653,7 +565,7 @@ nav {
         none;
 
     font-size:
-        0.8rem;
+        0.78rem;
 
     font-weight:
         700;
@@ -665,71 +577,22 @@ nav {
         0.2s ease;
 }
 
-.world-button::before,
-.updates-button::before {
-    content: "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    left:
-        -100%;
-
-    width:
-        60%;
-
-    height:
-        100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0),
-            rgba(240, 215, 149, 0.1),
-            rgba(255, 255, 255, 0)
-        );
-
-    transform:
-        skewX(-20deg);
-
-    transition:
-        left 0.5s ease;
-}
-
 .world-button:hover,
 .updates-button:hover {
     background:
-        rgba(214, 181, 106, 0.09);
-
-    border-color:
-        #d6b56a;
-
-    color:
-        #fff2c8;
+        rgba(214, 181, 106, 0.08);
 }
-
-.world-button:hover::before,
-.updates-button:hover::before {
-    left:
-        140%;
-}
-
-
-/* FOREST IMAGE */
 
 .world-image {
     min-height:
-        360px;
+        340px;
 
     overflow:
         hidden;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.28);
+        rgba(154, 190, 89, 0.32);
 }
 
 .world-image img {
@@ -740,25 +603,25 @@ nav {
         100%;
 
     min-height:
-        360px;
-
-    object-fit:
-        cover;
+        340px;
 
     display:
         block;
 
+    object-fit:
+        cover;
+
     transition:
-        transform 0.45s ease;
+        transform 0.4s ease;
 }
 
 .world-image:hover img {
     transform:
-        scale(1.025);
+        scale(1.02);
 }
 
 
-/* WORLD FEATURES */
+/* WORLD FEATURE ROW */
 
 .forest-features {
     grid-column:
@@ -772,13 +635,17 @@ nav {
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.25);
+        rgba(154, 190, 89, 0.25);
+
+    border-bottom:
+        1px solid
+        rgba(154, 190, 89, 0.18);
 }
 
 .feature-item {
     padding:
-        30px
-        22px;
+        26px
+        20px;
 
     text-align:
         center;
@@ -787,19 +654,19 @@ nav {
 .feature-item:not(:last-child) {
     border-right:
         1px solid
-        rgba(214, 181, 106, 0.18);
+        rgba(154, 190, 89, 0.18);
 }
 
 .feature-icon {
     width:
-        52px;
+        48px;
 
     height:
-        52px;
+        48px;
 
     margin:
         0 auto
-        20px;
+        17px;
 
     display:
         flex;
@@ -828,13 +695,13 @@ nav {
 
 .feature-item h3 {
     margin-bottom:
-        10px;
+        8px;
 
     color:
         #eee6d4;
 
     font-size:
-        0.82rem;
+        0.78rem;
 }
 
 .feature-item p {
@@ -847,7 +714,7 @@ nav {
         serif;
 
     font-size:
-        0.88rem;
+        0.86rem;
 }
 
 
@@ -860,20 +727,23 @@ nav {
         1 / -1;
 
     padding-top:
-        52px;
+        44px;
+}
 
+.miniboss-section,
+.island-boss-section {
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.25);
+        rgba(154, 190, 89, 0.19);
 }
 
 .section-heading {
     max-width:
-        780px;
+        760px;
 
     margin:
         0 auto
-        40px;
+        32px;
 
     text-align:
         center;
@@ -891,9 +761,9 @@ nav {
 
     font-size:
         clamp(
-            2.2rem,
-            4vw,
-            3.4rem
+            2.1rem,
+            3.4vw,
+            3.1rem
         );
 
     font-weight:
@@ -902,11 +772,11 @@ nav {
 
 .center-divider {
     width:
-        190px;
+        180px;
 
     margin:
-        18px auto
-        20px;
+        16px auto
+        18px;
 }
 
 .section-heading p:last-child {
@@ -921,7 +791,7 @@ nav {
 
 .section-closing {
     margin-top:
-        34px;
+        28px;
 
     color:
         #b9aa81;
@@ -950,7 +820,7 @@ nav {
         repeat(3, 1fr);
 
     gap:
-        22px;
+        18px;
 }
 
 .species-card,
@@ -960,20 +830,23 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.55);
+        rgba(154, 190, 89, 0.4);
 
     background:
-        rgba(9, 15, 14, 0.98);
+        rgba(8, 14, 12, 0.98);
+
+    transition:
+        0.2s ease;
 }
 
 .species-image {
     height:
-        360px;
+        345px;
 }
 
 .miniboss-image {
     height:
-        390px;
+        365px;
 }
 
 .species-image img,
@@ -991,24 +864,39 @@ nav {
         block;
 
     transition:
-        transform 0.45s ease;
+        transform 0.4s ease;
 }
 
-.species-card:hover .species-image img,
-.miniboss-card:hover .miniboss-image img {
+.species-card:hover,
+.miniboss-card:hover {
     transform:
-        scale(1.025);
+        translateY(-3px);
+
+    border-color:
+        rgba(174, 207, 98, 0.72);
+}
+
+.species-card:hover img,
+.miniboss-card:hover img {
+    transform:
+        scale(1.02);
 }
 
 .species-card-content,
 .miniboss-content {
     padding:
-        24px
-        24px
-        26px;
+        22px
+        22px
+        24px;
 
     text-align:
         center;
+}
+
+.species-symbol,
+.miniboss-icon {
+    color:
+        #9fbe73;
 }
 
 .species-symbol {
@@ -1016,13 +904,10 @@ nav {
         inline-block;
 
     margin-bottom:
-        9px;
-
-    color:
-        #9fbe73;
+        8px;
 
     font-size:
-        1.5rem;
+        1.4rem;
 }
 
 .aggressive-symbol,
@@ -1034,7 +919,7 @@ nav {
 .species-card h4,
 .miniboss-content h4 {
     margin-bottom:
-        10px;
+        8px;
 
     color:
         #cbdc9a;
@@ -1056,32 +941,35 @@ nav {
         serif;
 
     font-size:
-        0.92rem;
+        0.9rem;
 }
 
 
-/* ISLAND BOSS */
+/* BOSS */
 
 .island-boss-section {
     margin-top:
-        32px;
+        26px;
 
     padding:
-        34px;
+        30px;
 
     display:
         grid;
 
     grid-template-columns:
-        minmax(300px, 0.8fr)
-        minmax(500px, 1.6fr);
+        minmax(300px, 0.82fr)
+        minmax(500px, 1.55fr);
 
     gap:
-        30px;
+        28px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.5);
+        rgba(154, 190, 89, 0.42);
+
+    background:
+        rgba(7, 13, 10, 0.62);
 }
 
 .boss-copy {
@@ -1100,11 +988,11 @@ nav {
 
 .boss-divider {
     width:
-        180px;
+        170px;
 
     margin:
-        18px 0
-        24px;
+        17px 0
+        20px;
 }
 
 .boss-description {
@@ -1119,7 +1007,7 @@ nav {
 
 .boss-teaser {
     margin-top:
-        22px;
+        18px;
 
     color:
         #9eb46d;
@@ -1135,7 +1023,7 @@ nav {
 
 .boss-image {
     min-height:
-        520px;
+        460px;
 
     overflow:
         hidden;
@@ -1148,19 +1036,11 @@ nav {
     height:
         100%;
 
-    object-fit:
-        cover;
-
     display:
         block;
 
-    transition:
-        transform 0.45s ease;
-}
-
-.island-boss-section:hover .boss-image img {
-    transform:
-        scale(1.025);
+    object-fit:
+        cover;
 }
 
 .boss-footer {
@@ -1168,14 +1048,14 @@ nav {
         1 / -1;
 
     padding-top:
-        28px;
+        24px;
 
     text-align:
         center;
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.22);
+        rgba(154, 190, 89, 0.2);
 }
 
 .boss-footer p {
@@ -1188,7 +1068,7 @@ nav {
         serif;
 
     font-size:
-        1.4rem;
+        1.25rem;
 
     letter-spacing:
         0.18em;
@@ -1204,52 +1084,35 @@ nav {
    COMPETITIVE SEASON
    ========================================= */
 
-#competitive-season {
-    padding:
-        14px;
-
-    background:
-        #07090d;
-}
-
 .competitive-panel {
-    width:
-        100%;
-
-    max-width:
-        1500px;
-
-    margin:
-        0 auto;
-
     padding:
-        48px
-        40px
-        28px;
+        42px
+        36px
+        26px;
 
     display:
         grid;
 
     grid-template-columns:
-        minmax(500px, 1.05fr)
-        minmax(460px, 0.95fr);
+        minmax(540px, 1.12fr)
+        minmax(390px, 0.88fr);
 
     gap:
-        34px;
+        28px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.56);
+        rgba(167, 113, 220, 0.44);
 
     background:
         radial-gradient(
-            circle at 70% 40%,
-            rgba(100, 65, 160, 0.08),
-            rgba(0, 0, 0, 0) 42%
+            circle at 75% 35%,
+            rgba(120, 70, 175, 0.13),
+            transparent 40%
         ),
         linear-gradient(
             135deg,
-            #0b1015,
+            #0a0d13,
             #06090d
         );
 }
@@ -1262,7 +1125,7 @@ nav {
         column;
 
     gap:
-        36px;
+        28px;
 }
 
 .competitive-heading {
@@ -1278,7 +1141,7 @@ nav {
         700;
 
     letter-spacing:
-        0.22em;
+        0.2em;
 
     text-align:
         center;
@@ -1298,24 +1161,33 @@ nav {
 
     font-size:
         clamp(
-            2.8rem,
-            5vw,
-            4.8rem
+            2.7rem,
+            4vw,
+            4.15rem
         );
 
     font-weight:
         500;
+
+    line-height:
+        1.08;
 }
 
 .competitive-divider {
     width:
-        220px;
+        210px;
 
     margin:
-        20px auto;
+        18px auto;
 }
 
 .competitive-heading > p:last-child {
+    max-width:
+        690px;
+
+    margin:
+        0 auto;
+
     color:
         #d0c5b1;
 
@@ -1326,7 +1198,7 @@ nav {
 }
 
 
-/* SEASON STATS */
+/* COMPETITIVE STATS */
 
 .season-stats {
     display:
@@ -1337,19 +1209,19 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.5);
+        rgba(167, 113, 220, 0.32);
 
     background:
-        rgba(9, 13, 19, 0.76);
+        rgba(9, 13, 19, 0.78);
 }
 
 .season-stat {
     min-height:
-        150px;
+        135px;
 
     padding:
-        22px
-        14px;
+        18px
+        10px;
 
     display:
         flex;
@@ -1370,18 +1242,18 @@ nav {
 .season-stat:not(:last-child) {
     border-right:
         1px solid
-        rgba(214, 181, 106, 0.18);
+        rgba(167, 113, 220, 0.17);
 }
 
 .season-stat-icon {
     margin-bottom:
-        8px;
+        7px;
 
     color:
         #b78bf2;
 
     font-size:
-        1.45rem;
+        1.3rem;
 }
 
 .season-stat strong {
@@ -1394,25 +1266,25 @@ nav {
         serif;
 
     font-size:
-        1.08rem;
+        1rem;
 }
 
 .season-stat small {
     margin-top:
-        4px;
+        3px;
 
     color:
         #bcb2a3;
 
     font-size:
-        0.67rem;
+        0.64rem;
 
     letter-spacing:
         0.08em;
 }
 
 
-/* PLACEMENT */
+/* PLACEMENTS */
 
 .placement-heading {
     text-align:
@@ -1422,7 +1294,7 @@ nav {
 .placement-heading p:last-child {
     margin:
         8px auto
-        24px;
+        20px;
 
     color:
         #c7bdac;
@@ -1441,26 +1313,34 @@ nav {
         repeat(3, 1fr);
 
     gap:
-        16px;
+        14px;
 }
 
 .placement-card {
     min-height:
-        180px;
+        155px;
 
     padding:
-        26px
-        18px;
+        22px
+        16px;
 
     text-align:
         center;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.44);
+        rgba(167, 113, 220, 0.33);
 
     background:
-        rgba(11, 15, 20, 0.84);
+        rgba(11, 15, 20, 0.85);
+
+    transition:
+        0.2s ease;
+}
+
+.placement-card:hover {
+    transform:
+        translateY(-3px);
 }
 
 .placement-symbol {
@@ -1468,15 +1348,15 @@ nav {
         block;
 
     margin-bottom:
-        10px;
+        8px;
 
     font-size:
-        2rem;
+        1.7rem;
 }
 
 .placement-card h3 {
     margin-bottom:
-        8px;
+        6px;
 
     font-family:
         Georgia,
@@ -1494,7 +1374,7 @@ nav {
         serif;
 
     font-size:
-        0.86rem;
+        0.84rem;
 }
 
 .diamond-placement h3,
@@ -1517,7 +1397,7 @@ nav {
 
 .placement-note {
     margin-top:
-        18px;
+        15px;
 
     color:
         #ae9a68;
@@ -1531,19 +1411,19 @@ nav {
 
 .wings-panel {
     padding:
-        30px
-        30px
-        24px;
+        26px
+        26px
+        22px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.58);
+        rgba(167, 113, 220, 0.46);
 
     background:
         linear-gradient(
             to bottom,
-            rgba(10, 13, 20, 0.92),
-            rgba(5, 7, 11, 0.98)
+            rgba(12, 13, 21, 0.95),
+            rgba(6, 7, 11, 0.98)
         );
 
     text-align:
@@ -1561,9 +1441,9 @@ nav {
 
     font-size:
         clamp(
-            2.5rem,
-            4vw,
-            4rem
+            2.2rem,
+            3.2vw,
+            3.45rem
         );
 
     font-weight:
@@ -1578,14 +1458,17 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
+
+    font-size:
+        0.94rem;
 }
 
 .wings-image {
     height:
-        520px;
+        430px;
 
     margin-top:
-        24px;
+        20px;
 
     overflow:
         hidden;
@@ -1598,14 +1481,11 @@ nav {
     height:
         100%;
 
-    object-fit:
-        cover;
-
     display:
         block;
 
-    transition:
-        transform 0.45s ease;
+    object-fit:
+        cover;
 }
 
 .wing-labels {
@@ -1616,7 +1496,7 @@ nav {
         repeat(3, 1fr);
 
     margin-top:
-        16px;
+        14px;
 }
 
 .diamond-label {
@@ -1648,16 +1528,16 @@ nav {
         repeat(2, 1fr);
 
     gap:
-        18px;
+        16px;
 }
 
 .competitive-info-block {
     min-height:
-        120px;
+        104px;
 
     padding:
-        24px
-        28px;
+        20px
+        24px;
 
     display:
         flex;
@@ -1666,11 +1546,11 @@ nav {
         center;
 
     gap:
-        22px;
+        18px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.34);
+        rgba(167, 113, 220, 0.25);
 
     background:
         rgba(8, 12, 17, 0.88);
@@ -1681,7 +1561,7 @@ nav {
         #b68cf0;
 
     font-size:
-        2rem;
+        1.8rem;
 }
 
 .competitive-info-block h4 {
@@ -1696,58 +1576,39 @@ nav {
 
 
 /* =========================================
-   UPDATES — REALM CHRONICLE
+   UPDATES
    ========================================= */
 
-#updates {
-    padding:
-        14px;
-
-    background:
-        #060b0f;
-}
-
 .updates-panel {
-    width:
-        100%;
-
-    max-width:
-        1500px;
-
-    margin:
-        0 auto;
-
     padding:
-        56px
-        46px
-        34px;
+        44px
+        40px
+        30px;
 
     display:
         grid;
 
     grid-template-columns:
-        minmax(300px, 0.7fr)
-        minmax(600px, 1.3fr);
+        minmax(300px, 0.62fr)
+        minmax(650px, 1.38fr);
 
     gap:
-        38px
-        42px;
+        34px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.58);
+        rgba(74, 156, 190, 0.4);
 
     background:
         radial-gradient(
             circle at 78% 35%,
-            rgba(40, 91, 120, 0.12),
-            rgba(0, 0, 0, 0) 35%
+            rgba(40, 91, 120, 0.16),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
-            #091218,
-            #050a0d 60%,
-            #071014
+            #081117,
+            #050a0d
         );
 }
 
@@ -1775,18 +1636,18 @@ nav {
         serif;
 
     font-size:
-        0.85rem;
+        0.8rem;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.22em;
+        0.21em;
 }
 
 .updates-intro h2 {
     margin-top:
-        8px;
+        7px;
 
     color:
         #f2d89a;
@@ -1798,21 +1659,21 @@ nav {
 
     font-size:
         clamp(
-            3rem,
-            5vw,
-            4.8rem
+            2.7rem,
+            4.2vw,
+            4rem
         );
 
     font-weight:
         500;
 
     line-height:
-        0.98;
+        1;
 }
 
 .updates-subtitle {
     margin-top:
-        12px;
+        10px;
 
     color:
         #a6bfd0;
@@ -1822,20 +1683,17 @@ nav {
         "Times New Roman",
         serif;
 
-    font-size:
-        1.1rem;
-
     font-style:
         italic;
 }
 
 .updates-ornament {
     width:
-        260px;
+        230px;
 
     margin:
-        22px 0
-        24px;
+        18px 0
+        20px;
 
     display:
         flex;
@@ -1844,7 +1702,7 @@ nav {
         center;
 
     gap:
-        12px;
+        10px;
 
     color:
         #d6b56a;
@@ -1858,15 +1716,15 @@ nav {
         1px;
 
     background:
-        rgba(214, 181, 106, 0.65);
+        rgba(214, 181, 106, 0.55);
 }
 
 .updates-intro-copy {
     max-width:
-        440px;
+        420px;
 
     margin-bottom:
-        28px;
+        22px;
 
     color:
         #d3c7b4;
@@ -1877,7 +1735,7 @@ nav {
         serif;
 
     line-height:
-        1.75;
+        1.7;
 }
 
 .updates-content {
@@ -1888,7 +1746,7 @@ nav {
         column;
 
     gap:
-        22px;
+        16px;
 }
 
 .featured-update {
@@ -1896,68 +1754,21 @@ nav {
         relative;
 
     padding:
-        38px
-        38px
-        32px;
+        30px
+        30px
+        26px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.62);
+        rgba(74, 156, 190, 0.4);
 
     background:
         radial-gradient(
             circle at 90% 10%,
-            rgba(122, 81, 157, 0.16),
-            rgba(0, 0, 0, 0) 32%
+            rgba(122, 81, 157, 0.14),
+            transparent 32%
         ),
-        linear-gradient(
-            135deg,
-            rgba(14, 23, 30, 0.98),
-            rgba(7, 12, 16, 0.98)
-        );
-}
-
-.featured-corner {
-    position:
-        absolute;
-
-    width:
-        18px;
-
-    height:
-        18px;
-}
-
-.corner-top-left {
-    top:
-        9px;
-
-    left:
-        9px;
-
-    border-top:
-        2px solid
-        #d6b56a;
-
-    border-left:
-        2px solid
-        #d6b56a;
-}
-
-.corner-bottom-right {
-    right:
-        9px;
-
-    bottom:
-        9px;
-
-    border-right:
-        2px solid
-        #d6b56a;
-
-    border-bottom:
-        2px solid
-        #d6b56a;
+        rgba(10, 17, 23, 0.96);
 }
 
 .featured-update-top {
@@ -1971,10 +1782,10 @@ nav {
         space-between;
 
     gap:
-        16px;
+        14px;
 
     margin-bottom:
-        18px;
+        16px;
 }
 
 .update-type {
@@ -1986,7 +1797,7 @@ nav {
         10px;
 
     font-size:
-        0.66rem;
+        0.64rem;
 
     font-weight:
         700;
@@ -2024,10 +1835,10 @@ nav {
         #7faec4;
 
     font-size:
-        0.7rem;
+        0.68rem;
 
     letter-spacing:
-        0.14em;
+        0.13em;
 }
 
 .featured-update h3 {
@@ -2041,9 +1852,9 @@ nav {
 
     font-size:
         clamp(
-            2rem,
-            3vw,
-            2.8rem
+            1.8rem,
+            2.8vw,
+            2.5rem
         );
 
     font-weight:
@@ -2061,17 +1872,17 @@ nav {
         linear-gradient(
             to right,
             #d6b56a,
-            rgba(214, 181, 106, 0)
+            transparent
         );
 }
 
 .featured-divider {
     width:
-        150px;
+        140px;
 
     margin:
-        18px 0
-        20px;
+        16px 0
+        18px;
 }
 
 .featured-update > p {
@@ -2084,28 +1895,25 @@ nav {
         serif;
 
     line-height:
-        1.75;
+        1.7;
 }
 
 .featured-footer {
     margin-top:
-        24px;
+        20px;
 
     padding-top:
-        18px;
+        15px;
 
     display:
         flex;
-
-    align-items:
-        center;
 
     justify-content:
         space-between;
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.18);
+        rgba(74, 156, 190, 0.18);
 }
 
 .update-status {
@@ -2113,15 +1921,10 @@ nav {
         #84c8e3;
 
     font-size:
-        0.7rem;
+        0.68rem;
 
     letter-spacing:
-        0.14em;
-}
-
-.featured-symbol {
-    color:
-        #d6b56a;
+        0.13em;
 }
 
 .updates-grid {
@@ -2132,17 +1935,16 @@ nav {
         repeat(3, 1fr);
 
     gap:
-        18px;
+        14px;
 }
 
 .update-card {
     min-height:
-        290px;
+        260px;
 
     padding:
-        28px
         24px
-        24px;
+        20px;
 
     display:
         flex;
@@ -2152,22 +1954,18 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.32);
+        rgba(74, 156, 190, 0.24);
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(9, 17, 22, 0.98),
-            rgba(5, 11, 15, 0.98)
-        );
+        rgba(7, 14, 18, 0.95);
 }
 
 .update-card-ornament {
     margin-bottom:
-        14px;
+        11px;
 
     font-size:
-        1.55rem;
+        1.4rem;
 }
 
 .content-update .update-card-ornament {
@@ -2187,7 +1985,7 @@ nav {
 
 .update-card h3 {
     margin-top:
-        14px;
+        12px;
 
     color:
         #ead8ad;
@@ -2198,19 +1996,16 @@ nav {
         serif;
 
     font-size:
-        1.35rem;
-
-    font-weight:
-        500;
+        1.25rem;
 }
 
 .card-divider {
     width:
-        70px;
+        64px;
 
     margin:
-        12px 0
-        14px;
+        10px 0
+        12px;
 }
 
 .update-card p {
@@ -2226,28 +2021,28 @@ nav {
         serif;
 
     font-size:
-        0.92rem;
+        0.88rem;
 }
 
 .update-meta {
     margin-top:
-        20px;
+        16px;
 
     padding-top:
-        12px;
+        10px;
 
     color:
         #839eab;
 
     font-size:
-        0.68rem;
+        0.65rem;
 
     letter-spacing:
-        0.13em;
+        0.12em;
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.12);
+        rgba(74, 156, 190, 0.14);
 }
 
 .updates-footer {
@@ -2255,11 +2050,11 @@ nav {
         1 / -1;
 
     padding-top:
-        30px;
+        22px;
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.22);
+        rgba(74, 156, 190, 0.2);
 
     text-align:
         center;
@@ -2267,7 +2062,7 @@ nav {
 
 .updates-footer-ornament {
     max-width:
-        860px;
+        820px;
 
     margin:
         0 auto;
@@ -2279,7 +2074,7 @@ nav {
         center;
 
     gap:
-        16px;
+        14px;
 }
 
 .updates-footer-ornament span {
@@ -2290,7 +2085,7 @@ nav {
         1px;
 
     background:
-        rgba(214, 181, 106, 0.55);
+        rgba(214, 181, 106, 0.46);
 }
 
 .updates-footer-ornament b {
@@ -2303,7 +2098,7 @@ nav {
         serif;
 
     font-size:
-        0.84rem;
+        0.8rem;
 
     font-weight:
         500;
@@ -2314,7 +2109,7 @@ nav {
 
 .updates-footer p {
     margin-top:
-        10px;
+        8px;
 
     color:
         #999085;
@@ -2333,62 +2128,36 @@ nav {
    STORE
    ========================================= */
 
-#store {
-    padding:
-        14px;
-
-    background:
-        #070b09;
-}
-
 .store-panel {
-    position:
-        relative;
-
-    width:
-        100%;
-
-    max-width:
-        1500px;
-
-    margin:
-        0 auto;
-
     padding:
-        58px
         46px
-        38px;
+        40px
+        32px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.62);
+        rgba(214, 181, 106, 0.48);
 
     background:
         radial-gradient(
-            circle at 50% 30%,
-            rgba(87, 71, 28, 0.12),
-            rgba(0, 0, 0, 0) 35%
-        ),
-        radial-gradient(
-            circle at 12% 60%,
-            rgba(25, 83, 48, 0.1),
-            rgba(0, 0, 0, 0) 30%
+            circle at 50% 25%,
+            rgba(127, 92, 25, 0.11),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
             #09100d,
-            #050807 65%,
-            #0c0c08
+            #050807
         );
 }
 
 .store-heading {
     max-width:
-        900px;
+        850px;
 
     margin:
         0 auto
-        42px;
+        34px;
 
     text-align:
         center;
@@ -2400,18 +2169,18 @@ nav {
         #d6b56a;
 
     font-size:
-        0.8rem;
+        0.78rem;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.22em;
+        0.2em;
 }
 
 .store-heading h2 {
     margin-top:
-        8px;
+        7px;
 
     color:
         #f0cf7e;
@@ -2423,9 +2192,9 @@ nav {
 
     font-size:
         clamp(
-            3rem,
-            6vw,
-            5.3rem
+            2.8rem,
+            4.8vw,
+            4.45rem
         );
 
     font-weight:
@@ -2437,7 +2206,7 @@ nav {
 
 .store-subtitle {
     margin-top:
-        14px;
+        12px;
 
     color:
         #b9c99f;
@@ -2447,20 +2216,17 @@ nav {
         "Times New Roman",
         serif;
 
-    font-size:
-        1.08rem;
-
     font-style:
         italic;
 }
 
 .store-ornament {
     width:
-        320px;
+        290px;
 
     margin:
-        22px auto
-        24px;
+        19px auto
+        20px;
 
     display:
         flex;
@@ -2469,7 +2235,7 @@ nav {
         center;
 
     gap:
-        13px;
+        12px;
 
     color:
         #d6b56a;
@@ -2483,25 +2249,12 @@ nav {
         1px;
 
     background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            #d6b56a
-        );
-}
-
-.store-ornament span:last-child {
-    background:
-        linear-gradient(
-            to left,
-            rgba(214, 181, 106, 0),
-            #d6b56a
-        );
+        rgba(214, 181, 106, 0.55);
 }
 
 .store-description {
     max-width:
-        760px;
+        720px;
 
     margin:
         0 auto;
@@ -2515,7 +2268,7 @@ nav {
         serif;
 
     line-height:
-        1.75;
+        1.7;
 }
 
 
@@ -2529,23 +2282,19 @@ nav {
         repeat(4, 1fr);
 
     margin-bottom:
-        48px;
+        38px;
 
     border:
         1px solid
         rgba(214, 181, 106, 0.32);
-
-    background:
-        rgba(8, 12, 10, 0.72);
 }
 
 .store-principle {
     min-height:
-        150px;
+        130px;
 
     padding:
-        26px
-        24px;
+        22px;
 
     display:
         flex;
@@ -2554,7 +2303,7 @@ nav {
         center;
 
     gap:
-        18px;
+        16px;
 }
 
 .store-principle:not(:last-child) {
@@ -2568,10 +2317,10 @@ nav {
         0;
 
     width:
-        48px;
+        44px;
 
     height:
-        48px;
+        44px;
 
     display:
         flex;
@@ -2584,18 +2333,15 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.65);
+        rgba(214, 181, 106, 0.6);
 
     color:
         #e2bd61;
-
-    font-size:
-        1.1rem;
 }
 
 .store-principle h3 {
     margin-bottom:
-        4px;
+        3px;
 
     color:
         #dfbd6b;
@@ -2606,7 +2352,7 @@ nav {
         serif;
 
     font-size:
-        0.9rem;
+        0.86rem;
 }
 
 .store-principle p {
@@ -2619,15 +2365,15 @@ nav {
         serif;
 
     font-size:
-        0.86rem;
+        0.82rem;
 }
 
 
-/* RANK SHOWCASE */
+/* STORE RANK SHOWCASE */
 
 .store-rank-showcase {
     margin-bottom:
-        34px;
+        28px;
 
     text-align:
         center;
@@ -2647,9 +2393,9 @@ nav {
 
     font-size:
         clamp(
-            2.3rem,
-            4vw,
-            3.5rem
+            2.1rem,
+            3.6vw,
+            3.15rem
         );
 
     font-weight:
@@ -2658,20 +2404,19 @@ nav {
 
 .store-rank-divider {
     width:
-        190px;
+        180px;
 
     margin:
-        18px auto
-        18px;
+        16px auto;
 }
 
 .rank-showcase-description {
     max-width:
-        700px;
+        670px;
 
     margin:
         0 auto
-        30px;
+        24px;
 
     color:
         #c7b9a3;
@@ -2687,15 +2432,14 @@ nav {
         100%;
 
     padding:
-        22px
-        20px;
+        16px;
 
     overflow:
         hidden;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.42);
+        rgba(214, 181, 106, 0.35);
 
     background:
         #030605;
@@ -2705,18 +2449,12 @@ nav {
     width:
         100%;
 
-    height:
-        auto;
-
     display:
         block;
-
-    object-fit:
-        contain;
 }
 
 
-/* RANK CARDS */
+/* STORE RANK CARDS */
 
 .rank-card-grid {
     display:
@@ -2726,20 +2464,20 @@ nav {
         repeat(5, 1fr);
 
     gap:
-        16px;
+        14px;
 
     margin-bottom:
-        42px;
+        34px;
 }
 
 .rank-card {
     min-height:
-        330px;
+        295px;
 
     padding:
-        28px
-        20px
-        24px;
+        24px
+        18px
+        20px;
 
     display:
         flex;
@@ -2752,19 +2490,26 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.34);
+        rgba(214, 181, 106, 0.32);
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(11, 15, 12, 0.96),
-            rgba(5, 8, 7, 0.98)
-        );
+        rgba(7, 11, 8, 0.96);
+
+    transition:
+        0.2s ease;
+}
+
+.rank-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(214, 181, 106, 0.62);
 }
 
 .rank-number {
     margin-bottom:
-        8px;
+        6px;
 
     font-family:
         Georgia,
@@ -2772,10 +2517,10 @@ nav {
         serif;
 
     font-size:
-        0.78rem;
+        0.75rem;
 
     letter-spacing:
-        0.2em;
+        0.18em;
 }
 
 .rank-card h3 {
@@ -2785,15 +2530,12 @@ nav {
         serif;
 
     font-size:
-        1.45rem;
-
-    font-weight:
-        500;
+        1.32rem;
 }
 
 .rank-tagline {
     margin-top:
-        6px;
+        5px;
 
     color:
         #c7b9a2;
@@ -2807,15 +2549,15 @@ nav {
         italic;
 
     font-size:
-        0.9rem;
+        0.86rem;
 }
 
 .rank-divider {
     width:
-        70px;
+        64px;
 
     margin:
-        18px auto;
+        15px auto;
 }
 
 .rank-card > p:not(.rank-tagline) {
@@ -2831,21 +2573,21 @@ nav {
         serif;
 
     font-size:
-        0.88rem;
+        0.84rem;
 }
 
 .rank-classification {
     margin-top:
-        20px;
+        16px;
 
     padding-top:
-        13px;
+        10px;
 
     font-size:
-        0.66rem;
+        0.62rem;
 
     letter-spacing:
-        0.13em;
+        0.12em;
 
     border-top:
         1px solid
@@ -2888,15 +2630,15 @@ nav {
 }
 
 
-/* STORE FAIRNESS */
+/* FAIRNESS */
 
 .store-fairness-banner {
     margin-bottom:
-        28px;
+        24px;
 
     padding:
-        30px
-        34px;
+        26px
+        30px;
 
     display:
         grid;
@@ -2909,26 +2651,22 @@ nav {
         center;
 
     gap:
-        28px;
+        24px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.5);
+        rgba(214, 181, 106, 0.45);
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(29, 22, 8, 0.38),
-            rgba(7, 9, 7, 0.95)
-        );
+        rgba(20, 15, 6, 0.24);
 }
 
 .fairness-symbol {
     width:
-        76px;
+        68px;
 
     height:
-        76px;
+        68px;
 
     display:
         flex;
@@ -2941,7 +2679,7 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.7);
+        rgba(214, 181, 106, 0.68);
 
     border-radius:
         50%;
@@ -2950,13 +2688,13 @@ nav {
         #e1b957;
 
     font-size:
-        2rem;
+        1.7rem;
 }
 
 .store-fairness-banner h3 {
     margin:
-        4px 0
-        7px;
+        3px 0
+        6px;
 
     color:
         #e6c77f;
@@ -2967,7 +2705,7 @@ nav {
         serif;
 
     font-size:
-        1.45rem;
+        1.35rem;
 
     font-weight:
         500;
@@ -2991,18 +2729,18 @@ nav {
         grid;
 
     grid-template-columns:
-        minmax(320px, 0.85fr)
-        minmax(400px, 1.15fr);
+        minmax(320px, 0.82fr)
+        minmax(430px, 1.18fr);
 
     gap:
-        26px;
+        24px;
 
     padding:
-        28px;
+        24px;
 
     border:
         1px solid
-        rgba(102, 185, 232, 0.46);
+        rgba(102, 185, 232, 0.42);
 
     background:
         linear-gradient(
@@ -3030,7 +2768,7 @@ nav {
 
 .store-wings-copy h3 {
     margin-top:
-        6px;
+        5px;
 
     color:
         #d7ebf5;
@@ -3042,9 +2780,9 @@ nav {
 
     font-size:
         clamp(
-            1.8rem,
-            3vw,
-            2.7rem
+            1.7rem,
+            2.7vw,
+            2.45rem
         );
 
     font-weight:
@@ -3063,7 +2801,7 @@ nav {
 
 .store-wings-image {
     min-height:
-        310px;
+        285px;
 
     overflow:
         hidden;
@@ -3085,17 +2823,11 @@ nav {
 
     object-fit:
         cover;
-
-    transition:
-        transform 0.45s ease;
 }
-
-
-/* STORE FOOTER */
 
 .store-footer-message {
     margin-top:
-        34px;
+        26px;
 
     display:
         grid;
@@ -3110,7 +2842,7 @@ nav {
 
     gap:
         12px
-        20px;
+        18px;
 
     text-align:
         center;
@@ -3121,20 +2853,7 @@ nav {
         1px;
 
     background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            #d6b56a
-        );
-}
-
-.store-footer-line:last-child {
-    background:
-        linear-gradient(
-            to left,
-            rgba(214, 181, 106, 0),
-            #d6b56a
-        );
+        rgba(214, 181, 106, 0.5);
 }
 
 .store-footer-message p {
@@ -3147,10 +2866,10 @@ nav {
         serif;
 
     font-size:
-        0.95rem;
+        0.9rem;
 
     letter-spacing:
-        0.12em;
+        0.1em;
 }
 
 .store-footer-message span {
@@ -3174,54 +2893,36 @@ nav {
    SUPPORT
    ========================================= */
 
-#support {
-    padding:
-        14px;
-
-    background:
-        #070a0d;
-}
-
 .support-panel {
-    width:
-        100%;
-
-    max-width:
-        1500px;
-
-    margin:
-        0 auto;
-
     padding:
-        58px
         46px
-        38px;
+        40px
+        32px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.6);
+        rgba(75, 155, 196, 0.42);
 
     background:
         radial-gradient(
-            circle at 50% 18%,
-            rgba(61, 104, 129, 0.11),
-            rgba(0, 0, 0, 0) 34%
+            circle at 50% 16%,
+            rgba(61, 104, 129, 0.14),
+            transparent 34%
         ),
         linear-gradient(
             135deg,
-            #091016,
-            #05090c 58%,
-            #0b0d0c
+            #081016,
+            #05090c
         );
 }
 
 .support-heading {
     max-width:
-        1000px;
+        900px;
 
     margin:
         0 auto
-        46px;
+        34px;
 
     text-align:
         center;
@@ -3237,18 +2938,18 @@ nav {
         serif;
 
     font-size:
-        0.85rem;
+        0.8rem;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.22em;
+        0.2em;
 }
 
 .support-heading h2 {
     margin-top:
-        8px;
+        7px;
 
     color:
         #e8c274;
@@ -3260,9 +2961,9 @@ nav {
 
     font-size:
         clamp(
-            3rem,
-            5.5vw,
-            5rem
+            2.7rem,
+            4.4vw,
+            4.15rem
         );
 
     font-weight:
@@ -3274,11 +2975,10 @@ nav {
 
 .support-ornament {
     width:
-        360px;
+        300px;
 
     margin:
-        24px auto
-        24px;
+        20px auto;
 
     display:
         flex;
@@ -3287,7 +2987,7 @@ nav {
         center;
 
     gap:
-        14px;
+        12px;
 
     color:
         #d6b56a;
@@ -3301,25 +3001,12 @@ nav {
         1px;
 
     background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.9)
-        );
-}
-
-.support-ornament span:last-child {
-    background:
-        linear-gradient(
-            to left,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.9)
-        );
+        rgba(214, 181, 106, 0.5);
 }
 
 .support-heading > p:last-child {
     max-width:
-        760px;
+        720px;
 
     margin:
         0 auto;
@@ -3334,28 +3021,43 @@ nav {
 }
 
 
-/* MEET STAFF */
+/* SUPPORT SECTION PANELS */
 
 .meet-staff-section,
 .support-action-section {
     padding:
-        38px
-        34px;
+        28px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.48);
+        rgba(75, 155, 196, 0.28);
 
     background:
         rgba(6, 10, 12, 0.78);
-
-    text-align:
-        center;
 }
 
 .support-action-section {
     margin-top:
-        28px;
+        22px;
+}
+
+.staff-section-heading,
+.support-action-header {
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(330px, 0.8fr)
+        minmax(520px, 1.2fr);
+
+    gap:
+        24px;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        22px;
 }
 
 .support-small-label {
@@ -3363,19 +3065,19 @@ nav {
         #d6b56a;
 
     font-size:
-        0.76rem;
+        0.73rem;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.2em;
+        0.18em;
 }
 
-.meet-staff-section > h3,
-.support-action-section > h3 {
+.meet-staff-section h3,
+.support-action-section h3 {
     margin-top:
-        7px;
+        5px;
 
     color:
         #eccb84;
@@ -3387,9 +3089,9 @@ nav {
 
     font-size:
         clamp(
-            2.2rem,
-            4vw,
-            3.5rem
+            2rem,
+            3.2vw,
+            3rem
         );
 
     font-weight:
@@ -3398,31 +3100,40 @@ nav {
 
 .support-divider {
     width:
-        190px;
+        175px;
 
     height:
         1px;
 
     margin:
-        18px auto
-        20px;
+        14px auto
+        16px;
 
     background:
         linear-gradient(
             to right,
-            rgba(214, 181, 106, 0),
+            transparent,
             #d6b56a,
-            rgba(214, 181, 106, 0)
+            transparent
         );
 }
 
-.staff-intro {
-    max-width:
-        760px;
+.left-support-divider {
+    margin-left:
+        0;
 
-    margin:
-        0 auto
-        28px;
+    background:
+        linear-gradient(
+            to right,
+            #d6b56a,
+            transparent
+        );
+}
+
+.staff-intro,
+.support-action-header p:last-child {
+    max-width:
+        520px;
 
     color:
         #c8bcab;
@@ -3439,11 +3150,11 @@ nav {
         100%;
 
     padding:
-        18px;
+        10px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.24);
+        rgba(75, 155, 196, 0.2);
 
     background:
         #030506;
@@ -3454,8 +3165,8 @@ nav {
     width:
         100%;
 
-    height:
-        auto;
+    max-height:
+        300px;
 
     display:
         block;
@@ -3465,7 +3176,7 @@ nav {
 }
 
 
-/* STAFF ROLE CARDS */
+/* STAFF ROLES */
 
 .staff-role-grid {
     display:
@@ -3475,19 +3186,16 @@ nav {
         repeat(5, 1fr);
 
     gap:
-        14px;
-
-    margin-top:
-        20px;
+        12px;
 }
 
 .staff-role {
     min-height:
-        240px;
+        210px;
 
     padding:
-        24px
-        18px;
+        21px
+        16px;
 
     display:
         flex;
@@ -3497,19 +3205,26 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.28);
+        rgba(75, 155, 196, 0.2);
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(10, 14, 16, 0.95),
-            rgba(5, 8, 10, 0.98)
-        );
+        rgba(7, 12, 15, 0.96);
+
+    text-align:
+        center;
+
+    transition:
+        0.2s ease;
+}
+
+.staff-role:hover {
+    transform:
+        translateY(-3px);
 }
 
 .staff-rank-marker {
     margin-bottom:
-        8px;
+        6px;
 
     font-family:
         Georgia,
@@ -3517,15 +3232,15 @@ nav {
         serif;
 
     font-size:
-        0.75rem;
+        0.72rem;
 
     letter-spacing:
-        0.18em;
+        0.16em;
 }
 
 .staff-role h4 {
     margin-bottom:
-        12px;
+        10px;
 
     font-family:
         Georgia,
@@ -3533,7 +3248,7 @@ nav {
         serif;
 
     font-size:
-        1.1rem;
+        1rem;
 
     font-weight:
         500;
@@ -3549,7 +3264,7 @@ nav {
         serif;
 
     font-size:
-        0.88rem;
+        0.84rem;
 }
 
 .owner-staff h4,
@@ -3585,11 +3300,6 @@ nav {
 
 /* SUPPORT ACTIONS */
 
-.support-actions-image {
-    margin-bottom:
-        20px;
-}
-
 .support-action-grid {
     display:
         grid;
@@ -3598,17 +3308,16 @@ nav {
         repeat(3, 1fr);
 
     gap:
-        18px;
+        14px;
 }
 
 .support-action-card {
     min-height:
-        290px;
+        245px;
 
     padding:
-        28px
-        24px
-        24px;
+        23px
+        20px;
 
     display:
         flex;
@@ -3621,19 +3330,23 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.28);
+        rgba(75, 155, 196, 0.23);
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(10, 15, 17, 0.96),
-            rgba(5, 8, 10, 0.98)
-        );
+        rgba(7, 12, 15, 0.96);
+
+    transition:
+        0.2s ease;
+}
+
+.support-action-card:hover {
+    transform:
+        translateY(-3px);
 }
 
 .support-card-number {
     margin-bottom:
-        10px;
+        8px;
 
     font-family:
         Georgia,
@@ -3641,10 +3354,10 @@ nav {
         serif;
 
     font-size:
-        0.72rem;
+        0.69rem;
 
     letter-spacing:
-        0.18em;
+        0.16em;
 }
 
 .support-action-card h4 {
@@ -3654,7 +3367,7 @@ nav {
         serif;
 
     font-size:
-        1.45rem;
+        1.3rem;
 
     font-weight:
         500;
@@ -3662,20 +3375,20 @@ nav {
 
 .support-card-divider {
     width:
-        80px;
+        72px;
 
     height:
         1px;
 
     margin:
-        15px 0
-        16px;
+        12px 0
+        14px;
 
     background:
         linear-gradient(
             to right,
             #d6b56a,
-            rgba(214, 181, 106, 0)
+            transparent
         );
 }
 
@@ -3692,30 +3405,30 @@ nav {
         serif;
 
     font-size:
-        0.92rem;
+        0.88rem;
 }
 
 .support-action-status {
     margin-top:
-        20px;
+        16px;
 
     padding-top:
-        12px;
+        10px;
 
     font-size:
-        0.68rem;
+        0.64rem;
 
     letter-spacing:
-        0.13em;
+        0.12em;
 
     border-top:
         1px solid
-        rgba(214, 181, 106, 0.14);
+        rgba(75, 155, 196, 0.13);
 }
 
 .application-card {
     border-color:
-        rgba(128, 178, 72, 0.42);
+        rgba(128, 178, 72, 0.35);
 }
 
 .application-card h4,
@@ -3727,7 +3440,7 @@ nav {
 
 .appeal-card {
     border-color:
-        rgba(197, 77, 58, 0.45);
+        rgba(197, 77, 58, 0.38);
 }
 
 .appeal-card h4,
@@ -3739,7 +3452,7 @@ nav {
 
 .discord-card {
     border-color:
-        rgba(89, 158, 217, 0.45);
+        rgba(89, 158, 217, 0.38);
 }
 
 .discord-card h4,
@@ -3750,7 +3463,7 @@ nav {
 }
 
 
-/* SUPPORT PRINCIPLES */
+/* SUPPORT VALUES */
 
 .support-principles {
     display:
@@ -3760,18 +3473,18 @@ nav {
         repeat(3, 1fr);
 
     gap:
-        18px;
+        14px;
 
     margin-top:
-        28px;
+        22px;
 }
 
 .support-principle {
     min-height:
-        130px;
+        110px;
 
     padding:
-        24px;
+        20px;
 
     display:
         flex;
@@ -3780,14 +3493,14 @@ nav {
         center;
 
     gap:
-        18px;
+        16px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.3);
+        rgba(75, 155, 196, 0.2);
 
     background:
-        rgba(8, 11, 13, 0.86);
+        rgba(8, 11, 13, 0.84);
 }
 
 .support-principle > span {
@@ -3795,10 +3508,10 @@ nav {
         0;
 
     width:
-        48px;
+        44px;
 
     height:
-        48px;
+        44px;
 
     display:
         flex;
@@ -3811,7 +3524,7 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.6);
+        rgba(214, 181, 106, 0.55);
 
     color:
         #d8b45c;
@@ -3827,7 +3540,7 @@ nav {
         serif;
 
     font-size:
-        0.95rem;
+        0.9rem;
 }
 
 .support-principle p {
@@ -3840,7 +3553,7 @@ nav {
         serif;
 
     font-size:
-        0.84rem;
+        0.8rem;
 }
 
 
@@ -3848,7 +3561,7 @@ nav {
 
 .support-footer {
     margin-top:
-        34px;
+        26px;
 
     display:
         grid;
@@ -3862,7 +3575,7 @@ nav {
         center;
 
     gap:
-        20px;
+        18px;
 
     text-align:
         center;
@@ -3873,20 +3586,7 @@ nav {
         1px;
 
     background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.8)
-        );
-}
-
-.support-footer > span:last-child {
-    background:
-        linear-gradient(
-            to left,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.8)
-        );
+        rgba(214, 181, 106, 0.5);
 }
 
 .support-footer p {
@@ -3899,10 +3599,10 @@ nav {
         serif;
 
     font-size:
-        1rem;
+        0.92rem;
 
     letter-spacing:
-        0.11em;
+        0.1em;
 }
 
 .support-footer small {
@@ -3910,7 +3610,7 @@ nav {
         block;
 
     margin-top:
-        5px;
+        4px;
 
     color:
         #8f9da3;
@@ -3926,72 +3626,21 @@ nav {
 
 
 /* =========================================
-   SHARED CARD POLISH
-   ========================================= */
-
-.species-card,
-.miniboss-card,
-.placement-card,
-.update-card,
-.rank-card,
-.staff-role,
-.support-action-card,
-.support-principle,
-.store-principle,
-.competitive-info-block {
-    transition:
-        transform 0.22s ease,
-        border-color 0.22s ease,
-        box-shadow 0.22s ease;
-}
-
-.species-card:hover,
-.miniboss-card:hover,
-.placement-card:hover,
-.update-card:hover,
-.rank-card:hover,
-.staff-role:hover,
-.support-action-card:hover {
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(214, 181, 106, 0.72);
-
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.3);
-}
-
-
-/* =========================================
-   FINAL REALM FOOTER
+   FOOTER
    ========================================= */
 
 .realm-footer {
-    position:
-        relative;
-
     padding:
-        0 14px
-        14px;
+        0 12px
+        12px;
 
     background:
         #05080a;
-
-    border-top:
-        none;
-
-    color:
-        inherit;
 }
 
 .footer-inner {
     position:
         relative;
-
-    width:
-        100%;
 
     max-width:
         1500px;
@@ -4000,92 +3649,33 @@ nav {
         0 auto;
 
     padding:
-        65px
-        46px
-        30px;
-
-    overflow:
-        hidden;
+        52px
+        40px
+        26px;
 
     text-align:
         center;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.55);
-
-    border-top-color:
-        rgba(214, 181, 106, 0.72);
+        rgba(214, 181, 106, 0.48);
 
     background:
         radial-gradient(
             circle at 50% 0%,
-            rgba(214, 181, 106, 0.08),
-            rgba(0, 0, 0, 0) 38%
+            rgba(214, 181, 106, 0.07),
+            transparent 38%
         ),
         linear-gradient(
             to bottom,
             #080d10,
             #040709
         );
-
-    box-shadow:
-        inset 0 20px 50px
-        rgba(0, 0, 0, 0.35);
 }
-
-.footer-inner::before,
-.footer-inner::after {
-    content: "";
-
-    position:
-        absolute;
-
-    width:
-        18px;
-
-    height:
-        18px;
-}
-
-.footer-inner::before {
-    top:
-        9px;
-
-    left:
-        9px;
-
-    border-top:
-        2px solid
-        #d6b56a;
-
-    border-left:
-        2px solid
-        #d6b56a;
-}
-
-.footer-inner::after {
-    right:
-        9px;
-
-    bottom:
-        9px;
-
-    border-right:
-        2px solid
-        #d6b56a;
-
-    border-bottom:
-        2px solid
-        #d6b56a;
-}
-
-
-/* FOOTER BRAND */
 
 .footer-brand {
     max-width:
-        760px;
+        720px;
 
     margin:
         0 auto;
@@ -4093,14 +3683,14 @@ nav {
 
 .footer-emblem {
     width:
-        42px;
+        38px;
 
     height:
-        42px;
+        38px;
 
     margin:
         0 auto
-        16px;
+        14px;
 
     display:
         flex;
@@ -4116,7 +3706,7 @@ nav {
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.72);
+        rgba(214, 181, 106, 0.7);
 
     color:
         #d6b56a;
@@ -4133,7 +3723,7 @@ nav {
         rotate(-45deg);
 
     font-size:
-        0.65rem;
+        0.58rem;
 }
 
 .footer-brand h2 {
@@ -4147,24 +3737,21 @@ nav {
 
     font-size:
         clamp(
-            2.4rem,
-            5vw,
-            4rem
+            2.2rem,
+            4vw,
+            3.5rem
         );
 
     font-weight:
         500;
 
-    line-height:
-        1;
-
     letter-spacing:
-        0.12em;
+        0.11em;
 }
 
 .footer-tagline {
     margin-top:
-        14px;
+        10px;
 
     color:
         #f0dfb7;
@@ -4175,13 +3762,13 @@ nav {
         serif;
 
     font-size:
-        1rem;
+        0.9rem;
 
     font-weight:
         600;
 
     letter-spacing:
-        0.15em;
+        0.14em;
 
     text-transform:
         uppercase;
@@ -4189,10 +3776,10 @@ nav {
 
 .footer-description {
     max-width:
-        620px;
+        590px;
 
     margin:
-        17px auto
+        14px auto
         0;
 
     color:
@@ -4204,53 +3791,44 @@ nav {
         serif;
 
     font-size:
-        0.92rem;
-
-    line-height:
-        1.7;
+        0.88rem;
 }
-
-
-/* FOOTER DIVIDER */
 
 .footer-divider {
     width:
-        min(700px, 80%);
+        min(650px, 80%);
 
     height:
         1px;
 
     margin:
-        36px auto
-        28px;
+        28px auto
+        22px;
 
     background:
         linear-gradient(
             to right,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.65),
-            rgba(214, 181, 106, 0)
+            transparent,
+            rgba(214, 181, 106, 0.55),
+            transparent
         );
 }
 
-
-/* FOOTER LINKS */
-
 .footer-small-label {
     margin-bottom:
-        16px;
+        13px;
 
     color:
         #788a92;
 
     font-size:
-        0.68rem;
+        0.64rem;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.22em;
+        0.2em;
 }
 
 .footer-links {
@@ -4267,8 +3845,8 @@ nav {
         wrap;
 
     gap:
-        12px
-        18px;
+        10px
+        16px;
 }
 
 .footer-links a {
@@ -4281,16 +3859,13 @@ nav {
         serif;
 
     font-size:
-        0.78rem;
+        0.74rem;
 
     letter-spacing:
-        0.1em;
+        0.09em;
 
     text-decoration:
         none;
-
-    transition:
-        color 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -4300,18 +3875,15 @@ nav {
 
 .footer-links span {
     color:
-        rgba(214, 181, 106, 0.48);
+        rgba(214, 181, 106, 0.45);
 
     font-size:
-        0.45rem;
+        0.4rem;
 }
-
-
-/* FOOTER COPYRIGHT */
 
 .footer-final-line {
     margin-top:
-        36px;
+        28px;
 
     display:
         grid;
@@ -4325,7 +3897,7 @@ nav {
         center;
 
     gap:
-        24px;
+        20px;
 }
 
 .footer-final-line > span {
@@ -4335,8 +3907,8 @@ nav {
     background:
         linear-gradient(
             to right,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.38)
+            transparent,
+            rgba(214, 181, 106, 0.32)
         );
 }
 
@@ -4344,8 +3916,8 @@ nav {
     background:
         linear-gradient(
             to left,
-            rgba(214, 181, 106, 0),
-            rgba(214, 181, 106, 0.38)
+            transparent,
+            rgba(214, 181, 106, 0.32)
         );
 }
 
@@ -4359,27 +3931,10 @@ nav {
         serif;
 
     font-size:
-        0.75rem;
+        0.72rem;
 
     letter-spacing:
         0.08em;
-}
-
-.footer-copyright small {
-    display:
-        block;
-
-    margin-top:
-        4px;
-
-    color:
-        #525d62;
-
-    font-size:
-        0.58rem;
-
-    letter-spacing:
-        0.18em;
 }
 
 
@@ -4432,10 +3987,16 @@ nav {
             1fr;
     }
 
-    .support-action-grid,
-    .support-principles {
+    .staff-section-heading,
+    .support-action-header {
         grid-template-columns:
             1fr;
+    }
+
+    .staff-emblems-image img,
+    .support-actions-image img {
+        max-height:
+            360px;
     }
 
 }
@@ -4519,12 +4080,14 @@ nav {
     }
 
     .native-grid,
-    .miniboss-grid {
+    .miniboss-grid,
+    .island-boss-section {
         grid-template-columns:
             1fr;
     }
 
-    .island-boss-section {
+    .support-action-grid,
+    .support-principles {
         grid-template-columns:
             1fr;
     }
@@ -4574,8 +4137,8 @@ nav {
         font-size:
             clamp(
                 3rem,
-                15vw,
-                5rem
+                14vw,
+                4.8rem
             );
     }
 
@@ -4585,7 +4148,7 @@ nav {
     #store,
     #support {
         padding:
-            8px;
+            7px;
     }
 
     .world-panel,
@@ -4594,9 +4157,9 @@ nav {
     .store-panel,
     .support-panel {
         padding:
-            34px
-            18px
-            24px;
+            30px
+            16px
+            22px;
     }
 
     .world-copy,
@@ -4610,15 +4173,8 @@ nav {
     }
 
     .title-divider,
-    .boss-divider {
-        margin-left:
-            auto;
-
-        margin-right:
-            auto;
-    }
-
-    .updates-ornament {
+    .boss-divider,
+    .left-support-divider {
         margin-left:
             auto;
 
@@ -4637,24 +4193,24 @@ nav {
 
         border-bottom:
             1px solid
-            rgba(214, 181, 106, 0.16);
+            rgba(154, 190, 89, 0.15);
     }
 
     .species-image,
     .miniboss-image {
         height:
-            300px;
+            290px;
     }
 
     .island-boss-section {
         padding:
-            26px
-            18px;
+            22px
+            16px;
     }
 
     .boss-image {
         min-height:
-            300px;
+            290px;
     }
 
 
@@ -4674,17 +4230,29 @@ nav {
 
     .wings-image {
         height:
-            310px;
+            300px;
     }
 
 
     /* UPDATES */
 
+    .updates-intro {
+        align-items:
+            center;
+    }
+
+    .updates-ornament {
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
     .featured-update {
         padding:
-            30px
-            22px
-            26px;
+            26px
+            20px;
     }
 
     .featured-update-top {
@@ -4695,11 +4263,6 @@ nav {
             flex-start;
     }
 
-    .updates-grid {
-        grid-template-columns:
-            1fr;
-    }
-
     .updates-footer-ornament span {
         display:
             none;
@@ -4708,30 +4271,7 @@ nav {
 
     /* STORE */
 
-    .store-heading h2 {
-        font-size:
-            2.8rem;
-    }
-
-    .store-ornament {
-        width:
-            220px;
-    }
-
-    .store-principles {
-        grid-template-columns:
-            1fr;
-    }
-
-    .store-principle {
-        border-right:
-            none !important;
-
-        border-bottom:
-            1px solid
-            rgba(214, 181, 106, 0.18);
-    }
-
+    .store-principles,
     .rank-card-grid {
         grid-template-columns:
             1fr;
@@ -4740,6 +4280,15 @@ nav {
     .mythic-rank {
         grid-column:
             auto;
+    }
+
+    .store-principle {
+        border-right:
+            none !important;
+
+        border-bottom:
+            1px solid
+            rgba(214, 181, 106, 0.15);
     }
 
     .rank-card {
@@ -4762,8 +4311,8 @@ nav {
 
     .store-wings-notice {
         padding:
-            22px
-            16px;
+            20px
+            14px;
     }
 
     .store-wings-copy {
@@ -4773,7 +4322,7 @@ nav {
 
     .store-wings-image {
         min-height:
-            240px;
+            230px;
     }
 
     .store-footer-message {
@@ -4789,30 +4338,9 @@ nav {
 
     /* SUPPORT */
 
-    .support-heading h2 {
-        font-size:
-            2.6rem;
-    }
-
-    .support-ornament {
-        width:
-            220px;
-    }
-
-    .meet-staff-section,
-    .support-action-section {
-        padding:
-            28px
-            16px;
-    }
-
-    .staff-emblems-image,
-    .support-actions-image {
-        padding:
-            6px;
-    }
-
-    .staff-role-grid {
+    .staff-role-grid,
+    .support-action-grid,
+    .support-principles {
         grid-template-columns:
             1fr;
     }
@@ -4822,20 +4350,35 @@ nav {
             auto;
     }
 
-    .staff-role {
-        min-height:
+    .meet-staff-section,
+    .support-action-section {
+        padding:
+            22px
+            14px;
+    }
+
+    .staff-section-heading,
+    .support-action-header {
+        text-align:
+            center;
+    }
+
+    .staff-intro,
+    .support-action-header p:last-child {
+        margin-left:
+            auto;
+
+        margin-right:
             auto;
     }
 
-    .support-action-grid {
-        grid-template-columns:
-            1fr;
-    }
-
+    .staff-role,
     .support-action-card {
         min-height:
             auto;
+    }
 
+    .support-action-card {
         text-align:
             center;
     }
@@ -4846,11 +4389,6 @@ nav {
 
         margin-right:
             auto;
-    }
-
-    .support-principle {
-        text-align:
-            left;
     }
 
     .support-footer {
@@ -4864,35 +4402,29 @@ nav {
     }
 
 
-    /* FINAL FOOTER */
+    /* FOOTER */
 
     .realm-footer {
         padding:
-            0 8px
-            8px;
+            0 7px
+            7px;
     }
 
     .footer-inner {
         padding:
-            50px
-            18px
-            26px;
+            42px
+            16px
+            22px;
     }
 
     .footer-brand h2 {
         font-size:
-            2.5rem;
-
-        letter-spacing:
-            0.08em;
+            2.35rem;
     }
 
     .footer-tagline {
         font-size:
-            0.82rem;
-
-        letter-spacing:
-            0.11em;
+            0.78rem;
     }
 
     .footer-links {
@@ -4900,7 +4432,7 @@ nav {
             column;
 
         gap:
-            11px;
+            9px;
     }
 
     .footer-links span {
@@ -4908,17 +4440,9 @@ nav {
             none;
     }
 
-    .footer-links a {
-        font-size:
-            0.78rem;
-    }
-
     .footer-final-line {
         grid-template-columns:
             1fr;
-
-        margin-top:
-            30px;
     }
 
     .footer-final-line > span {
@@ -4932,7 +4456,6 @@ nav {
     .species-card:hover,
     .miniboss-card:hover,
     .placement-card:hover,
-    .update-card:hover,
     .rank-card:hover,
     .staff-role:hover,
     .support-action-card:hover {
