@@ -4,7 +4,9 @@
    ========================================= */
 
 
-/* ---------- RESET ---------- */
+/* =========================================
+   RESET
+   ========================================= */
 
 * {
     margin: 0;
@@ -18,9 +20,16 @@ html {
 
 body {
     margin: 0;
-    background: #0f1114;
+
+    background: #080c0e;
+
     color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     line-height: 1.6;
 }
 
@@ -31,6 +40,7 @@ body {
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -39,38 +49,55 @@ header {
 
     z-index: 1000;
 
-    background: rgba(8, 10, 13, 0.92);
+    background:
+        rgba(8, 10, 13, 0.93);
+
     backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(214, 181, 106, 0.2);
+    border-bottom:
+        1px solid
+        rgba(214, 181, 106, 0.28);
 }
 
 nav {
     width: 100%;
     max-width: 1500px;
+
     height: 100%;
 
     margin: 0 auto;
-    padding: 0 40px;
+
+    padding:
+        0 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 }
 
 
-/* ---------- NAV LOGO ---------- */
+/* =========================================
+   NAV LOGO
+   ========================================= */
 
 .logo {
-    display: flex;
-    align-items: center;
-
     height: 100%;
+
+    display: flex;
+
+    align-items: center;
 
     color: #f0dfb7;
 
-    font-size: 1.35rem;
-    font-weight: 800;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
 
     letter-spacing: 0.18em;
 
@@ -78,42 +105,50 @@ nav {
 }
 
 
-/* ---------- NAV LINKS ---------- */
+/* =========================================
+   NAV LINKS
+   ========================================= */
 
 .navigation {
     height: 100%;
 
     display: flex;
+
     align-items: center;
 
     gap: 32px;
 }
 
 .navigation a {
-    display: flex;
-    align-items: center;
-
     height: 100%;
+
+    display: flex;
+
+    align-items: center;
 
     color: #dddddd;
 
     text-decoration: none;
 
     font-size: 0.9rem;
+
     font-weight: 600;
 
     letter-spacing: 0.03em;
 
+    border-bottom:
+        2px solid transparent;
+
     transition:
         color 0.2s ease,
         border-color 0.2s ease;
-
-    border-bottom: 2px solid transparent;
 }
 
 .navigation a:hover {
     color: #d6b56a;
-    border-bottom-color: #d6b56a;
+
+    border-bottom-color:
+        #d6b56a;
 }
 
 
@@ -125,11 +160,13 @@ nav {
     position: relative;
 
     width: 100%;
+
     min-height: 100vh;
 
     overflow: hidden;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -144,30 +181,35 @@ nav {
         linear-gradient(
             to bottom,
             rgba(5, 7, 10, 0.08) 0%,
-            rgba(5, 7, 10, 0.12) 50%,
-            rgba(5, 7, 10, 0.58) 100%
+            rgba(5, 7, 10, 0.14) 52%,
+            rgba(5, 7, 10, 0.7) 100%
         ),
         url("realm-hero.png");
 
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+
+    background-position:
+        center center;
+
+    background-repeat:
+        no-repeat;
 }
 
 
-/* Soft edge shading */
+/* HERO EDGE SHADING */
 
 #home::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
         radial-gradient(
             ellipse at center,
-            rgba(0, 0, 0, 0) 35%,
-            rgba(0, 0, 0, 0.28) 100%
+            rgba(0, 0, 0, 0) 30%,
+            rgba(0, 0, 0, 0.3) 100%
         );
 
     pointer-events: none;
@@ -182,54 +224,64 @@ nav {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
+
     max-width: 1100px;
 
     margin: 0 auto;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
     text-align: center;
 }
 
-
-/* ---------- TITLE ---------- */
-
 #home h1 {
     margin: 0;
 
     color: #f6efe2;
 
-    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-size:
+        clamp(
+            4rem,
+            8vw,
+            7.5rem
+        );
+
     font-weight: 900;
 
     line-height: 1;
 
     letter-spacing: 0.08em;
 
-    text-align: center;
-
     text-shadow:
         0 3px 0 #57452f,
-        0 8px 30px rgba(0, 0, 0, 0.9);
+        0 8px 30px
+        rgba(0, 0, 0, 0.9);
 }
-
-
-/* ---------- TAGLINE ---------- */
 
 .hero-tagline {
     width: 100%;
 
-    margin: 28px auto 0;
+    margin:
+        28px auto 0;
 
     color: #f0dfb7;
 
-    font-size: clamp(1rem, 1.5vw, 1.35rem);
+    font-size:
+        clamp(
+            1rem,
+            1.5vw,
+            1.35rem
+        );
+
     font-weight: 700;
 
     line-height: 1.4;
@@ -237,24 +289,31 @@ nav {
     letter-spacing: 0.18em;
 
     text-align: center;
+
     text-transform: uppercase;
 
     text-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.95);
+        0 3px 12px
+        rgba(0, 0, 0, 0.95);
 }
-
-
-/* ---------- DESCRIPTION ---------- */
 
 .hero-description {
     width: 100%;
+
     max-width: 720px;
 
-    margin: 22px auto 0;
+    margin:
+        22px auto 0;
 
     color: #f0f0f0;
 
-    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-size:
+        clamp(
+            0.95rem,
+            1.2vw,
+            1.1rem
+        );
+
     font-weight: 400;
 
     line-height: 1.7;
@@ -262,51 +321,474 @@ nav {
     letter-spacing: 0.02em;
 
     text-align: center;
-    text-transform: none;
 
     text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.95);
+        0 2px 10px
+        rgba(0, 0, 0, 0.95);
 }
 
 
 /* =========================================
-   GENERAL WEBSITE SECTIONS
+   WORLD SECTION
    ========================================= */
 
-section:not(#home) {
-    min-height: 70vh;
+#world {
+    min-height: auto;
 
+    padding: 14px;
+
+    background: #070b0d;
+}
+
+
+/* =========================================
+   WORLD BORDER PANEL
+   ========================================= */
+
+.world-panel {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        58px
+        55px
+        28px;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.6);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 17, 19, 0.98),
+            rgba(5, 10, 12, 0.99)
+        );
+
+    box-shadow:
+        inset 0 0 45px
+        rgba(0, 0, 0, 0.45);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.75fr)
+        minmax(500px, 1.8fr);
+
+    column-gap: 55px;
+
+    row-gap: 45px;
+}
+
+
+/* =========================================
+   DECORATIVE BORDER CORNERS
+   ========================================= */
+
+.world-panel::before,
+.world-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+}
+
+.world-panel::before {
+    top: 8px;
+    left: 8px;
+
+    border-top:
+        2px solid #d6b56a;
+
+    border-left:
+        2px solid #d6b56a;
+}
+
+.world-panel::after {
+    right: 8px;
+    bottom: 8px;
+
+    border-right:
+        2px solid #d6b56a;
+
+    border-bottom:
+        2px solid #d6b56a;
+}
+
+
+/* =========================================
+   WORLD TEXT
+   ========================================= */
+
+.world-copy {
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 
-    padding: 100px 10%;
+    align-items: flex-start;
+
+    text-align: left;
 }
 
-section:not(#home) h2 {
-    margin-bottom: 20px;
+.section-kicker {
+    margin-bottom: 16px;
 
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #d6b56a;
 
-    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
 }
 
-section:not(#home) p {
-    max-width: 700px;
+.season-label {
+    margin-bottom: 5px;
 
-    color: #c5c5c5;
+    color: #d6b56a;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+#world h2 {
+    margin: 0;
+
+    color: #f5ecda;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* TITLE DIVIDER */
+
+.title-divider {
+    width: 155px;
+
+    height: 1px;
+
+    margin:
+        20px 0;
+
+    background:
+        linear-gradient(
+            to right,
+            #d6b56a,
+            rgba(214, 181, 106, 0)
+        );
+}
+
+
+/* WORLD DESCRIPTION */
+
+.world-description {
+    max-width: 430px;
+
+    margin-bottom: 25px;
+
+    color: #d0d0d0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   WORLD BUTTON
+   ========================================= */
+
+.world-button {
+    min-height: 46px;
+
+    padding:
+        0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.75);
+
+    color: #f0d795;
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.world-button span {
     font-size: 1.15rem;
 }
 
+.world-button:hover {
+    background:
+        rgba(214, 181, 106, 0.09);
+
+    border-color:
+        #d6b56a;
+
+    color: #fff0c4;
+}
+
 
 /* =========================================
-   SECTION BACKGROUNDS
+   FOREST IMAGE
    ========================================= */
 
-#world,
-#updates,
-#support {
+.world-image {
+    position: relative;
+
+    min-height: 360px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.28);
+
+    background: #101517;
+}
+
+.world-image img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 360px;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* FOREST IMAGE SHADING */
+
+.world-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(6, 12, 14, 0.55) 0%,
+            rgba(6, 12, 14, 0.08) 35%,
+            rgba(6, 12, 14, 0.04) 70%,
+            rgba(6, 12, 14, 0.2) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   FOREST FEATURE ROW
+   ========================================= */
+
+.forest-features {
+    grid-column:
+        1 / -1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    border-top:
+        1px solid
+        rgba(214, 181, 106, 0.25);
+
+    scroll-margin-top: 100px;
+}
+
+.feature-item {
+    min-height: 210px;
+
+    padding:
+        30px
+        22px
+        20px;
+
+    position: relative;
+
+    text-align: center;
+}
+
+.feature-item:not(:last-child) {
+    border-right:
+        1px solid
+        rgba(214, 181, 106, 0.18);
+}
+
+
+/* =========================================
+   FEATURE ICONS
+   ========================================= */
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+
+    margin:
+        0 auto
+        20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        rotate(45deg);
+
+    border:
+        1px solid #d6b56a;
+
+    border-radius: 4px;
+
+    color: #f0cf7c;
+}
+
+.feature-icon span {
+    display: block;
+
+    transform:
+        rotate(-45deg);
+
+    font-size: 1.45rem;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   FEATURE TEXT
+   ========================================= */
+
+.feature-item h3 {
+    margin-bottom: 10px;
+
+    color: #eee6d4;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+.feature-item p {
+    max-width: 230px;
+
+    margin: 0 auto;
+
+    color: #bbb5aa;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   OTHER WEBSITE SECTIONS
+   ========================================= */
+
+section:not(#home):not(#world) {
+    min-height: 65vh;
+
+    padding: 14px;
+
+    background: #070b0d;
+}
+
+
+/* BORDER AROUND FUTURE SECTIONS */
+
+.standard-panel {
+    width: 100%;
+
+    max-width: 1500px;
+
+    min-height: calc(65vh - 28px);
+
+    margin: 0 auto;
+
+    padding:
+        80px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.35);
+
     background:
         linear-gradient(
             135deg,
@@ -315,14 +797,32 @@ section:not(#home) p {
         );
 }
 
-#competitive-season,
-#store {
-    background:
-        linear-gradient(
-            135deg,
-            #1b1c20,
-            #141518
+.standard-panel h2 {
+    margin-bottom: 20px;
+
+    color: #eee6d4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4rem
         );
+
+    letter-spacing: 0.04em;
+}
+
+.standard-panel p {
+    max-width: 700px;
+
+    color: #c5c5c5;
+
+    font-size: 1.1rem;
 }
 
 
@@ -331,14 +831,17 @@ section:not(#home) p {
    ========================================= */
 
 footer {
-    padding: 40px 20px;
+    padding:
+        40px
+        20px;
 
     text-align: center;
 
-    background: #0a0b0d;
+    background: #06090b;
 
     border-top:
-        1px solid rgba(214, 181, 106, 0.18);
+        1px solid
+        rgba(214, 181, 106, 0.2);
 
     color: #777777;
 }
@@ -361,7 +864,9 @@ footer p {
     nav {
         height: auto;
 
-        padding: 14px 20px;
+        padding:
+            14px
+            20px;
 
         flex-direction: column;
 
@@ -376,14 +881,19 @@ footer p {
         height: auto;
 
         justify-content: center;
+
         flex-wrap: wrap;
 
-        gap: 8px 20px;
+        gap:
+            8px
+            20px;
     }
 
     .navigation a {
         height: auto;
-        padding: 4px 0;
+
+        padding:
+            4px 0;
     }
 
     #home {
@@ -393,13 +903,44 @@ footer p {
             60px;
     }
 
-    .hero-content {
-        max-width: 850px;
+
+    /* WORLD */
+
+    .world-panel {
+        grid-template-columns:
+            1fr;
+
+        padding:
+            45px
+            35px
+            25px;
+
+        row-gap: 32px;
     }
 
-    section:not(#home) {
-        padding: 80px 8%;
+    .world-image {
+        min-height: 320px;
     }
+
+    .world-image img {
+        min-height: 320px;
+    }
+
+    .forest-features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .feature-item {
+        border-bottom:
+            1px solid
+            rgba(214, 181, 106, 0.16);
+    }
+
+    .feature-item:nth-child(even) {
+        border-right: none;
+    }
+
 }
 
 
@@ -410,7 +951,9 @@ footer p {
 @media (max-width: 600px) {
 
     nav {
-        padding: 12px 15px;
+        padding:
+            12px
+            15px;
     }
 
     .logo {
@@ -418,12 +961,17 @@ footer p {
     }
 
     .navigation {
-        gap: 6px 12px;
+        gap:
+            6px
+            12px;
     }
 
     .navigation a {
         font-size: 0.7rem;
     }
+
+
+    /* HERO */
 
     #home {
         min-height: 100svh;
@@ -433,13 +981,20 @@ footer p {
             20px
             50px;
 
-        background-position: center center;
+        background-position:
+            center center;
     }
 
     #home h1 {
-        font-size: clamp(3rem, 15vw, 5rem);
+        font-size:
+            clamp(
+                3rem,
+                15vw,
+                5rem
+            );
 
-        letter-spacing: 0.04em;
+        letter-spacing:
+            0.04em;
     }
 
     .hero-tagline {
@@ -447,7 +1002,8 @@ footer p {
 
         font-size: 0.8rem;
 
-        letter-spacing: 0.1em;
+        letter-spacing:
+            0.1em;
     }
 
     .hero-description {
@@ -460,15 +1016,80 @@ footer p {
         line-height: 1.6;
     }
 
-    section:not(#home) {
-        padding: 70px 7%;
+
+    /* WORLD */
+
+    #world {
+        padding: 8px;
     }
 
-    section:not(#home) h2 {
+    .world-panel {
+        padding:
+            35px
+            20px
+            20px;
+
+        row-gap: 28px;
+    }
+
+    .world-copy {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .title-divider {
+        margin:
+            20px auto;
+    }
+
+    .world-description {
+        max-width: 100%;
+    }
+
+    .world-image {
+        min-height: 240px;
+    }
+
+    .world-image img {
+        min-height: 240px;
+    }
+
+    .forest-features {
+        grid-template-columns:
+            1fr;
+    }
+
+    .feature-item {
+        border-right:
+            none !important;
+
+        border-bottom:
+            1px solid
+            rgba(214, 181, 106, 0.16);
+    }
+
+
+    /* FUTURE SECTIONS */
+
+    section:not(#home):not(#world) {
+        padding: 8px;
+    }
+
+    .standard-panel {
+        min-height: 60vh;
+
+        padding:
+            60px
+            8%;
+    }
+
+    .standard-panel h2 {
         font-size: 2.3rem;
     }
 
-    section:not(#home) p {
+    .standard-panel p {
         font-size: 1rem;
     }
+
 }
