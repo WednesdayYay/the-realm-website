@@ -4,9 +4,7 @@
    ========================================= */
 
 
-/* =========================================
-   RESET
-   ========================================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -34,9 +32,7 @@ body {
 }
 
 
-/* =========================================
-   NAVIGATION
-   ========================================= */
+/* NAVIGATION */
 
 header {
     position: fixed;
@@ -76,11 +72,6 @@ nav {
     justify-content: space-between;
 }
 
-
-/* =========================================
-   NAV LOGO
-   ========================================= */
-
 .logo {
     height: 100%;
 
@@ -103,11 +94,6 @@ nav {
 
     white-space: nowrap;
 }
-
-
-/* =========================================
-   NAV LINKS
-   ========================================= */
 
 .navigation {
     height: 100%;
@@ -152,9 +138,7 @@ nav {
 }
 
 
-/* =========================================
-   HOMEPAGE HERO
-   ========================================= */
+/* HERO */
 
 #home {
     position: relative;
@@ -187,19 +171,14 @@ nav {
         url("realm-hero.png");
 
     background-size: cover;
-
-    background-position:
-        center center;
-
-    background-repeat:
-        no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #home::after {
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
@@ -213,11 +192,6 @@ nav {
 
     z-index: 1;
 }
-
-
-/* =========================================
-   HERO CONTENT
-   ========================================= */
 
 .hero-content {
     position: relative;
@@ -259,8 +233,7 @@ nav {
 
     text-shadow:
         0 3px 0 #57452f,
-        0 8px 30px
-        rgba(0, 0, 0, 0.9);
+        0 8px 30px rgba(0, 0, 0, 0.9);
 }
 
 .hero-tagline {
@@ -285,17 +258,14 @@ nav {
     letter-spacing: 0.18em;
 
     text-align: center;
-
     text-transform: uppercase;
 
     text-shadow:
-        0 3px 12px
-        rgba(0, 0, 0, 0.95);
+        0 3px 12px rgba(0, 0, 0, 0.95);
 }
 
 .hero-description {
     width: 100%;
-
     max-width: 720px;
 
     margin:
@@ -312,19 +282,14 @@ nav {
 
     line-height: 1.7;
 
-    letter-spacing: 0.02em;
-
     text-align: center;
 
     text-shadow:
-        0 2px 10px
-        rgba(0, 0, 0, 0.95);
+        0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 
-/* =========================================
-   WORLD SECTION
-   ========================================= */
+/* WORLD */
 
 #world {
     min-height: auto;
@@ -333,11 +298,6 @@ nav {
 
     background: #070b0d;
 }
-
-
-/* =========================================
-   WORLD BORDER PANEL
-   ========================================= */
 
 .world-panel {
     position: relative;
@@ -364,8 +324,7 @@ nav {
         );
 
     box-shadow:
-        inset 0 0 45px
-        rgba(0, 0, 0, 0.45);
+        inset 0 0 45px rgba(0, 0, 0, 0.45);
 
     display: grid;
 
@@ -377,11 +336,6 @@ nav {
 
     row-gap: 45px;
 }
-
-
-/* =========================================
-   WORLD BORDER CORNERS
-   ========================================= */
 
 .world-panel::before,
 .world-panel::after {
@@ -416,9 +370,7 @@ nav {
 }
 
 
-/* =========================================
-   WORLD COPY
-   ========================================= */
+/* WORLD COPY */
 
 .world-copy {
     display: flex;
@@ -518,11 +470,6 @@ nav {
     line-height: 1.65;
 }
 
-
-/* =========================================
-   WORLD BUTTON
-   ========================================= */
-
 .world-button {
     min-height: 46px;
 
@@ -548,31 +495,17 @@ nav {
     font-weight: 700;
 
     letter-spacing: 0.08em;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease;
-}
-
-.world-button span {
-    font-size: 1.15rem;
 }
 
 .world-button:hover {
     background:
         rgba(214, 181, 106, 0.09);
 
-    border-color:
-        #d6b56a;
-
-    color: #fff0c4;
+    border-color: #d6b56a;
 }
 
 
-/* =========================================
-   FOREST IMAGE
-   ========================================= */
+/* FOREST IMAGE */
 
 .world-image {
     position: relative;
@@ -592,14 +525,11 @@ nav {
     display: block;
 
     width: 100%;
-
     height: 100%;
 
     min-height: 360px;
 
     object-fit: cover;
-
-    object-position: center;
 }
 
 .world-image::after {
@@ -612,19 +542,15 @@ nav {
     background:
         linear-gradient(
             to right,
-            rgba(6, 12, 14, 0.55) 0%,
-            rgba(6, 12, 14, 0.08) 35%,
-            rgba(6, 12, 14, 0.04) 70%,
-            rgba(6, 12, 14, 0.2) 100%
+            rgba(6, 12, 14, 0.55),
+            rgba(6, 12, 14, 0.04)
         );
 
     pointer-events: none;
 }
 
 
-/* =========================================
-   FOREST FEATURE ROW
-   ========================================= */
+/* FEATURE ROW */
 
 .forest-features {
     grid-column:
@@ -670,22 +596,16 @@ nav {
     align-items: center;
     justify-content: center;
 
-    transform:
-        rotate(45deg);
+    transform: rotate(45deg);
 
     border:
         1px solid #d6b56a;
-
-    border-radius: 4px;
 
     color: #f0cf7c;
 }
 
 .feature-icon span {
-    display: block;
-
-    transform:
-        rotate(-45deg);
+    transform: rotate(-45deg);
 
     font-size: 1.45rem;
 }
@@ -713,31 +633,24 @@ nav {
         serif;
 
     font-size: 0.88rem;
-
-    line-height: 1.55;
 }
 
 
-/* =========================================
-   SHARED WORLD SUBSECTION HEADINGS
-   ========================================= */
+/* SHARED SUBSECTIONS */
 
 .native-species-section,
-.miniboss-section {
+.miniboss-section,
+.island-boss-section {
     grid-column:
         1 / -1;
 
-    padding:
-        52px
-        0
-        12px;
+    padding-top: 52px;
 
     border-top:
         1px solid
         rgba(214, 181, 106, 0.25);
 
-    scroll-margin-top:
-        95px;
+    scroll-margin-top: 95px;
 }
 
 .section-heading {
@@ -762,9 +675,8 @@ nav {
     letter-spacing: 0.24em;
 }
 
-.section-heading h3 {
-    margin: 0;
-
+.section-heading h3,
+.boss-copy h3 {
     color: #f2e6cc;
 
     font-family:
@@ -784,7 +696,8 @@ nav {
     letter-spacing: 0.05em;
 }
 
-.center-divider {
+.center-divider,
+.boss-divider {
     width: 190px;
 
     height: 1px;
@@ -813,10 +726,6 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1rem;
-
-    line-height: 1.65;
 }
 
 .section-closing {
@@ -833,21 +742,16 @@ nav {
         "Times New Roman",
         serif;
 
-    font-size: 0.95rem;
-
     font-style: italic;
 
     text-align: center;
-
-    line-height: 1.6;
 }
 
 
-/* =========================================
-   NATIVE SPECIES GRID
-   ========================================= */
+/* NATIVE SPECIES */
 
-.native-grid {
+.native-grid,
+.miniboss-grid {
     display: grid;
 
     grid-template-columns:
@@ -856,12 +760,8 @@ nav {
     gap: 22px;
 }
 
-
-/* =========================================
-   SPECIES CARDS
-   ========================================= */
-
-.species-card {
+.species-card,
+.miniboss-card {
     position: relative;
 
     overflow: hidden;
@@ -878,96 +778,24 @@ nav {
         );
 }
 
-.species-card::before,
-.species-card::after,
-.miniboss-card::before,
-.miniboss-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 12px;
-    height: 12px;
-
-    z-index: 4;
-}
-
-.species-card::before,
-.miniboss-card::before {
-    top: 7px;
-    left: 7px;
-
-    border-top:
-        1px solid #d6b56a;
-
-    border-left:
-        1px solid #d6b56a;
-}
-
-.species-card::after,
-.miniboss-card::after {
-    right: 7px;
-    bottom: 7px;
-
-    border-right:
-        1px solid #d6b56a;
-
-    border-bottom:
-        1px solid #d6b56a;
-}
-
 .species-image {
-    position: relative;
-
     height: 360px;
 
     overflow: hidden;
-
-    border-bottom:
-        1px solid
-        rgba(214, 181, 106, 0.25);
 }
 
-.species-image img {
+.species-image img,
+.miniboss-image img {
     width: 100%;
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
 
-    object-position: center;
-
-    transition:
-        transform 0.4s ease;
+    display: block;
 }
 
-.species-card:hover
-.species-image img {
-    transform:
-        scale(1.035);
-}
-
-.species-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 55%,
-            rgba(5, 10, 8, 0.6) 100%
-        );
-
-    pointer-events: none;
-}
-
-.species-card-content {
-    min-height: 180px;
-
+.species-card-content,
+.miniboss-content {
     padding:
         24px
         24px
@@ -986,11 +814,13 @@ nav {
     font-size: 1.5rem;
 }
 
-.aggressive-symbol {
-    color: #c96c54;
+.aggressive-symbol,
+.aggressive-card h4 {
+    color: #d57a61;
 }
 
-.species-card h4 {
+.species-card h4,
+.miniboss-content h4 {
     margin-bottom: 10px;
 
     color: #cbdc9a;
@@ -1005,15 +835,8 @@ nav {
     letter-spacing: 0.08em;
 }
 
-.aggressive-card h4 {
-    color: #d57a61;
-}
-
-.species-card p {
-    max-width: 340px;
-
-    margin: 0 auto;
-
+.species-card p,
+.miniboss-content p {
     color: #bbb5aa;
 
     font-family:
@@ -1022,153 +845,23 @@ nav {
         serif;
 
     font-size: 0.92rem;
-
-    line-height: 1.55;
 }
 
 
-/* =========================================
-   MINIBOSS SECTION
-   ========================================= */
+/* MINIBOSSES */
 
 .miniboss-section {
     margin-top: 30px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(35, 45, 26, 0.2),
-            rgba(0, 0, 0, 0) 70%
-        );
 }
-
-
-/* =========================================
-   MINIBOSS GRID
-   ========================================= */
-
-.miniboss-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
-}
-
-
-/* =========================================
-   MINIBOSS CARD
-   ========================================= */
-
-.miniboss-card {
-    position: relative;
-
-    overflow: hidden;
-
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.62);
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(11, 18, 16, 0.99),
-            rgba(5, 9, 9, 0.99)
-        );
-
-    box-shadow:
-        inset 0 0 30px
-        rgba(0, 0, 0, 0.45);
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.miniboss-card:hover {
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(231, 197, 115, 0.92);
-
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.28),
-        inset 0 0 30px
-        rgba(0, 0, 0, 0.45);
-}
-
-
-/* =========================================
-   MINIBOSS IMAGE
-   ========================================= */
 
 .miniboss-image {
-    position: relative;
-
     height: 390px;
 
     overflow: hidden;
-
-    border-bottom:
-        1px solid
-        rgba(214, 181, 106, 0.28);
 }
-
-.miniboss-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    transition:
-        transform 0.45s ease;
-}
-
-.miniboss-card:hover
-.miniboss-image img {
-    transform:
-        scale(1.035);
-}
-
-.miniboss-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 48%,
-            rgba(4, 8, 8, 0.72) 100%
-        );
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   MINIBOSS CONTENT
-   ========================================= */
 
 .miniboss-content {
     min-height: 210px;
-
-    padding:
-        28px
-        26px
-        30px;
-
-    text-align: center;
 }
 
 .miniboss-icon {
@@ -1176,7 +869,7 @@ nav {
     height: 48px;
 
     margin:
-        -52px auto
+        -48px auto
         24px;
 
     position: relative;
@@ -1188,8 +881,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    transform:
-        rotate(45deg);
+    transform: rotate(45deg);
 
     border:
         1px solid #d6b56a;
@@ -1197,53 +889,160 @@ nav {
     background: #0b1110;
 
     color: #e2c16e;
-
-    font-size: 1.2rem;
 }
 
-.miniboss-icon::first-letter {
-    transform:
-        rotate(-45deg);
+
+/* ISLAND BOSS */
+
+.island-boss-section {
+    margin-top: 32px;
+
+    padding-bottom: 10px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.8fr)
+        minmax(500px, 1.6fr);
+
+    gap: 30px;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.5);
+
+    padding:
+        34px;
 }
 
-.miniboss-content h4 {
-    margin-bottom: 14px;
+.boss-copy {
+    display: flex;
 
-    color: #dfc579;
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+    padding:
+        20px
+        10px;
+}
+
+.boss-copy h3 {
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            4.6rem
+        );
+}
+
+.boss-divider {
+    margin:
+        18px 0
+        24px;
+
+    width: 180px;
+}
+
+.boss-description {
+    color: #c9c2b5;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.22rem;
+    font-size: 1.05rem;
 
-    font-weight: 500;
+    line-height: 1.75;
+
+    max-width: 460px;
+}
+
+.boss-teaser {
+    margin-top: 22px;
+
+    color: #9eb46d;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+
+    font-style: italic;
+}
+
+.boss-image {
+    min-height: 520px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.3);
+}
+
+.boss-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.boss-footer {
+    grid-column:
+        1 / -1;
+
+    padding:
+        28px
+        20px
+        10px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(214, 181, 106, 0.22);
+}
+
+.boss-footer p {
+    color: #a9bf6f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.4rem;
 
     letter-spacing: 0.18em;
 }
 
-.miniboss-content p {
-    max-width: 360px;
+.boss-footer span {
+    display: block;
 
-    margin: 0 auto;
+    margin-top: 8px;
 
-    color: #bbb5aa;
+    color: #b8ac91;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.94rem;
-
-    line-height: 1.65;
+    font-size: 0.95rem;
 }
 
 
-/* =========================================
-   OTHER SECTIONS
-   ========================================= */
+/* OTHER SECTIONS */
 
 section:not(#home):not(#world) {
     min-height: 65vh;
@@ -1299,22 +1098,16 @@ section:not(#home):not(#world) {
             5vw,
             4rem
         );
-
-    letter-spacing: 0.04em;
 }
 
 .standard-panel p {
     max-width: 700px;
 
     color: #c5c5c5;
-
-    font-size: 1.1rem;
 }
 
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* FOOTER */
 
 footer {
     padding:
@@ -1332,14 +1125,8 @@ footer {
     color: #777777;
 }
 
-footer p {
-    font-size: 0.85rem;
-}
 
-
-/* =========================================
-   TABLET
-   ========================================= */
+/* TABLET */
 
 @media (max-width: 1000px) {
 
@@ -1359,27 +1146,18 @@ footer p {
         gap: 10px;
     }
 
-    .logo {
-        height: auto;
-    }
-
     .navigation {
         height: auto;
 
         justify-content: center;
 
         flex-wrap: wrap;
-
-        gap:
-            8px
-            20px;
     }
 
     .navigation a {
         height: auto;
 
-        padding:
-            4px 0;
+        padding: 4px 0;
     }
 
     #home {
@@ -1397,31 +1175,11 @@ footer p {
             45px
             35px
             30px;
-
-        row-gap: 32px;
-    }
-
-    .world-image {
-        min-height: 320px;
-    }
-
-    .world-image img {
-        min-height: 320px;
     }
 
     .forest-features {
         grid-template-columns:
             repeat(2, 1fr);
-    }
-
-    .feature-item {
-        border-bottom:
-            1px solid
-            rgba(214, 181, 106, 0.16);
-    }
-
-    .feature-item:nth-child(even) {
-        border-right: none;
     }
 
     .native-grid,
@@ -1430,17 +1188,19 @@ footer p {
             1fr;
     }
 
-    .species-image,
-    .miniboss-image {
-        height: 430px;
+    .island-boss-section {
+        grid-template-columns:
+            1fr;
+    }
+
+    .boss-image {
+        min-height: 430px;
     }
 
 }
 
 
-/* =========================================
-   MOBILE
-   ========================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -1471,9 +1231,6 @@ footer p {
             155px
             20px
             50px;
-
-        background-position:
-            center center;
     }
 
     #home h1 {
@@ -1483,28 +1240,6 @@ footer p {
                 15vw,
                 5rem
             );
-
-        letter-spacing:
-            0.04em;
-    }
-
-    .hero-tagline {
-        margin-top: 20px;
-
-        font-size: 0.8rem;
-
-        letter-spacing:
-            0.1em;
-    }
-
-    .hero-description {
-        max-width: 420px;
-
-        margin-top: 18px;
-
-        font-size: 0.9rem;
-
-        line-height: 1.6;
     }
 
     #world {
@@ -1516,31 +1251,19 @@ footer p {
             35px
             20px
             24px;
-
-        row-gap: 28px;
     }
 
-    .world-copy {
+    .world-copy,
+    .boss-copy {
         align-items: center;
 
         text-align: center;
     }
 
-    .title-divider {
-        margin:
-            20px auto;
-    }
-
-    .world-description {
-        max-width: 100%;
-    }
-
-    .world-image {
-        min-height: 240px;
-    }
-
-    .world-image img {
-        min-height: 240px;
+    .title-divider,
+    .boss-divider {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .forest-features {
@@ -1557,52 +1280,27 @@ footer p {
             rgba(214, 181, 106, 0.16);
     }
 
-    .native-species-section,
-    .miniboss-section {
-        padding-top: 40px;
-    }
-
-    .section-heading h3 {
-        font-size: 2.05rem;
-    }
-
-    .section-heading > p:last-child {
-        font-size: 0.95rem;
-    }
-
     .species-image,
     .miniboss-image {
         height: 300px;
     }
 
-    .species-card-content,
-    .miniboss-content {
-        min-height: auto;
-
+    .island-boss-section {
         padding:
-            24px
-            18px
-            26px;
+            26px
+            18px;
+    }
+
+    .boss-image {
+        min-height: 300px;
+    }
+
+    .boss-footer p {
+        font-size: 1.05rem;
     }
 
     section:not(#home):not(#world) {
         padding: 8px;
-    }
-
-    .standard-panel {
-        min-height: 60vh;
-
-        padding:
-            60px
-            8%;
-    }
-
-    .standard-panel h2 {
-        font-size: 2.3rem;
-    }
-
-    .standard-panel p {
-        font-size: 1rem;
     }
 
 }
