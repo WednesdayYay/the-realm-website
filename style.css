@@ -195,9 +195,6 @@ nav {
         no-repeat;
 }
 
-
-/* HERO EDGE SHADING */
-
 #home::after {
     content: "";
 
@@ -228,7 +225,6 @@ nav {
     z-index: 2;
 
     width: 100%;
-
     max-width: 1100px;
 
     margin: 0 auto;
@@ -314,8 +310,6 @@ nav {
             1.1rem
         );
 
-    font-weight: 400;
-
     line-height: 1.7;
 
     letter-spacing: 0.02em;
@@ -349,7 +343,6 @@ nav {
     position: relative;
 
     width: 100%;
-
     max-width: 1500px;
 
     margin: 0 auto;
@@ -357,7 +350,7 @@ nav {
     padding:
         58px
         55px
-        40px;
+        44px;
 
     border:
         1px solid
@@ -387,7 +380,7 @@ nav {
 
 
 /* =========================================
-   DECORATIVE BORDER CORNERS
+   WORLD BORDER CORNERS
    ========================================= */
 
 .world-panel::before,
@@ -424,7 +417,7 @@ nav {
 
 
 /* =========================================
-   WORLD TEXT
+   WORLD COPY
    ========================================= */
 
 .world-copy {
@@ -492,11 +485,6 @@ nav {
     letter-spacing: 0.03em;
 }
 
-
-/* =========================================
-   TITLE DIVIDER
-   ========================================= */
-
 .title-divider {
     width: 155px;
 
@@ -512,11 +500,6 @@ nav {
             rgba(214, 181, 106, 0)
         );
 }
-
-
-/* =========================================
-   WORLD DESCRIPTION
-   ========================================= */
 
 .world-description {
     max-width: 430px;
@@ -665,8 +648,6 @@ nav {
         22px
         20px;
 
-    position: relative;
-
     text-align: center;
 }
 
@@ -675,11 +656,6 @@ nav {
         1px solid
         rgba(214, 181, 106, 0.18);
 }
-
-
-/* =========================================
-   FEATURE ICONS
-   ========================================= */
 
 .feature-icon {
     width: 52px;
@@ -712,8 +688,6 @@ nav {
         rotate(-45deg);
 
     font-size: 1.45rem;
-
-    line-height: 1;
 }
 
 .feature-item h3 {
@@ -722,8 +696,6 @@ nav {
     color: #eee6d4;
 
     font-size: 0.82rem;
-
-    font-weight: 700;
 
     letter-spacing: 0.06em;
 }
@@ -747,17 +719,18 @@ nav {
 
 
 /* =========================================
-   NATIVE SPECIES SECTION
+   SHARED WORLD SUBSECTION HEADINGS
    ========================================= */
 
-.native-species-section {
+.native-species-section,
+.miniboss-section {
     grid-column:
         1 / -1;
 
     padding:
-        50px
+        52px
         0
-        10px;
+        12px;
 
     border-top:
         1px solid
@@ -767,22 +740,17 @@ nav {
         95px;
 }
 
-
-/* =========================================
-   NATIVE HEADING
-   ========================================= */
-
-.native-heading {
-    max-width: 760px;
+.section-heading {
+    max-width: 780px;
 
     margin:
         0 auto
-        38px;
+        40px;
 
     text-align: center;
 }
 
-.native-kicker {
+.section-small-label {
     margin-bottom: 8px;
 
     color: #d6b56a;
@@ -794,7 +762,7 @@ nav {
     letter-spacing: 0.24em;
 }
 
-.native-heading h3 {
+.section-heading h3 {
     margin: 0;
 
     color: #f2e6cc;
@@ -816,8 +784,8 @@ nav {
     letter-spacing: 0.05em;
 }
 
-.native-divider {
-    width: 180px;
+.center-divider {
+    width: 190px;
 
     height: 1px;
 
@@ -834,7 +802,7 @@ nav {
         );
 }
 
-.native-heading > p:last-child {
+.section-heading > p:last-child {
     max-width: 700px;
 
     margin: 0 auto;
@@ -851,9 +819,32 @@ nav {
     line-height: 1.65;
 }
 
+.section-closing {
+    max-width: 780px;
+
+    margin:
+        34px auto
+        0;
+
+    color: #b9aa81;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.95rem;
+
+    font-style: italic;
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
 
 /* =========================================
-   SPECIES GRID
+   NATIVE SPECIES GRID
    ========================================= */
 
 .native-grid {
@@ -867,7 +858,7 @@ nav {
 
 
 /* =========================================
-   SPECIES CARD
+   SPECIES CARDS
    ========================================= */
 
 .species-card {
@@ -885,14 +876,12 @@ nav {
             rgba(15, 25, 20, 0.98),
             rgba(8, 14, 12, 0.98)
         );
-
-    box-shadow:
-        inset 0 0 25px
-        rgba(0, 0, 0, 0.35);
 }
 
 .species-card::before,
-.species-card::after {
+.species-card::after,
+.miniboss-card::before,
+.miniboss-card::after {
     content: "";
 
     position: absolute;
@@ -903,7 +892,8 @@ nav {
     z-index: 4;
 }
 
-.species-card::before {
+.species-card::before,
+.miniboss-card::before {
     top: 7px;
     left: 7px;
 
@@ -914,7 +904,8 @@ nav {
         1px solid #d6b56a;
 }
 
-.species-card::after {
+.species-card::after,
+.miniboss-card::after {
     right: 7px;
     bottom: 7px;
 
@@ -924,11 +915,6 @@ nav {
     border-bottom:
         1px solid #d6b56a;
 }
-
-
-/* =========================================
-   SPECIES IMAGE
-   ========================================= */
 
 .species-image {
     position: relative;
@@ -944,7 +930,6 @@ nav {
 
 .species-image img {
     width: 100%;
-
     height: 100%;
 
     display: block;
@@ -980,11 +965,6 @@ nav {
     pointer-events: none;
 }
 
-
-/* =========================================
-   SPECIES CARD CONTENT
-   ========================================= */
-
 .species-card-content {
     min-height: 180px;
 
@@ -1008,8 +988,6 @@ nav {
 
 .aggressive-symbol {
     color: #c96c54;
-
-    letter-spacing: 0.1em;
 }
 
 .species-card h4 {
@@ -1023,8 +1001,6 @@ nav {
         serif;
 
     font-size: 1.05rem;
-
-    font-weight: 600;
 
     letter-spacing: 0.08em;
 }
@@ -1052,35 +1028,221 @@ nav {
 
 
 /* =========================================
-   NATIVE CLOSING
+   MINIBOSS SECTION
    ========================================= */
 
-.native-closing {
-    max-width: 760px;
+.miniboss-section {
+    margin-top: 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(35, 45, 26, 0.2),
+            rgba(0, 0, 0, 0) 70%
+        );
+}
+
+
+/* =========================================
+   MINIBOSS GRID
+   ========================================= */
+
+.miniboss-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   MINIBOSS CARD
+   ========================================= */
+
+.miniboss-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.62);
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(11, 18, 16, 0.99),
+            rgba(5, 9, 9, 0.99)
+        );
+
+    box-shadow:
+        inset 0 0 30px
+        rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.miniboss-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(231, 197, 115, 0.92);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.28),
+        inset 0 0 30px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   MINIBOSS IMAGE
+   ========================================= */
+
+.miniboss-image {
+    position: relative;
+
+    height: 390px;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid
+        rgba(214, 181, 106, 0.28);
+}
+
+.miniboss-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.miniboss-card:hover
+.miniboss-image img {
+    transform:
+        scale(1.035);
+}
+
+.miniboss-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 48%,
+            rgba(4, 8, 8, 0.72) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   MINIBOSS CONTENT
+   ========================================= */
+
+.miniboss-content {
+    min-height: 210px;
+
+    padding:
+        28px
+        26px
+        30px;
+
+    text-align: center;
+}
+
+.miniboss-icon {
+    width: 48px;
+    height: 48px;
 
     margin:
-        34px auto
-        0;
+        -52px auto
+        24px;
 
-    color: #b9aa81;
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        rotate(45deg);
+
+    border:
+        1px solid #d6b56a;
+
+    background: #0b1110;
+
+    color: #e2c16e;
+
+    font-size: 1.2rem;
+}
+
+.miniboss-icon::first-letter {
+    transform:
+        rotate(-45deg);
+}
+
+.miniboss-content h4 {
+    margin-bottom: 14px;
+
+    color: #dfc579;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.95rem;
+    font-size: 1.22rem;
 
-    font-style: italic;
+    font-weight: 500;
 
-    text-align: center;
+    letter-spacing: 0.18em;
+}
 
-    line-height: 1.6;
+.miniboss-content p {
+    max-width: 360px;
+
+    margin: 0 auto;
+
+    color: #bbb5aa;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.94rem;
+
+    line-height: 1.65;
 }
 
 
 /* =========================================
-   OTHER WEBSITE SECTIONS
+   OTHER SECTIONS
    ========================================= */
 
 section:not(#home):not(#world) {
@@ -1093,7 +1255,6 @@ section:not(#home):not(#world) {
 
 .standard-panel {
     width: 100%;
-
     max-width: 1500px;
 
     min-height:
@@ -1228,7 +1389,6 @@ footer p {
             60px;
     }
 
-
     .world-panel {
         grid-template-columns:
             1fr;
@@ -1264,14 +1424,15 @@ footer p {
         border-right: none;
     }
 
-
-    .native-grid {
+    .native-grid,
+    .miniboss-grid {
         grid-template-columns:
             1fr;
     }
 
-    .species-image {
-        height: 420px;
+    .species-image,
+    .miniboss-image {
+        height: 430px;
     }
 
 }
@@ -1302,7 +1463,6 @@ footer p {
     .navigation a {
         font-size: 0.7rem;
     }
-
 
     #home {
         min-height: 100svh;
@@ -1346,7 +1506,6 @@ footer p {
 
         line-height: 1.6;
     }
-
 
     #world {
         padding: 8px;
@@ -1398,32 +1557,33 @@ footer p {
             rgba(214, 181, 106, 0.16);
     }
 
-
-    .native-species-section {
+    .native-species-section,
+    .miniboss-section {
         padding-top: 40px;
     }
 
-    .native-heading h3 {
-        font-size: 2.1rem;
+    .section-heading h3 {
+        font-size: 2.05rem;
     }
 
-    .native-heading > p:last-child {
+    .section-heading > p:last-child {
         font-size: 0.95rem;
     }
 
-    .species-image {
+    .species-image,
+    .miniboss-image {
         height: 300px;
     }
 
-    .species-card-content {
+    .species-card-content,
+    .miniboss-content {
         min-height: auto;
 
         padding:
-            22px
+            24px
             18px
-            24px;
+            26px;
     }
-
 
     section:not(#home):not(#world) {
         padding: 8px;
