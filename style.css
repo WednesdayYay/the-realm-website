@@ -18,16 +18,9 @@ html {
 
 body {
     margin: 0;
-
     background: #080c0e;
-
     color: #f2f2f2;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
@@ -36,62 +29,40 @@ body {
 
 header {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 72px;
-
     z-index: 1000;
-
-    background:
-        rgba(8, 10, 13, 0.93);
-
+    background: rgba(8, 10, 13, 0.93);
     backdrop-filter: blur(10px);
-
-    border-bottom:
-        1px solid
-        rgba(214, 181, 106, 0.28);
+    border-bottom: 1px solid rgba(214, 181, 106, 0.28);
 }
 
 nav {
     width: 100%;
     max-width: 1500px;
-
     height: 100%;
-
     margin: 0 auto;
-
-    padding:
-        0 40px;
+    padding: 0 40px;
 
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
     height: 100%;
-
     display: flex;
-
     align-items: center;
 
     color: #f0dfb7;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 1.45rem;
-
     font-weight: 700;
 
     letter-spacing: 0.18em;
-
     white-space: nowrap;
 }
 
@@ -99,7 +70,6 @@ nav {
     height: 100%;
 
     display: flex;
-
     align-items: center;
 
     gap: 32px;
@@ -109,7 +79,6 @@ nav {
     height: 100%;
 
     display: flex;
-
     align-items: center;
 
     color: #dddddd;
@@ -117,13 +86,11 @@ nav {
     text-decoration: none;
 
     font-size: 0.9rem;
-
     font-weight: 600;
 
     letter-spacing: 0.03em;
 
-    border-bottom:
-        2px solid transparent;
+    border-bottom: 2px solid transparent;
 
     transition:
         color 0.2s ease,
@@ -132,9 +99,7 @@ nav {
 
 .navigation a:hover {
     color: #d6b56a;
-
-    border-bottom-color:
-        #d6b56a;
+    border-bottom-color: #d6b56a;
 }
 
 
@@ -144,13 +109,11 @@ nav {
     position: relative;
 
     width: 100%;
-
     min-height: 100vh;
 
     overflow: hidden;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -171,9 +134,7 @@ nav {
         url("realm-hero.png");
 
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
 }
 
@@ -181,7 +142,6 @@ nav {
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
@@ -207,9 +167,7 @@ nav {
     margin: 0 auto;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
 }
@@ -275,7 +233,6 @@ nav {
 
 #world {
     padding: 14px;
-
     background: #070b0d;
 }
 
@@ -300,9 +257,7 @@ nav {
         45px
         55px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.6);
+    border: 1px solid rgba(214, 181, 106, 0.6);
 
     background:
         linear-gradient(
@@ -314,11 +269,8 @@ nav {
 
 .world-copy {
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: flex-start;
 }
 
@@ -326,9 +278,7 @@ nav {
 .season-label,
 .section-small-label {
     color: #d6b56a;
-
     font-weight: 700;
-
     letter-spacing: 0.18em;
 }
 
@@ -343,10 +293,7 @@ nav {
 #world h2 {
     color: #f5ecda;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
@@ -361,8 +308,7 @@ nav {
 .title-divider,
 .center-divider,
 .boss-divider,
-.competitive-divider,
-.updates-divider {
+.competitive-divider {
     height: 1px;
 
     background:
@@ -388,47 +334,39 @@ nav {
 
     color: #d0d0d0;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .world-button,
 .updates-button {
     min-height: 46px;
 
-    padding:
-        0 20px;
+    padding: 0 20px;
 
     display: inline-flex;
-
     align-items: center;
 
     gap: 14px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.75);
+    border: 1px solid rgba(214, 181, 106, 0.75);
 
     color: #f0d795;
 
     text-decoration: none;
 
     font-size: 0.8rem;
-
     font-weight: 700;
 
     letter-spacing: 0.08em;
+
+    transition: 0.2s ease;
 }
 
 .world-button:hover,
 .updates-button:hover {
-    background:
-        rgba(214, 181, 106, 0.09);
-
-    border-color:
-        #d6b56a;
+    background: rgba(214, 181, 106, 0.09);
+    border-color: #d6b56a;
+    color: #fff2c8;
 }
 
 .world-image {
@@ -436,9 +374,7 @@ nav {
 
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.28);
+    border: 1px solid rgba(214, 181, 106, 0.28);
 }
 
 .world-image img {
@@ -456,17 +392,14 @@ nav {
 /* WORLD FEATURES */
 
 .forest-features {
-    grid-column:
-        1 / -1;
+    grid-column: 1 / -1;
 
     display: grid;
 
     grid-template-columns:
         repeat(5, 1fr);
 
-    border-top:
-        1px solid
-        rgba(214, 181, 106, 0.25);
+    border-top: 1px solid rgba(214, 181, 106, 0.25);
 }
 
 .feature-item {
@@ -478,9 +411,7 @@ nav {
 }
 
 .feature-item:not(:last-child) {
-    border-right:
-        1px solid
-        rgba(214, 181, 106, 0.18);
+    border-right: 1px solid rgba(214, 181, 106, 0.18);
 }
 
 .feature-icon {
@@ -492,22 +423,18 @@ nav {
         20px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    transform:
-        rotate(45deg);
+    transform: rotate(45deg);
 
-    border:
-        1px solid #d6b56a;
+    border: 1px solid #d6b56a;
 
     color: #f0cf7c;
 }
 
 .feature-icon span {
-    transform:
-        rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .feature-item h3 {
@@ -521,10 +448,7 @@ nav {
 .feature-item p {
     color: #bbb5aa;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size: 0.88rem;
 }
@@ -535,14 +459,11 @@ nav {
 .native-species-section,
 .miniboss-section,
 .island-boss-section {
-    grid-column:
-        1 / -1;
+    grid-column: 1 / -1;
 
     padding-top: 52px;
 
-    border-top:
-        1px solid
-        rgba(214, 181, 106, 0.25);
+    border-top: 1px solid rgba(214, 181, 106, 0.25);
 }
 
 .section-heading {
@@ -559,10 +480,7 @@ nav {
 .boss-copy h3 {
     color: #f2e6cc;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
@@ -585,10 +503,7 @@ nav {
 .section-heading p:last-child {
     color: #c9c2b5;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .section-closing {
@@ -596,10 +511,7 @@ nav {
 
     color: #b9aa81;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-style: italic;
 
@@ -623,12 +535,9 @@ nav {
 .miniboss-card {
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.55);
+    border: 1px solid rgba(214, 181, 106, 0.55);
 
-    background:
-        rgba(9, 15, 14, 0.98);
+    background: rgba(9, 15, 14, 0.98);
 }
 
 .species-image {
@@ -680,20 +589,14 @@ nav {
 
     color: #cbdc9a;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .species-card p,
 .miniboss-content p {
     color: #bbb5aa;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size: 0.92rem;
 }
@@ -714,18 +617,13 @@ nav {
 
     gap: 30px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.5);
+    border: 1px solid rgba(214, 181, 106, 0.5);
 }
 
 .boss-copy {
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: flex-start;
 }
 
@@ -740,10 +638,7 @@ nav {
 .boss-description {
     color: #c9c2b5;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .boss-teaser {
@@ -751,10 +646,7 @@ nav {
 
     color: #9eb46d;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-style: italic;
 }
@@ -775,25 +667,19 @@ nav {
 }
 
 .boss-footer {
-    grid-column:
-        1 / -1;
+    grid-column: 1 / -1;
 
     padding-top: 28px;
 
     text-align: center;
 
-    border-top:
-        1px solid
-        rgba(214, 181, 106, 0.22);
+    border-top: 1px solid rgba(214, 181, 106, 0.22);
 }
 
 .boss-footer p {
     color: #a9bf6f;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size: 1.4rem;
 
@@ -831,9 +717,7 @@ nav {
 
     gap: 34px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.56);
+    border: 1px solid rgba(214, 181, 106, 0.56);
 
     background:
         linear-gradient(
@@ -862,10 +746,7 @@ nav {
 
     color: #f3e5c6;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
@@ -887,10 +768,7 @@ nav {
 .competitive-heading > p:last-child {
     color: #d0c5b1;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .season-stats {
@@ -901,9 +779,7 @@ nav {
     grid-template-columns:
         repeat(5, 1fr);
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.5);
+    border: 1px solid rgba(214, 181, 106, 0.5);
 }
 
 .season-stat {
@@ -915,9 +791,7 @@ nav {
 }
 
 .season-stat:not(:last-child) {
-    border-right:
-        1px solid
-        rgba(214, 181, 106, 0.18);
+    border-right: 1px solid rgba(214, 181, 106, 0.18);
 }
 
 .season-stat-icon {
@@ -933,10 +807,7 @@ nav {
 
     color: #efd083;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .season-stat small {
@@ -958,10 +829,7 @@ nav {
 
     color: #c7bdac;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .placement-grid {
@@ -980,9 +848,7 @@ nav {
 
     text-align: center;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.44);
+    border: 1px solid rgba(214, 181, 106, 0.44);
 }
 
 .placement-symbol {
@@ -992,10 +858,7 @@ nav {
 }
 
 .placement-card h3 {
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .diamond-placement h3,
@@ -1027,9 +890,7 @@ nav {
         30px
         24px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.58);
+    border: 1px solid rgba(214, 181, 106, 0.58);
 
     text-align: center;
 }
@@ -1037,10 +898,7 @@ nav {
 .wings-panel h3 {
     color: #e7b245;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
@@ -1055,10 +913,7 @@ nav {
 .wings-description {
     color: #d1c4ae;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .wings-image {
@@ -1098,8 +953,7 @@ nav {
 }
 
 .competitive-bottom {
-    grid-column:
-        1 / -1;
+    grid-column: 1 / -1;
 
     display: grid;
 
@@ -1115,14 +969,11 @@ nav {
         28px;
 
     display: flex;
-
     align-items: center;
 
     gap: 22px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.34);
+    border: 1px solid rgba(214, 181, 106, 0.34);
 }
 
 .competitive-info-icon {
@@ -1141,48 +992,62 @@ nav {
 
 
 /* =========================================
-   UPDATES
+   UPDATES — REALM CHRONICLE
    ========================================= */
 
 #updates {
     padding: 14px;
 
-    background: #070b0d;
+    background: #060b0f;
 }
 
 .updates-panel {
+    position: relative;
+
     width: 100%;
     max-width: 1500px;
 
     margin: 0 auto;
 
     padding:
-        48px
-        40px
-        30px;
+        56px
+        46px
+        34px;
 
     display: grid;
 
     grid-template-columns:
-        minmax(280px, 0.65fr)
-        minmax(600px, 1.35fr);
+        minmax(300px, 0.7fr)
+        minmax(600px, 1.3fr);
 
-    gap: 34px;
+    gap:
+        38px
+        42px;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.5);
+        rgba(214, 181, 106, 0.58);
 
     background:
+        radial-gradient(
+            circle at 78% 35%,
+            rgba(40, 91, 120, 0.12),
+            rgba(0, 0, 0, 0) 35%
+        ),
         linear-gradient(
             135deg,
-            #091116,
-            #060b0e
+            #091218,
+            #050a0d 60%,
+            #071014
         );
+
+    box-shadow:
+        inset 0 0 55px
+        rgba(0, 0, 0, 0.45);
 }
 
 
-/* UPDATES INTRO */
+/* CHRONICLE INTRO */
 
 .updates-intro {
     display: flex;
@@ -1192,174 +1057,308 @@ nav {
     justify-content: center;
 
     align-items: flex-start;
+
+    position: relative;
 }
 
 .updates-kicker {
-    color: #7fc9e5;
+    color: #7fc8e7;
 
-    font-size: 0.82rem;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.85rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
 }
 
 .updates-intro h2 {
     margin-top: 8px;
 
-    color: #f2e5cb;
+    color: #f2d89a;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
-            2.8rem,
+            3rem,
             5vw,
-            4.4rem
+            4.8rem
         );
 
     font-weight: 500;
 
-    line-height: 1.05;
+    line-height: 0.98;
+
+    letter-spacing: 0.035em;
+
+    text-shadow:
+        0 2px 15px
+        rgba(0, 0, 0, 0.5);
 }
 
-.updates-divider {
-    width: 170px;
+.updates-subtitle {
+    margin-top: 12px;
+
+    color: #a6bfd0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.1rem;
+
+    font-style: italic;
+
+    letter-spacing: 0.04em;
+}
+
+.updates-ornament {
+    width: 260px;
 
     margin:
-        20px 0;
+        22px 0
+        24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #d6b56a;
 }
 
-.updates-intro > p:not(.updates-kicker) {
-    max-width: 430px;
+.updates-ornament span {
+    flex: 1;
 
-    margin-bottom: 25px;
+    height: 1px;
 
-    color: #c6c0b5;
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.9)
+        );
+}
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+.updates-ornament span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.9)
+        );
+}
+
+.updates-ornament b {
+    font-size: 0.8rem;
+}
+
+.updates-intro-copy {
+    max-width: 440px;
+
+    margin-bottom: 28px;
+
+    color: #d3c7b4;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
 }
 
 
-/* FEATURED UPDATE */
+/* FEATURED CHRONICLE ENTRY */
 
 .updates-content {
     display: flex;
 
     flex-direction: column;
 
-    gap: 20px;
+    gap: 22px;
 }
 
 .featured-update {
+    position: relative;
+
     padding:
-        32px
-        34px;
+        38px
+        38px
+        32px;
+
+    overflow: hidden;
 
     border:
         1px solid
-        rgba(214, 181, 106, 0.48);
+        rgba(214, 181, 106, 0.62);
 
     background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(122, 81, 157, 0.16),
+            rgba(0, 0, 0, 0) 32%
+        ),
         linear-gradient(
             135deg,
-            rgba(14, 22, 28, 0.96),
-            rgba(8, 13, 17, 0.98)
+            rgba(14, 23, 30, 0.98),
+            rgba(7, 12, 16, 0.98)
         );
+
+    box-shadow:
+        inset 0 0 30px
+        rgba(0, 0, 0, 0.3);
+}
+
+.featured-corner {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+}
+
+.corner-top-left {
+    top: 9px;
+    left: 9px;
+
+    border-top: 2px solid #d6b56a;
+    border-left: 2px solid #d6b56a;
+}
+
+.corner-bottom-right {
+    right: 9px;
+    bottom: 9px;
+
+    border-right: 2px solid #d6b56a;
+    border-bottom: 2px solid #d6b56a;
+}
+
+.featured-update-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
 }
 
 .update-type {
     display: inline-block;
 
-    margin-bottom: 12px;
-
     padding:
-        4px
-        9px;
+        5px
+        10px;
 
-    font-size: 0.65rem;
+    font-size: 0.66rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
 
-    border:
-        1px solid
-        currentColor;
+    border: 1px solid currentColor;
 }
 
 .announcement-type {
-    color: #bf95e8;
+    color: #c69bf4;
 }
 
 .content-type {
-    color: #8abb72;
+    color: #94bc78;
 }
 
 .competition-type {
-    color: #b895ef;
+    color: #a98ce5;
 }
 
 .event-type {
-    color: #d8ad65;
+    color: #d7aa5d;
 }
 
-.update-date {
-    margin-bottom: 8px;
+.chronicle-marker {
+    color: #7faec4;
 
-    color: #8fa6b2;
+    font-size: 0.7rem;
 
-    font-size: 0.72rem;
-
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
 }
 
 .featured-update h3 {
-    margin-bottom: 12px;
+    color: #f3dfb2;
 
-    color: #e8d9bc;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.8rem;
+    font-size:
+        clamp(
+            2rem,
+            3vw,
+            2.8rem
+        );
 
     font-weight: 500;
+
+    letter-spacing: 0.03em;
 }
 
-.featured-update > p:not(.update-date) {
+.featured-divider {
+    width: 150px;
+
+    height: 1px;
+
+    margin:
+        18px 0
+        20px;
+
+    background:
+        linear-gradient(
+            to right,
+            #d6b56a,
+            rgba(214, 181, 106, 0)
+        );
+}
+
+.featured-update > p {
     max-width: 800px;
 
-    color: #beb7aa;
+    color: #cec3b3;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+.featured-footer {
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(214, 181, 106, 0.18);
 }
 
 .update-status {
-    display: inline-block;
+    color: #84c8e3;
 
-    margin-top: 18px;
+    font-size: 0.7rem;
 
-    color: #7fc9e5;
+    letter-spacing: 0.14em;
+}
 
-    font-size: 0.72rem;
+.featured-symbol {
+    color: #d6b56a;
 
-    letter-spacing: 0.12em;
+    font-size: 1.1rem;
 }
 
 
-/* UPDATE CARDS */
+/* CHRONICLE CARDS */
 
 .updates-grid {
     display: grid;
@@ -1371,124 +1370,208 @@ nav {
 }
 
 .update-card {
-    min-height: 260px;
+    position: relative;
+
+    min-height: 290px;
 
     padding:
-        26px
-        22px;
+        28px
+        24px
+        24px;
 
     display: flex;
 
     flex-direction: column;
 
+    overflow: hidden;
+
     border:
         1px solid
-        rgba(214, 181, 106, 0.3);
+        rgba(214, 181, 106, 0.32);
 
     background:
-        rgba(8, 14, 18, 0.88);
+        linear-gradient(
+            to bottom,
+            rgba(9, 17, 22, 0.98),
+            rgba(5, 11, 15, 0.98)
+        );
 
     transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.update-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    width: 12px;
+    height: 12px;
+
+    border-top: 1px solid rgba(214, 181, 106, 0.75);
+    border-left: 1px solid rgba(214, 181, 106, 0.75);
 }
 
 .update-card:hover {
-    transform:
-        translateY(-4px);
+    transform: translateY(-5px);
 
     border-color:
-        rgba(214, 181, 106, 0.65);
+        rgba(214, 181, 106, 0.7);
+
+    box-shadow:
+        0 12px 24px
+        rgba(0, 0, 0, 0.25);
 }
 
-.update-icon {
+.update-card-ornament {
     margin-bottom: 14px;
 
-    color: #7fc9e5;
+    font-size: 1.55rem;
+}
 
-    font-size: 1.4rem;
+.content-update .update-card-ornament {
+    color: #92b777;
+}
+
+.competition-update .update-card-ornament {
+    color: #ac8ce3;
+}
+
+.community-update .update-card-ornament {
+    color: #d2aa64;
 }
 
 .update-card h3 {
-    margin-bottom: 10px;
+    margin-top: 14px;
 
-    color: #e7dcc6;
+    color: #ead8ad;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 
     font-weight: 500;
+
+    letter-spacing: 0.04em;
+}
+
+.card-divider {
+    width: 70px;
+
+    height: 1px;
+
+    margin:
+        12px 0
+        14px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0.9),
+            rgba(214, 181, 106, 0)
+        );
 }
 
 .update-card p {
     flex: 1;
 
-    color: #b8b0a4;
+    color: #c4b9a8;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+
+    line-height: 1.65;
 }
 
 .update-meta {
-    margin-top: 18px;
+    margin-top: 20px;
 
-    color: #7d939f;
+    padding-top: 12px;
+
+    color: #839eab;
 
     font-size: 0.68rem;
+
+    letter-spacing: 0.13em;
+
+    border-top: 1px solid rgba(214, 181, 106, 0.12);
+}
+
+
+/* CHRONICLE FOOTER */
+
+.updates-footer {
+    grid-column: 1 / -1;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(214, 181, 106, 0.22);
+
+    text-align: center;
+}
+
+.updates-footer-ornament {
+    max-width: 860px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.updates-footer-ornament span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.7)
+        );
+}
+
+.updates-footer-ornament span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            rgba(214, 181, 106, 0),
+            rgba(214, 181, 106, 0.7)
+        );
+}
+
+.updates-footer-ornament b {
+    color: #d3b66f;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.84rem;
+
+    font-weight: 500;
 
     letter-spacing: 0.12em;
 }
 
-
-/* UPDATES FOOTER */
-
-.updates-footer {
-    grid-column:
-        1 / -1;
-
-    padding-top: 26px;
-
-    text-align: center;
-
-    border-top:
-        1px solid
-        rgba(214, 181, 106, 0.2);
-}
-
 .updates-footer p {
-    color: #d2b674;
+    margin-top: 10px;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    color: #999085;
 
-    font-size: 1rem;
+    font-family: Georgia, "Times New Roman", serif;
 
-    letter-spacing: 0.14em;
-}
+    font-size: 0.9rem;
 
-.updates-footer span {
-    display: block;
-
-    margin-top: 6px;
-
-    color: #948d82;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.88rem;
+    font-style: italic;
 }
 
 
@@ -1511,7 +1594,8 @@ section:not(#home):not(#world):not(#competitive-season):not(#updates) {
     margin: 0 auto;
 
     padding:
-        80px 8%;
+        80px
+        8%;
 
     display: flex;
 
@@ -1534,10 +1618,7 @@ section:not(#home):not(#world):not(#competitive-season):not(#updates) {
 .standard-panel h2 {
     color: #eee6d4;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, "Times New Roman", serif;
 
     font-size:
         clamp(
@@ -1577,8 +1658,7 @@ footer {
 
     .competitive-panel,
     .updates-panel {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .season-stats {
@@ -1587,8 +1667,7 @@ footer {
     }
 
     .updates-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
 }
@@ -1623,7 +1702,8 @@ footer {
     .navigation a {
         height: auto;
 
-        padding: 4px 0;
+        padding:
+            4px 0;
     }
 
     #home {
@@ -1634,8 +1714,7 @@ footer {
     }
 
     .world-panel {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .forest-features {
@@ -1645,13 +1724,11 @@ footer {
 
     .native-grid,
     .miniboss-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .island-boss-section {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
 }
@@ -1723,20 +1800,22 @@ footer {
     }
 
     .title-divider,
-    .boss-divider,
-    .updates-divider {
+    .boss-divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .updates-ornament {
         margin-left: auto;
         margin-right: auto;
     }
 
     .forest-features {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .feature-item {
-        border-right:
-            none !important;
+        border-right: none !important;
     }
 
     .species-image,
@@ -1757,32 +1836,48 @@ footer {
     .season-stats,
     .placement-grid,
     .competitive-bottom {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .season-stat {
-        border-right:
-            none !important;
+        border-right: none !important;
     }
 
     .wings-image {
         height: 310px;
     }
 
-    .updates-grid {
-        grid-template-columns:
-            1fr;
-    }
-
     .featured-update {
         padding:
-            26px
-            22px;
+            30px
+            22px
+            26px;
+    }
+
+    .featured-update-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .updates-intro h2 {
+        font-size: 2.8rem;
+    }
+
+    .updates-grid {
+        grid-template-columns: 1fr;
     }
 
     .update-card {
         min-height: auto;
+    }
+
+    .updates-footer-ornament {
+        gap: 8px;
+    }
+
+    .updates-footer-ornament span {
+        display: none;
     }
 
     section:not(#home):not(#world):not(#competitive-season):not(#updates) {
