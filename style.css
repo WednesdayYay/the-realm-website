@@ -212,13 +212,9 @@ nav {
 
     align-items: center;
     justify-content: center;
-
-    text-align: center;
 }
 
 #home h1 {
-    margin: 0;
-
     color: #f6efe2;
 
     font-size:
@@ -241,10 +237,7 @@ nav {
 }
 
 .hero-tagline {
-    width: 100%;
-
-    margin:
-        28px auto 0;
+    margin-top: 28px;
 
     color: #f0dfb7;
 
@@ -257,23 +250,15 @@ nav {
 
     font-weight: 700;
 
-    line-height: 1.4;
-
     letter-spacing: 0.18em;
 
     text-transform: uppercase;
-
-    text-shadow:
-        0 3px 12px
-        rgba(0, 0, 0, 0.95);
 }
 
 .hero-description {
-    width: 100%;
     max-width: 720px;
 
-    margin:
-        22px auto 0;
+    margin-top: 22px;
 
     color: #f0f0f0;
 
@@ -283,28 +268,18 @@ nav {
             1.2vw,
             1.1rem
         );
-
-    line-height: 1.7;
-
-    text-shadow:
-        0 2px 10px
-        rgba(0, 0, 0, 0.95);
 }
 
 
 /* WORLD */
 
 #world {
-    min-height: auto;
-
     padding: 14px;
 
     background: #070b0d;
 }
 
 .world-panel {
-    position: relative;
-
     width: 100%;
     max-width: 1500px;
 
@@ -314,6 +289,16 @@ nav {
         58px
         55px
         44px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.75fr)
+        minmax(500px, 1.8fr);
+
+    gap:
+        45px
+        55px;
 
     border:
         1px solid
@@ -325,56 +310,7 @@ nav {
             rgba(10, 17, 19, 0.98),
             rgba(5, 10, 12, 0.99)
         );
-
-    box-shadow:
-        inset 0 0 45px
-        rgba(0, 0, 0, 0.45);
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(300px, 0.75fr)
-        minmax(500px, 1.8fr);
-
-    column-gap: 55px;
-
-    row-gap: 45px;
 }
-
-.world-panel::before,
-.world-panel::after {
-    content: "";
-
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-}
-
-.world-panel::before {
-    top: 8px;
-    left: 8px;
-
-    border-top:
-        2px solid #d6b56a;
-
-    border-left:
-        2px solid #d6b56a;
-}
-
-.world-panel::after {
-    right: 8px;
-    bottom: 8px;
-
-    border-right:
-        2px solid #d6b56a;
-
-    border-bottom:
-        2px solid #d6b56a;
-}
-
-
-/* WORLD COPY */
 
 .world-copy {
     display: flex;
@@ -384,42 +320,27 @@ nav {
     justify-content: center;
 
     align-items: flex-start;
-
-    text-align: left;
 }
 
-.section-kicker {
-    margin-bottom: 16px;
-
+.section-kicker,
+.season-label,
+.section-small-label {
     color: #d6b56a;
-
-    font-size: 0.95rem;
 
     font-weight: 700;
 
     letter-spacing: 0.18em;
 }
 
+.section-kicker {
+    margin-bottom: 16px;
+}
+
 .season-label {
     margin-bottom: 5px;
-
-    color: #d6b56a;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.15rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.2em;
 }
 
 #world h2 {
-    margin: 0;
-
     color: #f5ecda;
 
     font-family:
@@ -435,26 +356,29 @@ nav {
         );
 
     font-weight: 500;
+}
 
-    line-height: 1.05;
+.title-divider,
+.center-divider,
+.boss-divider,
+.competitive-divider,
+.updates-divider {
+    height: 1px;
 
-    letter-spacing: 0.03em;
+    background:
+        linear-gradient(
+            to right,
+            rgba(214, 181, 106, 0),
+            #d6b56a,
+            rgba(214, 181, 106, 0)
+        );
 }
 
 .title-divider {
     width: 155px;
 
-    height: 1px;
-
     margin:
         20px 0;
-
-    background:
-        linear-gradient(
-            to right,
-            #d6b56a,
-            rgba(214, 181, 106, 0)
-        );
 }
 
 .world-description {
@@ -468,13 +392,10 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1rem;
-
-    line-height: 1.65;
 }
 
-.world-button {
+.world-button,
+.updates-button {
     min-height: 46px;
 
     padding:
@@ -501,7 +422,8 @@ nav {
     letter-spacing: 0.08em;
 }
 
-.world-button:hover {
+.world-button:hover,
+.updates-button:hover {
     background:
         rgba(214, 181, 106, 0.09);
 
@@ -509,12 +431,7 @@ nav {
         #d6b56a;
 }
 
-
-/* FOREST IMAGE */
-
 .world-image {
-    position: relative;
-
     min-height: 360px;
 
     overflow: hidden;
@@ -522,23 +439,21 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.28);
-
-    background: #101517;
 }
 
 .world-image img {
-    display: block;
-
     width: 100%;
     height: 100%;
 
     min-height: 360px;
 
     object-fit: cover;
+
+    display: block;
 }
 
 
-/* FEATURE ROW */
+/* WORLD FEATURES */
 
 .forest-features {
     grid-column:
@@ -555,12 +470,9 @@ nav {
 }
 
 .feature-item {
-    min-height: 210px;
-
     padding:
         30px
-        22px
-        20px;
+        22px;
 
     text-align: center;
 }
@@ -596,8 +508,6 @@ nav {
 .feature-icon span {
     transform:
         rotate(-45deg);
-
-    font-size: 1.45rem;
 }
 
 .feature-item h3 {
@@ -606,15 +516,9 @@ nav {
     color: #eee6d4;
 
     font-size: 0.82rem;
-
-    letter-spacing: 0.06em;
 }
 
 .feature-item p {
-    max-width: 230px;
-
-    margin: 0 auto;
-
     color: #bbb5aa;
 
     font-family:
@@ -639,8 +543,6 @@ nav {
     border-top:
         1px solid
         rgba(214, 181, 106, 0.25);
-
-    scroll-margin-top: 95px;
 }
 
 .section-heading {
@@ -651,18 +553,6 @@ nav {
         40px;
 
     text-align: center;
-}
-
-.section-small-label {
-    margin-bottom: 8px;
-
-    color: #d6b56a;
-
-    font-size: 0.78rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.24em;
 }
 
 .section-heading h3,
@@ -682,34 +572,17 @@ nav {
         );
 
     font-weight: 500;
-
-    letter-spacing: 0.05em;
 }
 
-.center-divider,
-.boss-divider {
+.center-divider {
     width: 190px;
-
-    height: 1px;
 
     margin:
         18px auto
         20px;
-
-    background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            #d6b56a,
-            rgba(214, 181, 106, 0)
-        );
 }
 
-.section-heading > p:last-child {
-    max-width: 700px;
-
-    margin: 0 auto;
-
+.section-heading p:last-child {
     color: #c9c2b5;
 
     font-family:
@@ -719,11 +592,7 @@ nav {
 }
 
 .section-closing {
-    max-width: 780px;
-
-    margin:
-        34px auto
-        0;
+    margin-top: 34px;
 
     color: #b9aa81;
 
@@ -738,7 +607,7 @@ nav {
 }
 
 
-/* NATIVE + MINIBOSSES */
+/* SPECIES + MINIBOSSES */
 
 .native-grid,
 .miniboss-grid {
@@ -752,8 +621,6 @@ nav {
 
 .species-card,
 .miniboss-card {
-    position: relative;
-
     overflow: hidden;
 
     border:
@@ -761,23 +628,15 @@ nav {
         rgba(214, 181, 106, 0.55);
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(15, 25, 20, 0.98),
-            rgba(8, 14, 12, 0.98)
-        );
+        rgba(9, 15, 14, 0.98);
 }
 
 .species-image {
     height: 360px;
-
-    overflow: hidden;
 }
 
 .miniboss-image {
     height: 390px;
-
-    overflow: hidden;
 }
 
 .species-image img,
@@ -825,10 +684,6 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1.05rem;
-
-    letter-spacing: 0.08em;
 }
 
 .species-card p,
@@ -849,6 +704,8 @@ nav {
 .island-boss-section {
     margin-top: 32px;
 
+    padding: 34px;
+
     display: grid;
 
     grid-template-columns:
@@ -860,8 +717,6 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.5);
-
-    padding: 34px;
 }
 
 .boss-copy {
@@ -872,20 +727,11 @@ nav {
     justify-content: center;
 
     align-items: flex-start;
-
-    text-align: left;
-}
-
-.boss-copy h3 {
-    font-size:
-        clamp(
-            2.8rem,
-            5vw,
-            4.6rem
-        );
 }
 
 .boss-divider {
+    width: 180px;
+
     margin:
         18px 0
         24px;
@@ -898,10 +744,6 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1.05rem;
-
-    line-height: 1.75;
 }
 
 .boss-teaser {
@@ -921,10 +763,6 @@ nav {
     min-height: 520px;
 
     overflow: hidden;
-
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.3);
 }
 
 .boss-image img {
@@ -940,10 +778,7 @@ nav {
     grid-column:
         1 / -1;
 
-    padding:
-        28px
-        20px
-        10px;
+    padding-top: 28px;
 
     text-align: center;
 
@@ -966,36 +801,19 @@ nav {
 }
 
 .boss-footer span {
-    display: block;
-
-    margin-top: 8px;
-
     color: #b8ac91;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.95rem;
 }
 
 
-/* =========================================
-   COMPETITIVE SEASON
-   ========================================= */
+/* COMPETITIVE SEASON */
 
 #competitive-season {
-    min-height: auto;
-
     padding: 14px;
 
-    background:
-        #07090d;
+    background: #07090d;
 }
 
 .competitive-panel {
-    width: 100%;
     max-width: 1500px;
 
     margin: 0 auto;
@@ -1008,8 +826,8 @@ nav {
     display: grid;
 
     grid-template-columns:
-        minmax(500px, 1.05fr)
-        minmax(460px, 0.95fr);
+        1.05fr
+        0.95fr;
 
     gap: 34px;
 
@@ -1018,27 +836,11 @@ nav {
         rgba(214, 181, 106, 0.56);
 
     background:
-        radial-gradient(
-            circle at 70% 40%,
-            rgba(100, 65, 160, 0.08),
-            rgba(0, 0, 0, 0) 42%
-        ),
         linear-gradient(
             135deg,
             #0b1015,
             #06090d
         );
-}
-
-
-/* COMPETITIVE HEADING */
-
-.competitive-left {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 36px;
 }
 
 .competitive-heading {
@@ -1047,8 +849,6 @@ nav {
 
 .competitive-kicker {
     color: #c69bf4;
-
-    font-size: 0.82rem;
 
     font-weight: 700;
 
@@ -1075,50 +875,27 @@ nav {
         );
 
     font-weight: 500;
-
-    line-height: 1.05;
-
-    letter-spacing: 0.035em;
 }
 
 .competitive-divider {
     width: 220px;
 
-    height: 1px;
-
     margin:
         20px auto;
-
-    background:
-        linear-gradient(
-            to right,
-            rgba(214, 181, 106, 0),
-            #d6b56a,
-            rgba(214, 181, 106, 0)
-        );
 }
 
 .competitive-heading > p:last-child {
-    max-width: 720px;
-
-    margin: 0 auto;
-
     color: #d0c5b1;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1rem;
-
-    line-height: 1.7;
 }
 
-
-/* SEASON STATS */
-
 .season-stats {
+    margin-top: 36px;
+
     display: grid;
 
     grid-template-columns:
@@ -1127,24 +904,12 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.5);
-
-    background:
-        rgba(9, 13, 19, 0.76);
 }
 
 .season-stat {
-    min-height: 150px;
-
     padding:
         22px
         14px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
 
     text-align: center;
 }
@@ -1156,7 +921,7 @@ nav {
 }
 
 .season-stat-icon {
-    margin-bottom: 8px;
+    display: block;
 
     color: #b78bf2;
 
@@ -1164,38 +929,29 @@ nav {
 }
 
 .season-stat strong {
+    display: block;
+
     color: #efd083;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1.08rem;
-
-    font-weight: 500;
 }
 
 .season-stat small {
-    margin-top: 4px;
-
     color: #bcb2a3;
-
-    font-size: 0.67rem;
-
-    letter-spacing: 0.08em;
 }
 
-
-/* PLACEMENT */
+.placement-section {
+    margin-top: 36px;
+}
 
 .placement-heading {
     text-align: center;
 }
 
-.placement-heading > p:last-child {
-    max-width: 700px;
-
+.placement-heading p:last-child {
     margin:
         8px auto
         24px;
@@ -1206,8 +962,6 @@ nav {
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 0.94rem;
 }
 
 .placement-grid {
@@ -1220,8 +974,6 @@ nav {
 }
 
 .placement-card {
-    min-height: 180px;
-
     padding:
         26px
         18px;
@@ -1231,43 +983,19 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.44);
-
-    background:
-        rgba(11, 15, 20, 0.84);
 }
 
 .placement-symbol {
     display: block;
 
-    margin-bottom: 10px;
-
     font-size: 2rem;
 }
 
 .placement-card h3 {
-    margin-bottom: 8px;
-
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 1.3rem;
-
-    font-weight: 500;
-
-    letter-spacing: 0.08em;
-}
-
-.placement-card p {
-    color: #bfb5a5;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.86rem;
 }
 
 .diamond-placement h3,
@@ -1290,18 +1018,8 @@ nav {
 
     color: #ae9a68;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.88rem;
-
     text-align: center;
 }
-
-
-/* WINGS */
 
 .wings-panel {
     padding:
@@ -1313,19 +1031,10 @@ nav {
         1px solid
         rgba(214, 181, 106, 0.58);
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(10, 13, 20, 0.92),
-            rgba(5, 7, 11, 0.98)
-        );
-
     text-align: center;
 }
 
 .wings-panel h3 {
-    margin-top: 6px;
-
     color: #e7b245;
 
     font-family:
@@ -1341,39 +1050,23 @@ nav {
         );
 
     font-weight: 500;
-
-    letter-spacing: 0.05em;
-}
-
-.wings-divider {
-    margin-bottom: 16px;
 }
 
 .wings-description {
-    max-width: 620px;
-
-    margin:
-        0 auto
-        24px;
-
     color: #d1c4ae;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
-    font-size: 0.95rem;
 }
 
 .wings-image {
     height: 520px;
 
-    overflow: hidden;
+    margin-top: 24px;
 
-    border:
-        1px solid
-        rgba(214, 181, 106, 0.18);
+    overflow: hidden;
 }
 
 .wings-image img {
@@ -1381,8 +1074,6 @@ nav {
     height: 100%;
 
     object-fit: cover;
-
-    display: block;
 }
 
 .wing-labels {
@@ -1391,20 +1082,7 @@ nav {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 10px;
-
     margin-top: 16px;
-}
-
-.wing-label {
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.05rem;
-
-    letter-spacing: 0.08em;
 }
 
 .diamond-label {
@@ -1419,9 +1097,6 @@ nav {
     color: #dddddd;
 }
 
-
-/* COMPETITIVE BOTTOM */
-
 .competitive-bottom {
     grid-column:
         1 / -1;
@@ -1432,13 +1107,9 @@ nav {
         repeat(2, 1fr);
 
     gap: 18px;
-
-    padding-top: 4px;
 }
 
 .competitive-info-block {
-    min-height: 120px;
-
     padding:
         24px
         28px;
@@ -1452,36 +1123,311 @@ nav {
     border:
         1px solid
         rgba(214, 181, 106, 0.34);
-
-    background:
-        rgba(8, 12, 17, 0.88);
 }
 
 .competitive-info-icon {
-    flex-shrink: 0;
-
     color: #b68cf0;
 
-    font-size: 2.1rem;
+    font-size: 2rem;
 }
 
 .competitive-info-block h4 {
-    margin-bottom: 4px;
-
     color: #c69bf4;
+}
+
+.competitive-info-block p {
+    color: #bbb2a5;
+}
+
+
+/* =========================================
+   UPDATES
+   ========================================= */
+
+#updates {
+    padding: 14px;
+
+    background: #070b0d;
+}
+
+.updates-panel {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        48px
+        40px
+        30px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.65fr)
+        minmax(600px, 1.35fr);
+
+    gap: 34px;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            #091116,
+            #060b0e
+        );
+}
+
+
+/* UPDATES INTRO */
+
+.updates-intro {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.updates-kicker {
+    color: #7fc9e5;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.updates-intro h2 {
+    margin-top: 8px;
+
+    color: #f2e5cb;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.05rem;
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            4.4rem
+        );
 
-    letter-spacing: 0.08em;
+    font-weight: 500;
+
+    line-height: 1.05;
 }
 
-.competitive-info-block p {
-    color: #bbb2a5;
+.updates-divider {
+    width: 170px;
+
+    margin:
+        20px 0;
+}
+
+.updates-intro > p:not(.updates-kicker) {
+    max-width: 430px;
+
+    margin-bottom: 25px;
+
+    color: #c6c0b5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+/* FEATURED UPDATE */
+
+.updates-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.featured-update {
+    padding:
+        32px
+        34px;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.48);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(14, 22, 28, 0.96),
+            rgba(8, 13, 17, 0.98)
+        );
+}
+
+.update-type {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding:
+        4px
+        9px;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    border:
+        1px solid
+        currentColor;
+}
+
+.announcement-type {
+    color: #bf95e8;
+}
+
+.content-type {
+    color: #8abb72;
+}
+
+.competition-type {
+    color: #b895ef;
+}
+
+.event-type {
+    color: #d8ad65;
+}
+
+.update-date {
+    margin-bottom: 8px;
+
+    color: #8fa6b2;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.15em;
+}
+
+.featured-update h3 {
+    margin-bottom: 12px;
+
+    color: #e8d9bc;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 500;
+}
+
+.featured-update > p:not(.update-date) {
+    max-width: 800px;
+
+    color: #beb7aa;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+.update-status {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #7fc9e5;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* UPDATE CARDS */
+
+.updates-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.update-card {
+    min-height: 260px;
+
+    padding:
+        26px
+        22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+        1px solid
+        rgba(214, 181, 106, 0.3);
+
+    background:
+        rgba(8, 14, 18, 0.88);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.update-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(214, 181, 106, 0.65);
+}
+
+.update-icon {
+    margin-bottom: 14px;
+
+    color: #7fc9e5;
+
+    font-size: 1.4rem;
+}
+
+.update-card h3 {
+    margin-bottom: 10px;
+
+    color: #e7dcc6;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 500;
+}
+
+.update-card p {
+    flex: 1;
+
+    color: #b8b0a4;
 
     font-family:
         Georgia,
@@ -1491,10 +1437,64 @@ nav {
     font-size: 0.9rem;
 }
 
+.update-meta {
+    margin-top: 18px;
 
-/* OTHER SECTIONS */
+    color: #7d939f;
 
-section:not(#home):not(#world):not(#competitive-season) {
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* UPDATES FOOTER */
+
+.updates-footer {
+    grid-column:
+        1 / -1;
+
+    padding-top: 26px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(214, 181, 106, 0.2);
+}
+
+.updates-footer p {
+    color: #d2b674;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+
+    letter-spacing: 0.14em;
+}
+
+.updates-footer span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #948d82;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.88rem;
+}
+
+
+/* STORE + SUPPORT */
+
+section:not(#home):not(#world):not(#competitive-season):not(#updates) {
     min-height: 65vh;
 
     padding: 14px;
@@ -1503,7 +1503,6 @@ section:not(#home):not(#world):not(#competitive-season) {
 }
 
 .standard-panel {
-    width: 100%;
     max-width: 1500px;
 
     min-height:
@@ -1533,8 +1532,6 @@ section:not(#home):not(#world):not(#competitive-season) {
 }
 
 .standard-panel h2 {
-    margin-bottom: 20px;
-
     color: #eee6d4;
 
     font-family:
@@ -1551,8 +1548,6 @@ section:not(#home):not(#world):not(#competitive-season) {
 }
 
 .standard-panel p {
-    max-width: 700px;
-
     color: #c5c5c5;
 }
 
@@ -1580,7 +1575,8 @@ footer {
 
 @media (max-width: 1100px) {
 
-    .competitive-panel {
+    .competitive-panel,
+    .updates-panel {
         grid-template-columns:
             1fr;
     }
@@ -1590,18 +1586,9 @@ footer {
             repeat(2, 1fr);
     }
 
-    .season-stat {
-        border-bottom:
-            1px solid
-            rgba(214, 181, 106, 0.18);
-    }
-
-    .season-stat:nth-child(even) {
-        border-right: none;
-    }
-
-    .wings-image {
-        height: 430px;
+    .updates-grid {
+        grid-template-columns:
+            1fr;
     }
 
 }
@@ -1628,9 +1615,9 @@ footer {
     .navigation {
         height: auto;
 
-        justify-content: center;
-
         flex-wrap: wrap;
+
+        justify-content: center;
     }
 
     .navigation a {
@@ -1649,11 +1636,6 @@ footer {
     .world-panel {
         grid-template-columns:
             1fr;
-
-        padding:
-            45px
-            35px
-            30px;
     }
 
     .forest-features {
@@ -1670,10 +1652,6 @@ footer {
     .island-boss-section {
         grid-template-columns:
             1fr;
-    }
-
-    .boss-image {
-        min-height: 430px;
     }
 
 }
@@ -1721,26 +1699,32 @@ footer {
             );
     }
 
-    #world {
+    #world,
+    #competitive-season,
+    #updates {
         padding: 8px;
     }
 
-    .world-panel {
+    .world-panel,
+    .competitive-panel,
+    .updates-panel {
         padding:
-            35px
-            20px
+            34px
+            18px
             24px;
     }
 
     .world-copy,
-    .boss-copy {
+    .boss-copy,
+    .updates-intro {
         align-items: center;
 
         text-align: center;
     }
 
     .title-divider,
-    .boss-divider {
+    .boss-divider,
+    .updates-divider {
         margin-left: auto;
         margin-right: auto;
     }
@@ -1753,10 +1737,6 @@ footer {
     .feature-item {
         border-right:
             none !important;
-
-        border-bottom:
-            1px solid
-            rgba(214, 181, 106, 0.16);
     }
 
     .species-image,
@@ -1774,31 +1754,9 @@ footer {
         min-height: 300px;
     }
 
-    .boss-footer p {
-        font-size: 1.05rem;
-    }
-
-
-    /* COMPETITIVE MOBILE */
-
-    #competitive-season {
-        padding: 8px;
-    }
-
-    .competitive-panel {
-        padding:
-            34px
-            18px
-            20px;
-
-        gap: 26px;
-    }
-
-    .competitive-heading h2 {
-        font-size: 2.4rem;
-    }
-
-    .season-stats {
+    .season-stats,
+    .placement-grid,
+    .competitive-bottom {
         grid-template-columns:
             1fr;
     }
@@ -1808,42 +1766,26 @@ footer {
             none !important;
     }
 
-    .placement-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .wings-panel {
-        padding:
-            24px
-            16px
-            20px;
-    }
-
-    .wings-panel h3 {
-        font-size: 2.35rem;
-    }
-
     .wings-image {
         height: 310px;
     }
 
-    .wing-labels {
-        font-size: 0.8rem;
-    }
-
-    .competitive-bottom {
+    .updates-grid {
         grid-template-columns:
             1fr;
     }
 
-    .competitive-info-block {
+    .featured-update {
         padding:
-            22px
-            18px;
+            26px
+            22px;
     }
 
-    section:not(#home):not(#world):not(#competitive-season) {
+    .update-card {
+        min-height: auto;
+    }
+
+    section:not(#home):not(#world):not(#competitive-season):not(#updates) {
         padding: 8px;
     }
 
