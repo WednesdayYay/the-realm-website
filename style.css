@@ -1,6 +1,6 @@
 /* =========================================
    THE REALM
-   Homepage Design
+   WEBSITE DESIGN
    ========================================= */
 
 
@@ -17,6 +17,7 @@ html {
 }
 
 body {
+    margin: 0;
     background: #0f1114;
     color: #f2f2f2;
     font-family: Arial, Helvetica, sans-serif;
@@ -32,11 +33,13 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
+    height: 72px;
 
     z-index: 1000;
 
-    background: rgba(8, 10, 13, 0.78);
+    background: rgba(8, 10, 13, 0.92);
     backdrop-filter: blur(10px);
 
     border-bottom: 1px solid rgba(214, 181, 106, 0.2);
@@ -44,32 +47,54 @@ header {
 
 nav {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1500px;
+    height: 100%;
 
     margin: 0 auto;
-    padding: 18px 40px;
+    padding: 0 40px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+
+/* ---------- NAV LOGO ---------- */
+
 .logo {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
     color: #f0dfb7;
 
     font-size: 1.35rem;
     font-weight: 800;
 
     letter-spacing: 0.18em;
+
+    white-space: nowrap;
 }
 
+
+/* ---------- NAV LINKS ---------- */
+
 .navigation {
+    height: 100%;
+
     display: flex;
     align-items: center;
-    gap: 28px;
+
+    gap: 32px;
 }
 
 .navigation a {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
     color: #dddddd;
 
     text-decoration: none;
@@ -77,47 +102,60 @@ nav {
     font-size: 0.9rem;
     font-weight: 600;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
 
-    transition: 0.2s ease;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+    border-bottom: 2px solid transparent;
 }
 
 .navigation a:hover {
     color: #d6b56a;
+    border-bottom-color: #d6b56a;
 }
 
 
 /* =========================================
-   HERO
+   HOMEPAGE HERO
    ========================================= */
 
 #home {
+    position: relative;
+
+    width: 100%;
     min-height: 100vh;
 
-    position: relative;
     overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    text-align: center;
+    padding:
+        calc(72px + 5vh)
+        40px
+        5vh;
 
-    padding: 120px 8% 80px;
+    text-align: center;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(5, 7, 10, 0.16) 0%,
-            rgba(5, 7, 10, 0.2) 55%,
-            rgba(5, 7, 10, 0.72) 100%
+            rgba(5, 7, 10, 0.08) 0%,
+            rgba(5, 7, 10, 0.12) 50%,
+            rgba(5, 7, 10, 0.58) 100%
         ),
         url("realm-hero.png");
 
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
+
+
+/* Soft edge shading */
 
 #home::after {
     content: "";
@@ -127,8 +165,8 @@ nav {
 
     background:
         radial-gradient(
-            circle at center,
-            rgba(0, 0, 0, 0) 25%,
+            ellipse at center,
+            rgba(0, 0, 0, 0) 35%,
             rgba(0, 0, 0, 0.28) 100%
         );
 
@@ -137,64 +175,102 @@ nav {
     z-index: 1;
 }
 
+
+/* =========================================
+   HERO CONTENT
+   ========================================= */
+
 .hero-content {
     position: relative;
     z-index: 2;
 
-    max-width: 950px;
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
+
+/* ---------- TITLE ---------- */
+
 #home h1 {
+    margin: 0;
+
     color: #f6efe2;
 
-    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-size: clamp(4rem, 8vw, 7.5rem);
     font-weight: 900;
 
-    line-height: 0.95;
+    line-height: 1;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
+
+    text-align: center;
 
     text-shadow:
         0 3px 0 #57452f,
         0 8px 30px rgba(0, 0, 0, 0.9);
 }
 
+
+/* ---------- TAGLINE ---------- */
+
 .hero-tagline {
-    margin-top: 22px;
+    width: 100%;
+
+    margin: 28px auto 0;
 
     color: #f0dfb7;
 
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.35rem);
     font-weight: 700;
 
+    line-height: 1.4;
+
     letter-spacing: 0.18em;
+
+    text-align: center;
     text-transform: uppercase;
 
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.95);
 }
 
+
+/* ---------- DESCRIPTION ---------- */
+
 .hero-description {
-    margin-top: 20px;
+    width: 100%;
+    max-width: 720px;
 
-    max-width: 700px;
+    margin: 22px auto 0;
 
-    color: #eeeeee;
+    color: #f0f0f0;
 
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
     font-weight: 400;
+
+    line-height: 1.7;
 
     letter-spacing: 0.02em;
 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    text-transform: none;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 
 /* =========================================
-   GENERAL SECTIONS
+   GENERAL WEBSITE SECTIONS
    ========================================= */
 
 section:not(#home) {
@@ -225,71 +301,27 @@ section:not(#home) p {
 
 
 /* =========================================
-   WORLD
+   SECTION BACKGROUNDS
    ========================================= */
 
-#world {
-    background:
-        linear-gradient(
-            135deg,
-            #15181b,
-            #101214
-        );
-}
-
-
-/* =========================================
-   COMPETITIVE SEASON
-   ========================================= */
-
-#competitive-season {
-    background:
-        linear-gradient(
-            135deg,
-            #1b1c20,
-            #141518
-        );
-}
-
-
-/* =========================================
-   UPDATES
-   ========================================= */
-
-#updates {
-    background:
-        linear-gradient(
-            135deg,
-            #15181b,
-            #101214
-        );
-}
-
-
-/* =========================================
-   STORE
-   ========================================= */
-
-#store {
-    background:
-        linear-gradient(
-            135deg,
-            #1b1c20,
-            #141518
-        );
-}
-
-
-/* =========================================
-   SUPPORT
-   ========================================= */
-
+#world,
+#updates,
 #support {
     background:
         linear-gradient(
             135deg,
             #15181b,
             #101214
+        );
+}
+
+#competitive-season,
+#store {
+    background:
+        linear-gradient(
+            135deg,
+            #1b1c20,
+            #141518
         );
 }
 
@@ -305,7 +337,8 @@ footer {
 
     background: #0a0b0d;
 
-    border-top: 1px solid rgba(214, 181, 106, 0.18);
+    border-top:
+        1px solid rgba(214, 181, 106, 0.18);
 
     color: #777777;
 }
@@ -319,30 +352,49 @@ footer p {
    TABLET
    ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+    header {
+        height: auto;
+    }
 
     nav {
-        flex-direction: column;
+        height: auto;
 
         padding: 14px 20px;
+
+        flex-direction: column;
 
         gap: 10px;
     }
 
+    .logo {
+        height: auto;
+    }
+
     .navigation {
+        height: auto;
+
         justify-content: center;
         flex-wrap: wrap;
 
-        gap: 10px 18px;
+        gap: 8px 20px;
     }
 
     .navigation a {
-        font-size: 0.8rem;
+        height: auto;
+        padding: 4px 0;
     }
 
     #home {
-        padding-top: 165px;
-        background-position: center;
+        padding:
+            150px
+            30px
+            60px;
+    }
+
+    .hero-content {
+        max-width: 850px;
     }
 
     section:not(#home) {
@@ -357,31 +409,59 @@ footer p {
 
 @media (max-width: 600px) {
 
+    nav {
+        padding: 12px 15px;
+    }
+
     .logo {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 
     .navigation {
-        gap: 8px 12px;
+        gap: 6px 12px;
     }
 
     .navigation a {
-        font-size: 0.72rem;
+        font-size: 0.7rem;
+    }
+
+    #home {
+        min-height: 100svh;
+
+        padding:
+            155px
+            20px
+            50px;
+
+        background-position: center center;
     }
 
     #home h1 {
-        font-size: clamp(3rem, 17vw, 5rem);
-        letter-spacing: 0.05em;
+        font-size: clamp(3rem, 15vw, 5rem);
+
+        letter-spacing: 0.04em;
     }
 
     .hero-tagline {
-        font-size: 0.85rem;
+        margin-top: 20px;
+
+        font-size: 0.8rem;
+
         letter-spacing: 0.1em;
     }
 
     .hero-description {
-        font-size: 0.95rem;
-        max-width: 90%;
+        max-width: 420px;
+
+        margin-top: 18px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.6;
+    }
+
+    section:not(#home) {
+        padding: 70px 7%;
     }
 
     section:not(#home) h2 {
